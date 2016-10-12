@@ -19,6 +19,7 @@ class MainController extends Controller
      * @param Menu $menu
      */
     public function __construct(Menu $menu){
+        //dd(config('app.locale'));
         $this->data['menu'] = $menu->getActiveItems()->toArray();
         $this->data['locales'] = config('app.locales');
     }
