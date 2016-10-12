@@ -77,7 +77,7 @@
                             <ul class="main_menu " role="menu">
                                 @foreach($menu as $item)
                                     <li class="active">
-                                        <a href="{{ url($item['url']) }}" class="">{{$item['title_'.config('app.locale')]}}</a>
+                                        <a href="{{ url($item['url']) }}" class="">{{$item['title_'.session('locale')]}}</a>
                                     </li>
                                 @endforeach
                             </ul><!-- /.main_menu -->
@@ -100,7 +100,7 @@
                         <ul class="main_menu " role="menu">
                             @foreach($menu as $item)
                                 <li class="active">
-                                    <a href="{{ url($item['url']) }}" class="">{{$item['title_'.config('app.locale')]}}</a>
+                                    <a href="{{ url($item['url']) }}" class="">{{$item['title_'.session('locale')]}}</a>
                                 </li>
                             @endforeach
                         </ul><!-- /.main_menu -->
@@ -211,7 +211,7 @@
                 <ul class="menu_footer " role="menu">
                     @foreach($menu as $item)
                         <li class="active">
-                            <a href="{{ url($item['url']) }}" class="">{{$item['title_'.config('app.locale')]}}</a>
+                            <a href="{{ url($item['url']) }}" class="">{{$item['title_'.session('locale')]}}</a>
                         </li>
                     @endforeach
                 </ul><!-- /.menu_footer -->

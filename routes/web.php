@@ -32,6 +32,7 @@ Auth::routes();
     Route::get('setlocale/{locale}', function ($locale) {
         if (in_array($locale, config('app.locales'))) {   # Проверяем, что у пользователя выбран доступный язык
             session(['locale' => $locale]); # И устанавливаем его в сессии под именем locale
+            config(['app.locale' => $locale]);
         }
 
         return redirect()->back();  # Редиректим его <s>назад</s> на ту же страницу

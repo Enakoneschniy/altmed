@@ -20,6 +20,7 @@ class MainController extends Controller
      */
     public function __construct(Menu $menu){
         //dd(config('app.locale'));
+        if(!session('locale')) session(['locale' => 'ru']);
         $this->data['menu'] = $menu->getActiveItems()->toArray();
         $this->data['locales'] = config('app.locales');
     }
