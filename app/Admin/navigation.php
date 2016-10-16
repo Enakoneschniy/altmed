@@ -26,8 +26,8 @@ return [
         'title' => 'Dashboard',
         'icon'  => 'fa fa-dashboard',
         'url'   => route('admin.dashboard'),
+        'priority' => 0
     ],
-
     [
         'title' => 'Information',
         'icon'  => 'fa fa-exclamation-circle',

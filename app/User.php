@@ -23,7 +23,21 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    protected $hidden = ['remember_token'];
+
+    public function roles(){
+        return $this->belongsToMany(\App\Models\Role::class);
+    }
+
+    public function setPasswordAttribute($password){
+        $this->attributes['password'] = bcrypt($password);
+    }
+    public function isAdmin(){
+        $roles = $this->roles;
+        foreach ($roles as $role){
+            if($role->code == 1)
+                return true;
+        }
+        return false;
+    }
 }

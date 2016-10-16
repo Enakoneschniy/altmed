@@ -12,7 +12,7 @@
 */
 
 
-Auth::routes();
+//Auth::routes();
 
 //Route::group(['middleware' => ['web']], function () {
     Route::get('/', 'IndexController@index');
