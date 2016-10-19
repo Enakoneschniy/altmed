@@ -38,5 +38,4 @@
         return redirect()->back();  # Редиректим его <s>назад</s> на ту же страницу
     });
 
-    Route::get('/home', 'HomeController@index');
 //});
