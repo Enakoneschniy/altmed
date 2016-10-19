@@ -29,10 +29,12 @@ $(document).ready(function () {
 		.data('origWidth', $magicLine.width());
 		$('.main_menu li a').click(function() {
 			var $this = $(this);
+			var url = $(this).attr('href');
 			$this.parent().addClass('active').siblings().removeClass('active');
 			$magicLine
 			.data('origLeft', $this.position().left)
 			.data('origWidth', $this.parent().width());
+			window.location.href = url;
 			return false;
 		});
 

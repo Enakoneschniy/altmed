@@ -26,6 +26,10 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type='text/javascript'>
+        if(window.innerWidth<600 && location.hostname != 'm.ukrlogika.com')
+            location.href='http://m.ukrlogika.com/';
+    </script>
 </head>
 <body>
 <div class="wrapper">
@@ -197,6 +201,3162 @@
         </div>
     </section><!-- /.general -->
 
+    <section class="content" id="content">
+        <div class="container">
+            <div class="row widget">
+                <div class="block_leftbar">&nbsp;</div>
+                <div class="line_help">
+                    <div class="img">
+                        <i class="ico_plus sprites"></i>
+                    </div>
+                    <!-- <div class="col6"> -->
+                    <div class="text">
+                        <h1>Нужна медицинская помощь?</h1>
+                    </div>
+                    <!-- </div> -->
+                    <div class="btn btn_style1 btn_1" data-wipe="Записаться на приём">Записаться на приём</div>
+                    <div class="btn btn_style1 btn_2" data-wipe="Консультация">Консультация</div>
+                </div>
+            </div>
+            <div class="row widget">
+                <div class="block_leftbar">
+                    <div class="img">
+                        <i class="ico_service abs_center sprites"></i>
+                    </div>
+                    <p>Услуги</p>
+                </div><!-- /.block_leftbar -->
+                <div class="tab">
+                    <ul class="tabs tabs_service">
+                        <li><a href="#">Педиатр</a></li>
+                        <li><a href="#">Эндокринолог</a></li>
+                        <li><a href="#">Окулист</a></li>
+                        <li><a href="#">Гастроэнтеролог</a></li>
+                        <li><a href="#">Дерматолог</a></li>
+                        <li><a href="#">Аллерголог</a></li>
+                        <li><a href="#">Невролог</a></li>
+                    </ul> <!-- / tabs -->
+                    <div class="tab_content">
+                        <div class="tabs_item">
+
+
+                            <!--     <div id="owl-demo" class="owl-carousel owl-theme">
+      <div class="item"><h1>1</h1></div>
+      <div class="item"><h1>2</h1></div>
+      <div class="item"><h1>3</h1></div>
+      <div class="item"><h1>4</h1></div>
+      <div class="item"><h1>5</h1></div>
+      <div class="item"><h1>6</h1></div>
+      <div class="item"><h1>7</h1></div>
+      <div class="item"><h1>8</h1></div>
+      <div class="item"><h1>9</h1></div>
+      <div class="item"><h1>10</h1></div>
+      <div class="item"><h1>11</h1></div>
+      <div class="item"><h1>12</h1></div>
+      <div class="item"><h1>13</h1></div>
+      <div class="item"><h1>14</h1></div>
+      <div class="item"><h1>15</h1></div>
+      <div class="item"><h1>16</h1></div>
+    </div>
+
+    <div class="customNavigation">
+      <a class="btn prev">Previous</a>
+      <a class="btn next">Next</a>
+      <a class="btn play">Autoplay</a>
+      <a class="btn stop">Stop</a>
+    </div> -->
+
+
+
+
+
+
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+
+                            <!-- 				<a class="btn prev">Previous</a>
+								<a class="btn next">Next</a> -->
+
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">3Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">4Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">3Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">4Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">3Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">4Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div><!-- / .carousel_items -->
+                        </div> <!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div> <!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">3Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">3Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">3Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">3Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div><!-- / .carousel_items -->
+                        </div> <!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">4Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">4Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">4Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">4Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div> <!-- / .carousel_items -->
+                        </div> <!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">5Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">5Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">5Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">5Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div><!-- / .carousel_items -->
+                        </div> <!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">6Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">6Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">6Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">6Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div><!-- / .carousel_items -->
+                        </div> <!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">7Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">1Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">7Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">2Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">7Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">3Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">7Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">4Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div><!-- / .carousel_items -->
+                        </div> <!-- / tabs_item -->
+                    </div> <!-- / tab_content -->
+                </div> <!-- / tab -->
+            </div><!-- /.widget -->
+            <div class="row widget">
+                <div class="block_leftbar">
+                    <div class="img">
+                        <i class="ico_consult abs_center sprites"></i>
+                    </div>
+                    <p>Консультация <br>специалиста</p>
+                    <ul class="radio_btns">
+                        <li class="">
+                            <input class="radio" id="radio_consult1" name="radio_consult" type="radio" checked>
+                            <label tabindex="4" for="radio_consult1" class="radio-label">Детский</label>
+                        </li>
+                        <li class="">
+                            <input class="radio" id="radio_consult2" name="radio_consult" type="radio">
+                            <label tabindex="5" for="radio_consult2" class="radio-label">ВЗРОСЛЫЙ</label>
+                        </li>
+                    </ul>
+                </div><!-- /.block_leftbar -->
+                <div class="tab tabs_consult_child">
+                    <ul class="tabs tabs_consult ">
+                        <li><a href="#">Педиатр</a></li>
+                        <li><a href="#">Эндокринолог</a></li>
+                        <li><a href="#">Окулист</a></li>
+                        <li><a href="#">Гастроэнтеролог </a></li>
+                        <li><a href="#">Дерматолог</a></li>
+                        <li><a href="#">Аллерголог</a></li>
+                        <li><a href="#">Невролог</a></li>
+                        <li><a href="#">логопед</a></li>
+                        <li><a href="#">кардиоревматолог</a></li>
+                        <li><a href="#">хирург</a></li>
+                        <li><a href="#">Ортопед-травматолог</a></li>
+                        <li><a href="#">лор-врач</a></li>
+                        <li><a href="#">массажист</a></li>
+                    </ul>
+                    <br>
+                    <div class="tab_content">
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div> <!-- / .tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">20Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">20Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">20Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">20Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">20Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">20Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">20Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">20Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div> <!-- / .tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">30Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">30Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">30Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">30Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">40Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">40Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">40Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">40Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">50Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">50Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">50Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">50Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">60Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">60Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">60Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">60Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">70Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">70Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">70Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">70Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">80Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">80Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">80Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">80Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">90Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">90Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">90Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">90Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">100Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">100Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">100Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">100Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">110Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">110Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">110Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">110Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">120Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">120Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">120Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">120Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ДЕТ</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div> <!-- / tabs_item -->
+                    </div> <!-- / .tab_content -->
+                </div> <!-- / .tabs_consult_child -->
+                <div class="tab tabs_consult_adult">
+                    <ul class="tabs tabs_consult ">
+                        <li><a href="#">Педиатр</a></li>
+                        <li><a href="#">Эндокринолог</a></li>
+                        <li><a href="#">Окулист</a></li>
+                        <li><a href="#">Гастроэнтеролог </a></li>
+                        <li><a href="#">Дерматолог</a></li>
+                        <li><a href="#">Аллерголог</a></li>
+                        <li><a href="#">Невролог</a></li>
+                        <li><a href="#">логопед</a></li>
+                        <li><a href="#">кардиоревматолог</a></li>
+                        <li><a href="#">хирург</a></li>
+                        <li><a href="#">Ортопед-травматолог</a></li>
+                        <li><a href="#">лор-врач</a></li>
+                        <li><a href="#">массажист</a></li>
+                    </ul>
+                    <br>
+                    <div class="tab_content">
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">10Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">20Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">20Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">20Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">20Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">30Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">30Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">30Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">30Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">40Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">40Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">40Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">40Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">50Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">50Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">50Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">50Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">60Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">60Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">60Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">60Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">70Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">70Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">70Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">70Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">80Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">80Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">80Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">80Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">90Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">90Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">90Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">90Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">100Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">100Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">100Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">100Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">110Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">110Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">110Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">110Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">120Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">120Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">120Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">120Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div><!-- / tabs_item -->
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">130Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div>	<!-- / .carousel_items -->
+                        </div> <!-- / tabs_item -->
+                    </div> <!-- / tab_content -->
+                </div><!-- / .tabs_consult_adult -->
+            </div><!-- /.widget -->
+            <div class="row widget">
+                <div class="block_leftbar">
+                    <div class="img">
+                        <i class="ico_news abs_center sprites"></i>
+                    </div>
+                    <p>Новости,<br>Информация</p>
+                    <a href="#" class="btn btn_style2">Подробно</a>
+                </div><!-- /.block_leftbar -->
+
+                <div class="tab_filters ">
+                    <div class="btn-group magnet-filter">
+                        <button class="btn title_tab btn-link tab_all active" data-filter="*">Все</button>
+                        <button class="btn title_tab btn-link tab_photo" data-filter="filter_photo">Фото</button>
+                        <button class="btn title_tab btn-link tab_video" data-filter="filter_video">Видео</button>
+                        <button class="btn title_tab btn-link tab_article " data-filter="filter_article">Статьи</button>
+                        <button class="btn title_tab btn-link tab_actia" data-filter="filter_actia">Акции</button>
+                    </div><!-- /.magnet-filter -->
+                    <div class="magnet">
+                        <a href="#" class="filter_actia magnet-item item ">
+                            <div class="img">
+                                <img src="img/cart1.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="person_name">Анна Сергеевна Рузматова</p>
+                                <p class="person_post">actia Старший врач </p>
+                            </div>
+                        </a>
+                        <a href="#" class="filter_photo magnet-item item ">
+                            <div class="img">
+                                <img src="img/cart1.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="person_name">Анна Сергеевна Рузматова</p>
+                                <p class="person_post">photo Старший врач ВЗР</p>
+                            </div>
+                        </a>
+                        <a href="#" class="filter_video magnet-item item ">
+                            <div class="img">
+                                <img src="img/cart1.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="person_name">Анна Сергеевна Рузматова</p>
+                                <p class="person_post">video Старший врач ВЗР</p>
+                            </div>
+                        </a>
+                        <a href="#" class="filter_photo magnet-item item ">
+                            <div class="img">
+                                <img src="img/cart1.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="person_name">Анна Сергеевна Рузматова</p>
+                                <p class="person_post">photo Старший врач ВЗР</p>
+                            </div>
+                        </a>
+                        <a href="#" class="filter_actia magnet-item item ">
+                            <div class="img">
+                                <img src="img/cart1.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="person_name">Анна Сергеевна Рузматова</p>
+                                <p class="person_post">actia Старший врач ВЗР</p>
+                            </div>
+                        </a>
+                        <a href="#" class="filter_video magnet-item item ">
+                            <div class="img">
+                                <img src="img/cart1.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="person_name">Анна Сергеевна Рузматова</p>
+                                <p class="person_post">video Старший врач ВЗР</p>
+                            </div>
+                        </a>
+                        <a href="#" class="filter_article magnet-item item ">
+                            <div class="img">
+                                <img src="img/cart1.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="person_name">Анна Сергеевна Рузматова</p>
+                                <p class="person_post">article Старший врач ВЗР</p>
+                            </div>
+                        </a>
+                        <a href="#" class="filter_actia magnet-item item ">
+                            <div class="img">
+                                <img src="img/cart1.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="person_name">Анна Сергеевна Рузматова</p>
+                                <p class="person_post">actia Старший врач ВЗР</p>
+                            </div>
+                        </a>
+                    </div><!-- /.magnet -->
+                </div><!-- /.tab_filters -->
+            </div><!-- /.widget -->
+            <div class="row widget">
+                <div class="block_leftbar">
+                    <div class="img">
+                        <i class="ico_doctors abs_center sprites"></i>
+                    </div>
+                    <p>Для врачей</p>
+                    <a href="#" class="btn btn_style2">Подробно</a>
+                </div><!-- /.block_leftbar -->
+                <div class="tab">
+                    <ul class="tabs tabs_doctors">
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                    <br>
+                    <div class="tab_content">
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div> <!-- carousel_items -->
+                        </div>
+                        <div class="tabs_item">
+                            <div class="counterSlides">
+                                <span class="currentSlide">1</span>
+                                <span class="separatorSlide">/</span>
+                                <span class="totalSlide">3</span>
+                            </div>
+                            <div class="carousel_items">
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">2Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="item">
+                                    <div class="img">
+                                        <img src="img/cart1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <p class="person_name">1Анна Сергеевна Рузматова</p>
+                                        <p class="person_post">Старший врач ВЗР</p>
+                                    </div>
+                                </a>
+                            </div> <!-- carousel_items -->
+                        </div> <!-- / tabs_item -->
+                    </div> <!-- / tab_content -->
+                </div><!-- /.tab -->
+            </div><!-- /.widget -->
+            <div class="row description_text">
+                <p>Існує багато варіацій уривків з Lorem Ipsum, але більшість з них зазнала певних змін на кшталт жартівливих вставок або змішування слів, які навіть не виглядають правдоподібно. Якщо ви збираєтесь використовувати Lorem Ipsum, ви маєте упевнитись в тому, що всередині тексту не приховано нічого, що могло б викликати у читача конфуз. Більшість відомих генераторів Lorem Ipsum в Мережі генерують текст шляхом повторення наперед заданих. <a href="#">Читать дальше</a></p>
+            </div><!-- /.description_text -->
+        </div><!-- /.container -->
+    </section><!-- /.content -->
 
 
     <footer class="footer">
