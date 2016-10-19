@@ -12,4 +12,8 @@ class DoctorController extends MainController
 
         return view('desktop.for-doctors.list', $this->data);
     }
+    public function mIndex(){
+
+        return view('mobile.for-doctors.list', $this->data);
+    }
 }

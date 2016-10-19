@@ -12,4 +12,8 @@ class ContactsController extends MainController
 
         return view('desktop.contacts', $this->data);
     }
+    public function mIndex(){
+
+        return view('mobile.contacts', $this->data);
+    }
 }

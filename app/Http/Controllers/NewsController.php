@@ -12,4 +12,8 @@ class NewsController extends MainController
 
         return view('desktop.news.list', $this->data);
     }
+    public function mIndex(){
+
+        return view('mobile.news.list', $this->data);
+    }
 }

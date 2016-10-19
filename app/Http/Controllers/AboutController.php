@@ -14,4 +14,9 @@ class AboutController extends MainController
 
         return view('desktop.about', $this->data);
     }
+    public function mIndex(Review $review){
+        $this->data['reviews'] = $review->getActiveItems();
+
+        return view('mobile.about', $this->data);
+    }
 }

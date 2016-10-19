@@ -13,8 +13,34 @@
 
 
 //Auth::routes();
+$domain = config('app.local_domain');
+Route::group(['middleware' => ['web'], 'domain' => "m.".$domain], function () {
+    Route::get('/', 'IndexController@mIndex');
 
-//Route::group(['middleware' => ['web']], function () {
+    Route::get('about-clinic', "AboutController@mIndex");
+    Route::get('service', "ServiceController@mIndex");
+    Route::get('consultation', "ConsultationController@mIndex");
+    Route::get('schedule', "ScheduleController@mIndex");
+    Route::get('prices', "PriceController@mIndex");
+    Route::get('news', "NewsController@mIndex");
+    Route::get('for-doctors', "DoctorController@mIndex");
+    Route::get('contacts', "ContactsController@mIndex");
+    Route::get('map', "MapController@mIndex");
+
+    Route::post('/review/create', 'ReviewController@create');
+});
+
+Route::get('setlocale/{locale}', function ($locale) {
+    if (in_array($locale, config('app.locales'))) {   # Проверяем, что у пользователя выбран доступный язык
+        session(['locale' => $locale]); # И устанавливаем его в сессии под именем locale
+        config(['app.locale' => $locale]);
+    }
+
+    return redirect()->back();  # Редиректим его <s>назад</s> на ту же страницу
+});
+
+Route::group(['middleware' => ['web'], 'domain' => $domain], function () {
+
     Route::get('/', 'IndexController@index');
 
     Route::get('about-clinic', "AboutController@index");
@@ -28,14 +54,4 @@
     Route::get('map', "MapController@index");
 
     Route::post('/review/create', 'ReviewController@create');
-
-    Route::get('setlocale/{locale}', function ($locale) {
-        if (in_array($locale, config('app.locales'))) {   # Проверяем, что у пользователя выбран доступный язык
-            session(['locale' => $locale]); # И устанавливаем его в сессии под именем locale
-            config(['app.locale' => $locale]);
-        }
-
-        return redirect()->back();  # Редиректим его <s>назад</s> на ту же страницу
-    });
-
-//});
+});

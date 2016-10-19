@@ -12,4 +12,8 @@ class ScheduleController extends MainController
 
         return view('desktop.schedule', $this->data);
     }
+    public function mIndex(){
+
+        return view('mobile.schedule', $this->data);
+    }
 }

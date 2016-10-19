@@ -12,4 +12,8 @@ class ServiceController extends MainController
 
         return view('desktop.service', $this->data);
     }
+    public function mIndex(){
+
+        return view('mobile.service', $this->data);
+    }
 }

@@ -12,4 +12,7 @@ class IndexController extends MainController
     public function index(){
         return view('welcome', $this->data);
     }
+    public function mIndex(){
+        return view('mobile.index', $this->data);
+    }
 }

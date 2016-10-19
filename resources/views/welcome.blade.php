@@ -27,8 +27,11 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script type='text/javascript'>
-        if(window.innerWidth<600 && location.hostname != 'm.ukrlogika.com')
-            location.href='http://m.ukrlogika.com/';
+        var hostname = location.hostname;
+        var lnHostname = hostname.length;
+        console.log(hostname, lnHostname);
+        if(window.innerWidth<600 && hostname[0] != 'm')
+            location.href = location.hostname + location.href;
     </script>
 </head>
 <body>

@@ -12,4 +12,8 @@ class PriceController extends MainController
 
         return view('desktop.prices', $this->data);
     }
+    public function mIndex(){
+
+        return view('mobile.prices', $this->data);
+    }
 }

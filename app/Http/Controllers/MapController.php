@@ -12,4 +12,8 @@ class MapController extends MainController
 
         return view('desktop.map', $this->data);
     }
+    public function mIndex(){
+
+        return view('mobile.map', $this->data);
+    }
 }

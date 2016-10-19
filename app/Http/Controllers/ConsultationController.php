@@ -12,4 +12,8 @@ class ConsultationController extends MainController
         
         return view('desktop.consultation', $this->data);
     }
+    public function mIndex(){
+
+        return view('mobile.consultation', $this->data);
+    }
 }
