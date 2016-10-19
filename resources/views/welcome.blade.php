@@ -32,7 +32,7 @@
         var url = location.href.substr(lnHostname+7);
         //console.log(hostname, lnHostname, url, hostname.substr(0, 2));
 
-        var mobiles = ["iPhone","iPod","Android", "Blackberry", "Windows Phone"];//mobile devices
+        var mobiles = ["iPhone","iPod","Android", "BlackBerry", "Windows Phone", "Windows CE", "MOT"];//mobile devices
         var agent = navigator.userAgent;
 
         for(var index in mobiles){
