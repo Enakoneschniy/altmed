@@ -10,8 +10,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link rel="alternate" media="only screen and (max-width:640px)" href="http://m.ukrlogika.com/">
+    <link href="css/owl.carousel.css" rel="stylesheet"
 
     <!--[if lte IE 9]><link href="css/ie9.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if lte IE 8]><link href="css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
@@ -33,8 +32,16 @@
         var url = location.href.substr(lnHostname+7);
         //console.log(hostname, lnHostname, url, hostname.substr(0, 2));
 
-        if(window.innerWidth<600 && hostname.substr(0, 2) != 'm.')
-            location.href='http://m.' + hostname + url;
+        var mobiles = ["iPhone","iPod","Android", "Blackberry"];//mobile devices
+        var agent = navigator.userAgent;
+
+        for(var index in mobiles){
+            //testing if the RE matches the mobile agents
+
+            if(agent.indexOf(mobiles[index]) !== -1) {
+                location.href='http://m.' + hostname + url;
+            }
+        }
     </script>
 </head>
 <body>
