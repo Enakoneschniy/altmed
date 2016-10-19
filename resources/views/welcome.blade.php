@@ -11,6 +11,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
     <link href="css/owl.carousel.css" rel="stylesheet">
+    <link rel="alternate" media="only screen and (max-width:640px)" href="http://m.ukrlogika.com/">
 
     <!--[if lte IE 9]><link href="css/ie9.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if lte IE 8]><link href="css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->

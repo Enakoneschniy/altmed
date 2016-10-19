@@ -11,6 +11,7 @@
     <link href="/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/animate.css">
     <link href="/css/owl.carousel.css" rel="stylesheet">
+    <link rel="alternate" media="only screen and (max-width:640px)" href="http://m.ukrlogika.com/">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script>
@@ -37,7 +38,8 @@
         var hostname = location.hostname;
         var lnHostname = hostname.length;
         var url = location.href.substr(lnHostname+7);
-        //console.log(hostname, lnHostname, url, hostname.substr(0, 2));
+        console.log(hostname, lnHostname, url, hostname.substr(0, 2));
+        console.log(window.innerWidth);
 
         if(window.innerWidth<600 && hostname.substr(0, 2) != 'm.')
             location.href='http://m.' + hostname + url;
