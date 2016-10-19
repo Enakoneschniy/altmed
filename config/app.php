@@ -79,7 +79,7 @@ return [
 
     'locale' => 'ru',
     'locales' => ['ru', 'ua'],
-    'local_domain' => 'ukrlogika.com',
+    'local_domain' => 'altamedica.local',
     'domain' => 'ukrlogika.com',
     /*
     |--------------------------------------------------------------------------

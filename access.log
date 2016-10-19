@@ -3224,3 +3224,6 @@
 127.0.0.1 - - [19/Oct/2016:23:51:25 +0300] "GET /mobile/fonts/OpenSans.woff2 HTTP/1.1" 200 31630 "http://m.altamedica.local/mobile/css/main.css" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
 127.0.0.1 - - [19/Oct/2016:23:51:25 +0300] "GET /mobile/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 72159 "http://m.altamedica.local/mobile/css/main.css" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
 127.0.0.1 - - [19/Oct/2016:23:51:25 +0300] "GET /mobile/fonts/OpenSans-Light.woff2 HTTP/1.1" 200 32626 "http://m.altamedica.local/mobile/css/main.css" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
+127.0.0.1 - - [20/Oct/2016:00:00:48 +0300] "GET /about-clinic HTTP/1.1" 200 4645 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
+127.0.0.1 - - [20/Oct/2016:00:00:48 +0300] "GET /js/main.js HTTP/1.1" 200 3554 "http://altamedica.local/about-clinic" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
+127.0.0.1 - - [20/Oct/2016:00:00:48 +0300] "GET /about-clinic HTTP/1.1" 200 2798 "http://altamedica.local/about-clinic" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"

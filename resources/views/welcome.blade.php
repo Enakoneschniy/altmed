@@ -29,9 +29,11 @@
     <script type='text/javascript'>
         var hostname = location.hostname;
         var lnHostname = hostname.length;
-        console.log(hostname, lnHostname);
-        if(window.innerWidth<600 && hostname[0] != 'm')
-            location.href = location.hostname + location.href;
+        var url = location.href.substr(lnHostname+7);
+        //console.log(hostname, lnHostname, url, hostname.substr(0, 2));
+
+        if(window.innerWidth<600 && hostname.substr(0, 2) != 'm.')
+            location.href='http://m.' + hostname + url;
     </script>
 </head>
 <body>
