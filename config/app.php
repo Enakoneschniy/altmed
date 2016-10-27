@@ -79,8 +79,8 @@ return [
 
     'locale' => 'ru',
     'locales' => ['ru', 'ua'],
-    'local_domain' => 'altamedica.local/',
-    'domain' => 'altamedica.local/',
+    'local_domain' => 'altamedica.local',
+    'domain' => 'altamedica.local',
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -178,7 +178,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        Baum\Providers\BaumServiceProvider::class
     ],
 
     /*

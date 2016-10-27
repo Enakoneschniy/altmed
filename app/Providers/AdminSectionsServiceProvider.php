@@ -30,6 +30,7 @@ class AdminSectionsServiceProvider extends ServiceProvider
         \App\Models\Qualify::class => 'App\Http\Admin\Models\Qualifies',
         \App\Models\Category::class => 'App\Http\Admin\Models\Categories',
         \App\Models\News::class => 'App\Http\Admin\Models\News',
+        \App\Models\Address::class => 'App\Http\Admin\Models\Addresses',
     ];
 
     /**
