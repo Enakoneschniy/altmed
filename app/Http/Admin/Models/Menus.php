@@ -27,10 +27,11 @@ class Menus extends Section implements Initializable
         $this->addToNavigation($priority = 1);
 
         $this->creating(function($config, \Illuminate\Database\Eloquent\Model $model) {
-
         });
     }
-
+    public function disableCreating(){
+        return false;
+    }
     /**
      * @return string
      */
@@ -54,12 +55,20 @@ class Menus extends Section implements Initializable
     {
         return AdminDisplay::table()
             ->setHtmlAttribute('class', 'table-primary')
+            ->setApply(function ($query) {
+                $query->orderBy('sort', 'asc');
+            })
             ->setColumns(
                 AdminColumn::text('id', '#')->setWidth('30px'),
-                AdminColumn::link('title_ru', 'Заголовок(Рус)')->setWidth('100px'),
-                AdminColumn::link('title_ua', 'Заголовок(Укр)')->setWidth('100px'),
-                AdminColumn::link('url', 'URL')->setWidth('100px')
-            )->paginate(20);
+                AdminColumn::link('title_ru', 'Заголовок(Рус)'),
+                AdminColumn::link('title_ua', 'Заголовок(Укр)'),
+                AdminColumn::order()
+                    ->setLabel('Сортировка')
+                    ->setHtmlAttribute('class', 'text-center')
+                    ->setWidth('100px')
+                //AdminColumn::text('icon', 'Icon')->setWidth('100px')
+                //AdminColumn::link('url', 'URL')->setWidth('100px')
+            );
     }
 
     /**
@@ -72,7 +81,8 @@ class Menus extends Section implements Initializable
         return AdminForm::panel()->addBody([
             AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
             AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
-            AdminFormElement::text('url', 'URL')->required()
+            AdminFormElement::text('sort', 'Сортировка')->required()
+            //AdminFormElement::text('url', 'URL')->required()
         ]);
     }
 
@@ -84,10 +94,10 @@ class Menus extends Section implements Initializable
         return AdminForm::panel()->addBody([
             AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
             AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
-            AdminFormElement::text('url', 'URL')->required()
+            //AdminFormElement::text('icon', 'Icon')->required()
+            //AdminFormElement::text('url', 'URL')->required()
         ]);
     }
-
     /**
      * Переопределение метода содержащего заголовок создания записи
      *
@@ -101,7 +111,6 @@ class Menus extends Section implements Initializable
     {
         return 'Редактирование пункта меню';
     }
-
     /**
      * Переопределение метода для запрета удаления записи
      *
@@ -111,9 +120,13 @@ class Menus extends Section implements Initializable
      */
     public function isDeletable(\Illuminate\Database\Eloquent\Model $model)
     {
-        return true;
+        return false;
     }
 
+    public function isCreatable()
+    {
+        return false;
+    }
     /**
      * Переопределение метода содержащего ссылку на редактирование записи
      *

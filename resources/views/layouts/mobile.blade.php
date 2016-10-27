@@ -24,46 +24,17 @@
     <nav class="main-menu main-menu--side" id="main-menu--side">
         <div id="slide-out" class="side-nav">
             <ul class="main-menu__lists">
-                <li>
-                    <a href="#" class="item item-about">
-                        О клинике
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item item-service">
-                        Услуги
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item item-consult">
-                        Консультация
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item item-news">
-                        Новости
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item item-table">
-                        Расписание
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item item-doctors">
-                        Для Врачей
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item item-contacts">
-                        Контакты
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item item-maps">
-                        Карта
-                    </a>
-                </li>
+                @if(count($menu) > 0)
+                    @foreach($menu as $item)
+                        @if($item['url'] != '/' && $item['url'] != '/prices')
+                            <li>
+                                <a href="{{url($item['url'])}}" class="item {{$item['icon']}}">
+                                    {{$item['title_'.session('locale')]}}
+                                </a>
+                            </li>
+                        @endif
+                    @endforeach
+                @endif
             </ul>
         </div>
         <button type="button" class="close close-nav">

@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Http\Admin\Models\Categories;
 use App\Http\Admin\Models\Doctors;
 use App\Http\Admin\Models\Jobs;
+use App\Http\Admin\Models\News;
 use App\Http\Admin\Models\Qualifies;
 use App\Http\Admin\Models\Roles;
 use App\Http\Admin\Models\Specialties;
@@ -26,6 +28,8 @@ class AdminSectionsServiceProvider extends ServiceProvider
         \App\Models\Job::class => 'App\Http\Admin\Models\Jobs',
         \App\Models\Specialty::class => 'App\Http\Admin\Models\Specialties',
         \App\Models\Qualify::class => 'App\Http\Admin\Models\Qualifies',
+        \App\Models\Category::class => 'App\Http\Admin\Models\Categories',
+        \App\Models\News::class => 'App\Http\Admin\Models\News',
     ];
 
     /**
@@ -73,6 +77,19 @@ class AdminSectionsServiceProvider extends ServiceProvider
                 ->setUrl('admin/jobs')
                 ->setIcon('fa fa-hospital-o');
         })->setIcon('fa fa-hospital-o');
+
+        AdminNavigation::addPage("Новости")->setPages(function(Page $section){
+            $section
+                ->addPage(Categories::class)
+                ->setTitle('Категории')
+                ->setUrl('admin/categories')
+                ->setIcon('fa fa-folder');
+            $section
+                ->addPage(News::class)
+                ->setTitle('Список новостей')
+                ->setUrl('admin/news')
+                ->setIcon('fa fa-list-alt');
+        })->setIcon('fa fa-newspaper-o');
 
         /*$this->registerNRoutes();
         $this->registerNavigation();
