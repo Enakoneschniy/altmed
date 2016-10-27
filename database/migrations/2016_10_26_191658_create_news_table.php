@@ -23,7 +23,7 @@ class CreateNewsTable extends Migration
             $table->text('text_ua');
             $table->string('image');
             $table->string('main_image');
-            $table->json('gallery');
+            $table->string('gallery');
             $table->integer('category_id');
             $table->timestamps();
         });
