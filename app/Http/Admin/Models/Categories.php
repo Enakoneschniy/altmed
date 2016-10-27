@@ -54,13 +54,14 @@ class Categories extends Section implements Initializable
      */
     public function onDisplay()
     {
-        return AdminDisplay::table()
+        return AdminDisplay::tree()->setValue('title_ru');
+        /*return AdminDisplay::table()
             ->setHtmlAttribute('class', 'table-primary')
             ->setColumns(
                 AdminColumn::text('id', '#')->setWidth('30px'),
                 AdminColumn::link('title_ru', 'Заголовок(Рус)')->setWidth('100px'),
                 AdminColumn::link('title_ua', 'Заголовок(Укр)')->setWidth('100px')
-            )->paginate(20);
+            )->paginate(20);*/
     }
 
     /**

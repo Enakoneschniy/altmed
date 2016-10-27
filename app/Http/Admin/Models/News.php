@@ -2,6 +2,7 @@
 
 namespace App\Http\Admin\Models;
 
+use App\Models\Category;
 use SleepingOwl\Admin\Contracts\DisplayInterface;
 use SleepingOwl\Admin\Contracts\FormInterface;
 use SleepingOwl\Admin\Section;
@@ -55,36 +56,99 @@ class News extends Section implements Initializable
     public function onDisplay()
     {
         return AdminDisplay::table()
+            ->setFilters(
+                AdminDisplayFilter::related('category_id')->setModel(Category::class)
+            )
             ->setHtmlAttribute('class', 'table-primary')
             ->setColumns(
                 AdminColumn::text('id', '#')->setWidth('30px'),
                 AdminColumn::link('title_ru', 'Заголовок(Рус)')->setWidth('100px'),
-                AdminColumn::link('title_ua', 'Заголовок(Укр)')->setWidth('100px')
+                AdminColumn::link('title_ua', 'Заголовок(Укр)')->setWidth('100px'),
+                AdminColumn::link('category.title_ru', 'Категория')->setWidth('100px')
             )->paginate(20);
     }
 
-    /**
-     * @param int $id
-     *
-     * @return FormInterface
-     */
-    public function onEdit($id)
+    public function onEdit()
     {
-        return AdminForm::panel()->addBody([
-            AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
-            AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required()
-        ]);
+        $tabs = AdminDisplay::tabbed();
+
+        $tabs->setTabs(function ($id) {
+            $tabs = [];
+
+            $tabs[] = AdminDisplay::tab(AdminForm::elements([
+                AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
+                AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
+                AdminFormElement::wysiwyg('text_ru', 'Текст(Рус)')->required(),
+                AdminFormElement::wysiwyg('text_ru', 'Текст(Укр)')->required(),
+
+            ]))->setLabel('Основная информация');
+
+            $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
+                AdminFormElement::upload('main_image', 'Картинка для анонса'), // Элемент загрузки картинки
+                AdminColumn::image('main_image', 'Картинка для анонса'),
+                AdminFormElement::upload('image', 'Детальная картинка'), // Элемент загрузки картинки
+                AdminColumn::image('image', 'Детальная картинка')
+            ]))->setLabel('Картинки');
+
+            $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
+                AdminFormElement::select('category_id', 'Категория')
+                    ->setModelForOptions(Category::class)
+                    ->setDisplay(function($option) {
+                        return "{$option->title_ru}";
+                    })->required(),
+            ]))->setLabel('Категории');
+            $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
+
+            ]))->setLabel('Галерея');
+
+            return $tabs;
+        });
+        return AdminForm::panel()
+            ->addHeader([
+                $tabs
+            ]);
     }
 
-    /**
-     * @return FormInterface
-     */
+
     public function onCreate()
     {
-        return AdminForm::panel()->addBody([
-            AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
-            AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required()
-        ]);
+        $tabs = AdminDisplay::tabbed();
+
+        $tabs->setTabs(function ($id) {
+            $tabs = [];
+
+            $tabs[] = AdminDisplay::tab(AdminForm::elements([
+                AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
+                AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
+                AdminFormElement::wysiwyg('text_ru', 'Текст(Рус)')->required(),
+                AdminFormElement::wysiwyg('text_ru', 'Текст(Укр)')->required(),
+
+            ]))->setLabel('Основная информация');
+
+            $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
+                AdminFormElement::upload('main_image', 'Картинка для анонса'), // Элемент загрузки картинки
+                AdminColumn::image('main_image', 'Картинка для анонса'),
+                AdminFormElement::upload('image', 'Детальная картинка'), // Элемент загрузки картинки
+                AdminColumn::image('image', 'Детальная картинка')
+            ]))->setLabel('Картинки');
+
+            $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
+                AdminFormElement::select('category_id', 'Категория')
+                    ->setModelForOptions(Category::class)
+                    ->setDisplay(function($option) {
+                        return "{$option->title_ru}";
+                    })->required(),
+            ]))->setLabel('Категории');
+            $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
+                AdminFormElement::images('gallery', 'Галерея')
+            ]))->setLabel('Галерея');
+
+            return $tabs;
+        });
+        return AdminForm::panel()
+            ->addHeader([
+                $tabs
+            ]);
     }
 
     /**
