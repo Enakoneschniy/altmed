@@ -13,7 +13,7 @@ class ContactsController extends MainController
         return view('desktop.contacts', $this->data);
     }
     public function mIndex(){
-
+        $this->data['contacts'] = ['1',2, 3];
         return view('mobile.contacts', $this->data);
     }
 }
