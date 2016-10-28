@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
+    public function setGalleryAttribute($images){
+        dd($images);
+    }
+    public function setImageAttribute($images){
+        dd($images);
+    }
     public function category(){
         return $this->belongsTo(Category::class);
     }

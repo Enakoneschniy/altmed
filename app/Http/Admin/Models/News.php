@@ -10,7 +10,10 @@ use AdminColumn;
 use AdminDisplay;
 use AdminForm;
 use AdminFormElement;
+use AdminColumnEditable;
+use AdminDisplayFilter;
 use SleepingOwl\Admin\Contracts\Initializable;
+use SleepingOwl\Admin\Model\ModelConfiguration;
 
 class News extends Section implements Initializable
 {
@@ -56,15 +59,16 @@ class News extends Section implements Initializable
     public function onDisplay()
     {
         return AdminDisplay::table()
-            ->setFilters(
-                AdminDisplayFilter::related('category_id')->setModel(Category::class)
-            )
             ->setHtmlAttribute('class', 'table-primary')
+            ->setFilters([
+                AdminDisplayFilter::related('category_id')->setModel(Category::class),
+            ])
             ->setColumns(
                 AdminColumn::text('id', '#')->setWidth('30px'),
-                AdminColumn::link('title_ru', 'Заголовок(Рус)')->setWidth('100px'),
-                AdminColumn::link('title_ua', 'Заголовок(Укр)')->setWidth('100px'),
-                AdminColumn::link('category.title_ru', 'Категория')->setWidth('100px')
+                AdminColumn::link('title_ru', 'Заголовок(Рус)'),
+                AdminColumn::link('title_ua', 'Заголовок(Укр)'),
+                AdminColumn::link('category.title_ru', 'Категория'),
+                AdminColumnEditable::checkbox('published')->setLabel('Опубликована')
             )->paginate(20);
     }
 
@@ -103,7 +107,7 @@ class News extends Section implements Initializable
 
             return $tabs;
         });
-        return AdminForm::panel()
+        return AdminForm::panel()->setHtmlAttribute('enctype', 'multipart/form-data')
             ->addHeader([
                 $tabs
             ]);
@@ -145,7 +149,7 @@ class News extends Section implements Initializable
 
             return $tabs;
         });
-        return AdminForm::panel()
+        return AdminForm::panel()->setHtmlAttribute('enctype', 'multipart/form-data')
             ->addHeader([
                 $tabs
             ]);
