@@ -10,7 +10,10 @@ use AdminColumn;
 use AdminDisplay;
 use AdminForm;
 use AdminFormElement;
+use AdminColumnEditable;
+use AdminDisplayFilter;
 use SleepingOwl\Admin\Contracts\Initializable;
+use SleepingOwl\Admin\Model\ModelConfiguration;
 
 class News extends Section implements Initializable
 {
@@ -56,15 +59,16 @@ class News extends Section implements Initializable
     public function onDisplay()
     {
         return AdminDisplay::table()
-            ->setFilters(
-                AdminDisplayFilter::related('category_id')->setModel(Category::class)
-            )
             ->setHtmlAttribute('class', 'table-primary')
+            ->setFilters([
+                AdminDisplayFilter::related('category_id')->setModel(Category::class),
+            ])
             ->setColumns(
                 AdminColumn::text('id', '#')->setWidth('30px'),
-                AdminColumn::link('title_ru', 'Заголовок(Рус)')->setWidth('100px'),
-                AdminColumn::link('title_ua', 'Заголовок(Укр)')->setWidth('100px'),
-                AdminColumn::link('category.title_ru', 'Категория')->setWidth('100px')
+                AdminColumn::link('title_ru', 'Заголовок(Рус)'),
+                AdminColumn::link('title_ua', 'Заголовок(Укр)'),
+                AdminColumn::link('category.title_ru', 'Категория'),
+                AdminColumnEditable::checkbox('published')->setLabel('Опубликована')
             )->paginate(20);
     }
 
@@ -79,15 +83,15 @@ class News extends Section implements Initializable
                 AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
                 AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
                 AdminFormElement::wysiwyg('text_ru', 'Текст(Рус)')->required(),
-                AdminFormElement::wysiwyg('text_ru', 'Текст(Укр)')->required(),
+                AdminFormElement::wysiwyg('text_ua', 'Текст(Укр)')->required(),
 
             ]))->setLabel('Основная информация');
 
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
                 AdminFormElement::upload('main_image', 'Картинка для анонса'), // Элемент загрузки картинки
-                AdminColumn::image('main_image', 'Картинка для анонса'),
+                AdminColumn::image('main_image', 'Картинка для анонса')->setWidth(213),
                 AdminFormElement::upload('image', 'Детальная картинка'), // Элемент загрузки картинки
-                AdminColumn::image('image', 'Детальная картинка')
+                AdminColumn::image('image', 'Детальная картинка')->setWidth(213)
             ]))->setLabel('Картинки');
 
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
@@ -98,12 +102,12 @@ class News extends Section implements Initializable
                     })->required(),
             ]))->setLabel('Категории');
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
-
+                AdminFormElement::images('gallery', 'Галерея')
             ]))->setLabel('Галерея');
 
             return $tabs;
         });
-        return AdminForm::panel()
+        return AdminForm::panel()->setHtmlAttribute('enctype', 'multipart/form-data')
             ->addHeader([
                 $tabs
             ]);
@@ -121,15 +125,15 @@ class News extends Section implements Initializable
                 AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
                 AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
                 AdminFormElement::wysiwyg('text_ru', 'Текст(Рус)')->required(),
-                AdminFormElement::wysiwyg('text_ru', 'Текст(Укр)')->required(),
+                AdminFormElement::wysiwyg('text_ua', 'Текст(Укр)')->required(),
 
             ]))->setLabel('Основная информация');
 
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
                 AdminFormElement::upload('main_image', 'Картинка для анонса'), // Элемент загрузки картинки
-                AdminColumn::image('main_image', 'Картинка для анонса'),
+                AdminColumn::image('main_image', 'Картинка для анонса')->setWidth(213),
                 AdminFormElement::upload('image', 'Детальная картинка'), // Элемент загрузки картинки
-                AdminColumn::image('image', 'Детальная картинка')
+                AdminColumn::image('image', 'Детальная картинка')->setWidth(213)
             ]))->setLabel('Картинки');
 
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
@@ -145,7 +149,7 @@ class News extends Section implements Initializable
 
             return $tabs;
         });
-        return AdminForm::panel()
+        return AdminForm::panel()->setHtmlAttribute('enctype', 'multipart/form-data')
             ->addHeader([
                 $tabs
             ]);

@@ -21,8 +21,6 @@ class CreateCategoriesTable extends Migration
             $table->integer('depth')->nullable();
             $table->string('title_ru');
             $table->string('title_ua');
-            $table->text('text_ru');
-            $table->text('text_ua');
             $table->timestamps();
         });
     }
