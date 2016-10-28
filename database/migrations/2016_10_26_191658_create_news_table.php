@@ -17,13 +17,14 @@ class CreateNewsTable extends Migration
             $table->increments('id');
             $table->string('title_ru');
             $table->string('title_ua');
-            $table->date('date');
-            $table->boolean('published');
+            $table->date('date_start')->nullable();
+            $table->date('date_end')->nullable();
+            $table->boolean('published')->default(true);
             $table->text('text_ru');
             $table->text('text_ua');
             $table->string('image');
             $table->string('main_image');
-            $table->string('gallery');
+            $table->longText('gallery');
             $table->integer('category_id');
             $table->timestamps();
         });

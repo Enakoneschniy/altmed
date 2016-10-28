@@ -83,15 +83,15 @@ class News extends Section implements Initializable
                 AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
                 AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
                 AdminFormElement::wysiwyg('text_ru', 'Текст(Рус)')->required(),
-                AdminFormElement::wysiwyg('text_ru', 'Текст(Укр)')->required(),
+                AdminFormElement::wysiwyg('text_ua', 'Текст(Укр)')->required(),
 
             ]))->setLabel('Основная информация');
 
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
                 AdminFormElement::upload('main_image', 'Картинка для анонса'), // Элемент загрузки картинки
-                AdminColumn::image('main_image', 'Картинка для анонса'),
+                AdminColumn::image('main_image', 'Картинка для анонса')->setWidth(213),
                 AdminFormElement::upload('image', 'Детальная картинка'), // Элемент загрузки картинки
-                AdminColumn::image('image', 'Детальная картинка')
+                AdminColumn::image('image', 'Детальная картинка')->setWidth(213)
             ]))->setLabel('Картинки');
 
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
@@ -102,7 +102,7 @@ class News extends Section implements Initializable
                     })->required(),
             ]))->setLabel('Категории');
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
-
+                AdminFormElement::images('gallery', 'Галерея')
             ]))->setLabel('Галерея');
 
             return $tabs;
@@ -125,15 +125,15 @@ class News extends Section implements Initializable
                 AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
                 AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
                 AdminFormElement::wysiwyg('text_ru', 'Текст(Рус)')->required(),
-                AdminFormElement::wysiwyg('text_ru', 'Текст(Укр)')->required(),
+                AdminFormElement::wysiwyg('text_ua', 'Текст(Укр)')->required(),
 
             ]))->setLabel('Основная информация');
 
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
                 AdminFormElement::upload('main_image', 'Картинка для анонса'), // Элемент загрузки картинки
-                AdminColumn::image('main_image', 'Картинка для анонса'),
+                AdminColumn::image('main_image', 'Картинка для анонса')->setWidth(213),
                 AdminFormElement::upload('image', 'Детальная картинка'), // Элемент загрузки картинки
-                AdminColumn::image('image', 'Детальная картинка')
+                AdminColumn::image('image', 'Детальная картинка')->setWidth(213)
             ]))->setLabel('Картинки');
 
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
