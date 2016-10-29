@@ -18,6 +18,10 @@ Route::group(['middleware' => ['web'], 'domain' => "m.".$domain], function () {
     Route::get('/', 'IndexController@mIndex');
 
     Route::get('about-clinic', "AboutController@mIndex");
+    Route::get('/tabs/about', "AboutController@mTabsAbout");
+    Route::get('/tabs/respond', "AboutController@mTabsRespond");
+    Route::get('/modals/phone', "ModalController@phones");
+    Route::get('/modals/search', "ModalController@search");
     Route::get('feedback', "AboutController@mFeedback");
     Route::get('service', "ServiceController@mIndex");
     Route::get('consultation', "ConsultationController@mIndex");
