@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6f0e7ed71177d7afccc0e278ec9f4fb9",
+    "hash": "da95378e536cda80f37587934c055240",
     "content-hash": "c329d2382d7b45602fbfc1b1e7dd3def",
     "packages": [
         {
@@ -268,16 +268,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.6.0",
+            "version": "v1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "f8af318d14bdb0eff0336795b428b547bd39ccb6"
+                "reference": "b6f544a20f4807e81f7044d31e679ccbb1866dc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/f8af318d14bdb0eff0336795b428b547bd39ccb6",
-                "reference": "f8af318d14bdb0eff0336795b428b547bd39ccb6",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/b6f544a20f4807e81f7044d31e679ccbb1866dc3",
+                "reference": "b6f544a20f4807e81f7044d31e679ccbb1866dc3",
                 "shasum": ""
             },
             "require": {
@@ -334,7 +334,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-12-31 16:37:02"
+            "time": "2016-10-29 11:16:17"
         },
         {
             "name": "doctrine/collections",
@@ -1172,12 +1172,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelRUS/SleepingOwlAdmin.git",
-                "reference": "6135e001d04920a53611fd515a42adfe4be7e45e"
+                "reference": "9b6d3f6a400b4226d85babed5813dd3080087e8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LaravelRUS/SleepingOwlAdmin/zipball/6135e001d04920a53611fd515a42adfe4be7e45e",
-                "reference": "6135e001d04920a53611fd515a42adfe4be7e45e",
+                "url": "https://api.github.com/repos/LaravelRUS/SleepingOwlAdmin/zipball/9b6d3f6a400b4226d85babed5813dd3080087e8f",
+                "reference": "9b6d3f6a400b4226d85babed5813dd3080087e8f",
                 "shasum": ""
             },
             "require": {
@@ -1229,7 +1229,7 @@
                 "crud",
                 "laravel"
             ],
-            "time": "2016-10-26 20:19:20"
+            "time": "2016-10-28 04:49:47"
         },
         {
             "name": "league/flysystem",

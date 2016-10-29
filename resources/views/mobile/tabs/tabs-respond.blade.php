@@ -2,7 +2,8 @@
 <div class="respond-container" id="respond-container">
 
     <a href="/feedback" class="leave-respond">
-        <div class="btn-transparent waves-effect waves-dark"></div>Оставить отзыв
+        <div class="btn-transparent waves-effect waves-dark"></div>
+        Оставить отзыв
     </a>
 
     <div class="respond-block__wrap">

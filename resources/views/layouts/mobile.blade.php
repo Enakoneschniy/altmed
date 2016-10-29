@@ -52,12 +52,13 @@
                     </a>
                 </div>
                 <div class="col-2">
-                    <a href="#" data-toggle="modal" data-target="#modal" data-link="mobile/ajax/modals/phone.html" class="phone-btn">
+                    <a href="#" data-toggle="modal" data-target="#modal" data-link="/modals/phone"
+                       class="phone-btn">
                         <i class="fa fa-phone" aria-hidden="true"></i>
                     </a>
                 </div>
                 <div class="col-2">
-                    <a href="#" data-toggle="modal" data-target="#modal" data-link="mobile/ajax/modals/search.html"
+                    <a href="#" data-toggle="modal" data-target="#modal" data-link="modals/search"
                        class="search-btn">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </a>
@@ -71,8 +72,8 @@
         </div>
         <div class="header__bottom">
             <strong class="logo">
-                <a href="#" class="logo__link">
-                    Альтмедика медичний центр
+                <a href="/" class="logo__link">
+                    {{ trans('layout.description') }}
                 </a>
             </strong>
         </div>
@@ -87,9 +88,12 @@
                 <div class="phone-block">
                     <i class="fa fa-phone" aria-hidden="true"></i>
                     <div class="row">
-                        <a href="tel:(0432)520042">(0432)52-00-42</a>,
-                        <a href="tel:(0432)520055">(0432)52-00-55</a>,
-                        <a href="tel:(098)5550202">(098)555-02-02</a>
+                        @foreach($phones as $phone)
+                            <a href="tel:{{ $phone['phone'] }}">{{ $phone['phone'] }}</a>
+                            @if(!$loop->last)
+                                {{ ',' }}
+                            @endif
+                        @endforeach
                     </div>
                 </div>
                 <div class="mail-block">
@@ -140,6 +144,13 @@
 <!-- /WRAPPER -->
 <!-- jQuery & JS-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="mobile/js/jquery.maskedinput-1.3.js"></script>
+<script src="mobile/js/jquery.formstyler.js"></script>
+<script src="mobile/js/jquery.mCustomScrollbar.js"></script>
+<script src="mobile/js/materialize.js"></script>
+<script src="mobile/js/tabsload.js"></script>
+<script src="mobile/js/tabs.js"></script>
 <script src="mobile/js/main.js"></script>
+<script src="mobile/js/slick.js"></script>
 </body>
 </html>
