@@ -72,6 +72,27 @@ class News extends Section implements Initializable
             )->paginate(20);
     }
 
+    private function getFormatCategories($categories){
+        //dd($categories);
+        $categoriesText = [];
+        foreach ($categories as $category) {
+            //$categoriesText[] = str_repeat('.',$category->depth).$category->title_ru;
+            $children = $category->children()->get();
+            //dd($children);
+            if(count($children) > 0){
+                $categoriesText[] = str_repeat(' - ',$category->depth).$category->title_ru;
+                $temp = $this->getFormatCategories($children);
+                foreach ($temp as $item){
+                    $categoriesText[] = $item;
+                }
+
+            }else{
+                $categoriesText[] = str_repeat(' - ',$category->depth).$category->title_ru;
+            }
+        }
+        return $categoriesText;
+    }
+
     public function onEdit()
     {
         $tabs = AdminDisplay::tabbed();
@@ -80,6 +101,7 @@ class News extends Section implements Initializable
             $tabs = [];
 
             $tabs[] = AdminDisplay::tab(AdminForm::elements([
+                AdminFormElement::checkbox('published', 'Опубликовать'),
                 AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
                 AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
                 AdminFormElement::wysiwyg('text_ru', 'Текст(Рус)')->required(),
@@ -93,13 +115,10 @@ class News extends Section implements Initializable
                 AdminFormElement::upload('image', 'Детальная картинка'), // Элемент загрузки картинки
                 AdminColumn::image('image', 'Детальная картинка')->setWidth(213)
             ]))->setLabel('Картинки');
-
+            $categories = Category::where('parent_id', null)->get();
+            $categoriesText = $this->getFormatCategories($categories);
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
-                AdminFormElement::select('category_id', 'Категория')
-                    ->setModelForOptions(Category::class)
-                    ->setDisplay(function($option) {
-                        return "{$option->title_ru}";
-                    })->required(),
+                AdminFormElement::select('category_id', 'Категория', $categoriesText)->setSortable(false),
             ]))->setLabel('Категории');
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
                 AdminFormElement::images('gallery', 'Галерея')
@@ -122,6 +141,7 @@ class News extends Section implements Initializable
             $tabs = [];
 
             $tabs[] = AdminDisplay::tab(AdminForm::elements([
+                AdminFormElement::checkbox('published', 'Опубликовать'),
                 AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
                 AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
                 AdminFormElement::wysiwyg('text_ru', 'Текст(Рус)')->required(),
@@ -135,13 +155,11 @@ class News extends Section implements Initializable
                 AdminFormElement::upload('image', 'Детальная картинка'), // Элемент загрузки картинки
                 AdminColumn::image('image', 'Детальная картинка')->setWidth(213)
             ]))->setLabel('Картинки');
-
+            $categories = Category::where('parent_id', null)->get();
+            $categoriesText = $this->getFormatCategories($categories);
+            //dd($categoriesText);
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
-                AdminFormElement::select('category_id', 'Категория')
-                    ->setModelForOptions(Category::class)
-                    ->setDisplay(function($option) {
-                        return "{$option->title_ru}";
-                    })->required(),
+                AdminFormElement::select('category_id', 'Категория', $categoriesText)->setSortable(false),
             ]))->setLabel('Категории');
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
                 AdminFormElement::images('gallery', 'Галерея')

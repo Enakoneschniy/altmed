@@ -73,7 +73,7 @@ class Categories extends Section implements Initializable
     {
         return AdminForm::panel()->addBody([
             AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
-            AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required()
+            AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
         ]);
     }
 

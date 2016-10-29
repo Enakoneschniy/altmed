@@ -2,14 +2,17 @@
 
 namespace App\Providers;
 
+use App\Http\Admin\Models\Addresses;
 use App\Http\Admin\Models\Categories;
 use App\Http\Admin\Models\Doctors;
 use App\Http\Admin\Models\Jobs;
 use App\Http\Admin\Models\News;
+use App\Http\Admin\Models\Phones;
 use App\Http\Admin\Models\Qualifies;
 use App\Http\Admin\Models\Roles;
 use App\Http\Admin\Models\Specialties;
 use App\Http\Admin\Models\Users;
+use App\Http\Admin\Models\Vacancies;
 use SleepingOwl\Admin\Providers\AdminSectionsServiceProvider as ServiceProvider;
 
 use SleepingOwl\Admin\Navigation\Page;
@@ -20,7 +23,7 @@ class AdminSectionsServiceProvider extends ServiceProvider
     /**
      * @var array
      */
-    protected $sections = [
+    protected $sections = array(
         \App\User::class => 'App\Http\Admin\Models\Users',
         \App\Models\Role::class => 'App\Http\Admin\Models\Roles',
         \App\Models\Menu::class => 'App\Http\Admin\Models\Menus',
@@ -31,7 +34,12 @@ class AdminSectionsServiceProvider extends ServiceProvider
         \App\Models\Category::class => 'App\Http\Admin\Models\Categories',
         \App\Models\News::class => 'App\Http\Admin\Models\News',
         \App\Models\Address::class => 'App\Http\Admin\Models\Addresses',
-    ];
+        \App\Models\Vacancy::class => 'App\Http\Admin\Models\Vacancies',
+        \App\Models\Carousel::class => 'App\Http\Admin\Models\Carousels',
+        \App\Models\Review::class => 'App\Http\Admin\Models\Reviews',
+        \App\Models\Phone::class => 'App\Http\Admin\Models\Phones',
+        \App\Models\Email::class => 'App\Http\Admin\Models\Emails',
+    );
 
     /**
      * Register sections.
@@ -43,6 +51,24 @@ class AdminSectionsServiceProvider extends ServiceProvider
     	//
 
         parent::boot($admin);
+        AdminNavigation::addPage("Контакты")->setPages(function(Page $section){
+            $section
+                ->addPage(Addresses::class)
+                ->setTitle('Адреса клиник')
+                ->setUrl('admin/addresses')
+                ->setIcon('fa fa-map-marker');
+            $section
+                ->addPage(Phones::class)
+                ->setTitle('Телефоны')
+                ->setUrl('admin/phones')
+                ->setIcon('fa fa-phone');
+            $section
+                ->addPage(Emails::class)
+                ->setTitle('Email')
+                ->setUrl('admin/emails')
+                ->setIcon('fa fa-envelope');
+        })->setIcon('fa fa-info-circle');
+
         AdminNavigation::addPage("Пользователи")->setPages(function(Page $section){
             $section
                 ->addPage(Users::class)
@@ -77,6 +103,11 @@ class AdminSectionsServiceProvider extends ServiceProvider
                 ->setTitle('Должности')
                 ->setUrl('admin/jobs')
                 ->setIcon('fa fa-hospital-o');
+            /*$section
+                ->addPage(Vacancies::class)
+                ->setTitle('Вакансии')
+                ->setUrl('admin/vacancies')
+                ->setIcon('fa fa-user');*/
         })->setIcon('fa fa-hospital-o');
 
         AdminNavigation::addPage("Новости")->setPages(function(Page $section){

@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use SleepingOwl\Admin\Http\Controllers\AdminController;
 
@@ -14,7 +15,6 @@ class HomeController extends AdminController
     {
         return view('home');
     }
-
     /**
      * Show the application dashboard.
      *
@@ -22,7 +22,6 @@ class HomeController extends AdminController
      */
     public function dashboard()
     {
-
         return $this->renderContent(
             view('dashboard'),
             trans('sleeping_owl::lang.dashboard')

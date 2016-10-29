@@ -12,7 +12,7 @@ class News extends Model
         return json_decode($images);
     }
 
-    public function getUploadSettings()
+    /*public function getUploadSettings()
     {
         return [
             'image' => [
@@ -30,7 +30,7 @@ class News extends Model
                 }]
             ]
         ];
-    }
+    }*/
     public function setMainImageAttribute($file){
         //getting timestamp
         $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
@@ -54,5 +54,9 @@ class News extends Model
     }
     public function category(){
         return $this->belongsTo(Category::class);
+    }
+
+    public function carousels(){
+        $this->hasMany(Carousel::class);
     }
 }

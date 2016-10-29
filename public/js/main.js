@@ -29,12 +29,10 @@ $(document).ready(function () {
 		.data('origWidth', $magicLine.width());
 		$('.main_menu li a').click(function() {
 			var $this = $(this);
-			var url = $(this).attr('href');
 			$this.parent().addClass('active').siblings().removeClass('active');
 			$magicLine
 			.data('origLeft', $this.position().left)
 			.data('origWidth', $this.parent().width());
-			window.location.href = url;
 			return false;
 		});
 
@@ -120,10 +118,28 @@ $(document).ready(function () {
 		paginationNumbers:true
 	});
 	// работа с главным слайдером на главной странице
-	$('#general_slider').bind("DOMSubtreeModified",function(){
-		var totalGeneralCarouselItems = parseInt($('#general_slider .owl-page:last-child .owl-numbers').text());
+	$(function() {//$('#general_slider').bind("DOMSubtreeModified",function(){
+		var totalGeneralCarouselItems = $('#general_slider .owl-page').length;
 		var widthGeneralPagination = $('#general_slider .owl-pagination').width();
 		$('#general_slider .owl-pagination .owl-page').width(widthGeneralPagination/totalGeneralCarouselItems);
+	});
+	var $general = $('.general');
+	$general.addClass('slide1');
+	$('.general').click(function(){
+		var currentSlideGeneral = $('.general_slider .owl-page.active span').text();
+		if (currentSlideGeneral == 1) {
+			$general.removeClass('slide1 slide2 slide3 slide4');
+			$general.addClass('slide'+currentSlideGeneral);
+		} else if (currentSlideGeneral == 2) {
+			$general.removeClass('slide1 slide2 slide3 slide4');
+			$general.addClass('slide'+currentSlideGeneral);
+		} else if (currentSlideGeneral == 3) {
+			$general.removeClass('slide1 slide2 slide3 slide4');
+			$general.addClass('slide'+currentSlideGeneral);
+		} else if (currentSlideGeneral == 4) {
+			$general.removeClass('slide1 slide2 slide3 slide4');
+			$general.addClass('slide'+currentSlideGeneral);
+		}
 	});
 
 	/* CAROUSEL in Article
