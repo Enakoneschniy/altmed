@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
-    protected $fillable = ['name', 'email', 'content', 'active'];
+    protected $fillable = ['type_id', 'name', 'email', 'content', 'phone', 'active'];
 
     public function getActiveItems(){
         return $this->latest()->active()->get();

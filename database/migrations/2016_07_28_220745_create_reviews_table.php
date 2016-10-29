@@ -14,10 +14,12 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('type_id');
             $table->string('name');
+            $table->string('phone');
             $table->string('email');
             $table->text('content');
-            $table->boolean('active');
+            $table->boolean('active')->default(false);
             $table->timestamps();
         });
     }
