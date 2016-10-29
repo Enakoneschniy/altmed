@@ -7,10 +7,10 @@
 
     <div class="tabs-control-container">
         <div class="tabs-control-wrap" id="tabs-control">
-            <a data-link="/tabs/about-table.html" href="#" class="tabs-control">
+            <a data-link="/tabs/about" href="#" class="tabs-control">
                 <span class="tabs-control__link">График работы</span>
             </a>
-            <a data-link="/tabs/respond.html" href="#" class="tabs-control">
+            <a data-link="/tabs/respond" href="#" class="tabs-control">
                 <span class="tabs-control__link">Отзывы</span>
             </a>
         </div>

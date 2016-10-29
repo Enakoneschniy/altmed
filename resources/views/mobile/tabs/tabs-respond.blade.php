@@ -1,0 +1,45 @@
+<!-- AJAX RESPOND CONTAINER -->
+<div class="respond-container" id="respond-container">
+
+    <a href="/feedback" class="leave-respond">
+        <div class="btn-transparent waves-effect waves-dark"></div>
+        Оставить отзыв
+    </a>
+
+    <div class="respond-block__wrap">
+        <div class="respond-block">
+            <div class="respond-block__head">
+                <div class="respond-block__head-name">
+                    Алексей
+                </div>
+                <div class="respond-block__head-date">
+                    22.01.2016
+                </div>
+            </div>
+            <div class="respond-block__body">
+                Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію
+                сторінки.
+                Сенс використання Lorem Ipsum полягає в тому, що
+            </div>
+        </div>
+        <div class="respond-block">
+            <div class="respond-block__head">
+                <div class="respond-block__head-name">
+                    Алексей
+                </div>
+                <div class="respond-block__head-date">
+                    22.01.2016
+                </div>
+            </div>
+            <div class="respond-block__body">
+                Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію
+                сторінки.
+                Сенс використання Lorem Ipsum полягає в тому, що
+            </div>
+        </div>
+    </div>
+    <a href="#" class="waves-effect waves-dark more-btn">
+        Еще
+    </a>
+</div>
+<!-- AJAX RESPOND CONTAINER -->

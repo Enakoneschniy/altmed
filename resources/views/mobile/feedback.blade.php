@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="input-row {{ $errors->has('name') ? ' has-error' : '' }}">
-                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => trans('review.name'), 'id' => 'phone']) !!}
+                {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => trans('review.name')]) !!}
                 @if ($errors->has('name'))
                     <span class="help-block">
                         <strong>{{ $errors->first('name') }}</strong>
@@ -32,10 +32,10 @@
                 @endif
             </div>
             <div class="input-row {{ $errors->has('phone') ? ' has-error' : '' }}">
-                {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => '380']) !!}
+                {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => '380', 'id' => 'phone']) !!}
                 @if ($errors->has('phone'))
                     <span class="help-block">
-                        <strong>{{ $errors->first('name') }}</strong>
+                        <strong>{{ $errors->first('phone') }}</strong>
                     </span>
                 @endif
             </div>
