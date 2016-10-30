@@ -23,6 +23,7 @@ class MainController extends Controller
         //dd(config('app.locale'));
         if(!session('locale')) session(['locale' => 'ru']);
         config(['app.locale' => session('locale')]);
+        app()->setLocale(session('locale'));
         $this->data['menu'] = $menu->getActiveItems()->toArray();
         $this->data['phones'] = $phone->where('active', true)->get();
         $this->data['locales'] = config('app.locales');

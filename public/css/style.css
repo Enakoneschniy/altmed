@@ -759,26 +759,46 @@ ul.main_menu li:hover a {
 	position: relative;
 	z-index: 32;
 }
-.general.slide1 {
-	background: url(../img/bg_general.jpg) no-repeat center;
-	// background: red;
-	background-size: cover;
+
+.general .img_fullpage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	transition:0.5s;
+	    z-index: 3;
 }
-.general.slide2 {
-	background: url(../img/bg_general2.jpg) no-repeat center;
-	// background: green;
-	background-size: cover;
+.general .img_fullpage.active {
+	display: block;
 }
-.general.slide3 {
-	background: url(../img/bg_general3.jpg) no-repeat center;
-	// background: orange;
-	background-size: cover;
+
+.general .container {
+	position: relative;
+	z-index: 5;
 }
-.general.slide4 {
-	background: url(../img/bg_general.jpg) no-repeat center;
-	// background: black;
-	background-size: cover;
-}
+
+// .general.slide1 {
+// 	background: url(../img/bg_general.jpg) no-repeat center;
+// 	// background: red;
+// 	background-size: cover;
+// }
+// .general.slide2 {
+// 	background: url(../img/bg_general2.jpg) no-repeat center;
+// 	// background: green;
+// 	background-size: cover;
+// }
+// .general.slide3 {
+// 	background: url(../img/bg_general3.jpg) no-repeat center;
+// 	// background: orange;
+// 	background-size: cover;
+// }
+// .general.slide4 {
+// 	background: url(../img/bg_general.jpg) no-repeat center;
+// 	// background: black;
+// 	background-size: cover;
+// }
 .general_slider {
 	position: relative;
 	width: 100%;

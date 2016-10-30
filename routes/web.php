@@ -33,19 +33,28 @@ Route::group(['middleware' => ['web'], 'domain' => "m.".$domain], function () {
     Route::get('map', "MapController@mIndex");
 
     Route::post('/review/create', 'ReviewController@create');
+    Route::get('setlocale/{locale}', function ($locale) {
+        if (in_array($locale, config('app.locales'))) {   # Проверяем, что у пользователя выбран доступный язык
+            config(['app.locale' => $locale]);
+            session(['locale' => $locale]); # И устанавливаем его в сессии под именем locale
+        }
+
+        return redirect()->back();  # Редиректим его <s>назад</s> на ту же страницу
+    });
 });
 
-Route::get('setlocale/{locale}', function ($locale) {
-    if (in_array($locale, config('app.locales'))) {   # Проверяем, что у пользователя выбран доступный язык
-        config(['app.locale' => $locale]);
-        session(['locale' => $locale]); # И устанавливаем его в сессии под именем locale
-    }
 
-    return redirect()->back();  # Редиректим его <s>назад</s> на ту же страницу
-});
 
 Route::group(['middleware' => ['web'], 'domain' => $domain], function () {
+    Route::get('setlocale/{locale}', function ($locale) {
+        if (in_array($locale, config('app.locales'))) {   # Проверяем, что у пользователя выбран доступный язык
+            //config(['app.locale' => $locale]);
+            app()->setLocale($locale);
+            session(['locale' => $locale]); # И устанавливаем его в сессии под именем locale
+        }
 
+        return redirect()->back();  # Редиректим его <s>назад</s> на ту же страницу
+    });
     Route::get('/', 'IndexController@index');
 
     Route::get('about-clinic', "AboutController@index");

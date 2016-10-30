@@ -3,6 +3,7 @@
 namespace App\Http\Admin\Models;
 
 use App\Models\Category;
+use App\Models\Doctor;
 use SleepingOwl\Admin\Contracts\DisplayInterface;
 use SleepingOwl\Admin\Contracts\FormInterface;
 use SleepingOwl\Admin\Section;
@@ -82,12 +83,11 @@ class News extends Section implements Initializable
             if(count($children) > 0){
                 $categoriesText[] = str_repeat(' - ',$category->depth).$category->title_ru;
                 $temp = $this->getFormatCategories($children);
-                foreach ($temp as $item){
-                    $categoriesText[] = $item;
+                foreach ($temp as $key => $item){
+                    $categoriesText[$key] = $item;
                 }
-
             }else{
-                $categoriesText[] = str_repeat(' - ',$category->depth).$category->title_ru;
+                $categoriesText[$category->id] = str_repeat(' - ',$category->depth).$category->title_ru;
             }
         }
         return $categoriesText;
@@ -102,8 +102,14 @@ class News extends Section implements Initializable
 
             $tabs[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::checkbox('published', 'Опубликовать'),
+                AdminFormElement::checkbox('is_home', 'Показывать на главной'),
                 AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
                 AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
+                AdminFormElement::select('doctor_id', 'Врач')
+                    ->setModelForOptions(Doctor::class)
+                    ->setDisplay(function($option) {
+                        return "{$option->name_ru}";
+                    })->setSortable(false),
                 AdminFormElement::wysiwyg('text_ru', 'Текст(Рус)')->required(),
                 AdminFormElement::wysiwyg('text_ua', 'Текст(Укр)')->required(),
 
@@ -142,8 +148,14 @@ class News extends Section implements Initializable
 
             $tabs[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::checkbox('published', 'Опубликовать'),
+                AdminFormElement::checkbox('is_home', 'Показывать на главной'),
                 AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
                 AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
+                AdminFormElement::select('doctor_id', 'Врач')
+                    ->setModelForOptions(Doctor::class)
+                    ->setDisplay(function($option) {
+                        return "{$option->name_ru}";
+                    })->setSortable(false),
                 AdminFormElement::wysiwyg('text_ru', 'Текст(Рус)')->required(),
                 AdminFormElement::wysiwyg('text_ua', 'Текст(Укр)')->required(),
 

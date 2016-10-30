@@ -143,7 +143,10 @@
 
 
 
-    <section class="general">
+    <section class="general" style="">
+        @foreach($slides as $slide)
+            <img src="{{$slide->image}}" alt="" class="abs img_fullpage slide{{$loop->index}} active">
+        @endforeach
         <div class="container">
             <div class="row">
                 <div class="col15">
@@ -201,12 +204,12 @@
                     </div>
                     <!-- <div class="col6"> -->
                     <div class="text">
-                        <h1>{{trans('index.line_help_title')}}</h1>
+                        <h1>@lang('index.need_help')</h1>
                     </div>
                     <!-- </div> -->
-                    {{config('app.locale')}}
-                    <div class="btn btn_style1 btn_1" data-wipe="{{trans('index.btn_1')}}">{{trans('index.btn_1')}}</div>
-                    <div class="btn btn_style1 btn_2" data-wipe="{{trans('index.btn_2')}}">{{trans('index.btn_2')}}</div>
+                    {{--{{config('app.locale')}}--}}
+                    <div class="btn btn_style1 btn_1" data-wipe=">@lang('index.appointment')">@lang('index.appointment')</div>
+                    <div class="btn btn_style1 btn_2" data-wipe=">@lang('index.consultation')">@lang('index.consultation')</div>
                 </div>
             </div>
             @foreach($leftItems as $rootCategory)
@@ -216,7 +219,127 @@
                             <i class="{{$rootCategory->icon}} abs_center sprites"></i>
                         </div>
                         <p>{{$rootCategory->getTitle()}}</p>
+                        @if($rootCategory->icon == 'ico_consult')
+                            <ul class="radio_btns">
+                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                    <li class="">
+                                        <input class="radio" id="radio_consult{{$loop->index}}" name="radio_consult" type="radio" @if($loop->first) checked @endif>
+                                        <label tabindex="4" for="radio_consult{{$loop->index}}" class="radio-label">{{$child->getTitle()}}</label>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @elseif($rootCategory->icon != 'ico_service')
+                            <a href="#" class="btn btn_style2">{{trans('index.detail')}}</a>
+                        @endif
                     </div><!-- /.block_leftbar -->
+                    @if($rootCategory->icon == 'ico_service')
+                        <div class="tab">
+                            <ul class="tabs tabs_service">
+                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                    <li><a href="{{$child->id}}">{{$child->getTitle()}}</a></li>
+                                @endforeach
+                            </ul> <!-- / tabs -->
+                            <div class="tab_content">
+                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                    <div class="tabs_item">
+                                        <div class="counterSlides">
+                                            <span class="currentSlide">1</span>
+                                            <span class="separatorSlide">/</span>
+                                            <span class="totalSlide">3</span>
+                                        </div>
+                                        <div class="carousel_items">
+                                            @foreach($child->getNews() as $item)
+                                                <a href="{{url('/service', [$child->id, $item->id])}}" class="item">
+                                                    <div class="img">
+                                                        <img src="{{$item->main_image}}" alt="">
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="person_name">{{$item->getTitle()}}</p>
+                                                        <p class="person_post">{{$item->doctor->getName()}}</p>
+                                                    </div>
+                                                </a>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    @elseif($rootCategory->icon == 'ico_consult')
+                        <div class="tab tabs_consult_child">
+                            <ul class="tabs tabs_consult">
+                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                    @if($loop->first)
+                                        @foreach($child->getChildrenCategories() as $_child)
+                                            <li><a href="#">{{$_child->getTitle()}}</a></li>
+                                        @endforeach
+                                    @endif
+                                @endforeach
+                            </ul> <!-- / tabs -->
+                            <div class="tab_content">
+                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                    @if($loop->first)
+                                        @foreach($child->getChildrenCategories() as $_child)
+                                            <div class="tabs_item">
+                                                <div class="counterSlides">
+                                                    <span class="currentSlide">1</span>
+                                                    <span class="separatorSlide">/</span>
+                                                    <span class="totalSlide">3</span>
+                                                </div>
+                                                <div class="carousel_items">
+                                                    @foreach($_child->getNews() as $item)
+                                                        <a href="{{url('/service', [$child->id, $item->id])}}" class="item">
+                                                            <div class="img">
+                                                                <img src="{{$item->main_image}}" alt="">
+                                                            </div>
+                                                            <div class="info">
+                                                                <p class="person_name">{{$item->getTitle()}}</p>
+                                                                <p class="person_post">{{$item->doctor->getName()}}</p>
+                                                            </div>
+                                                        </a>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                @endforeach
+                            </div>
+                        </div>
+                    @else
+                        <div class="tab">
+                            <ul class="tabs">
+                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                    <li><a href="#">{{$child->getTitle()}}</a></li>
+                                @endforeach
+                                @if($rootCategory->icon == 'ico_doctors')
+                                        <li><a href="#">@lang('index.vacancy')</a></li>
+                                @endif
+                            </ul> <!-- / tabs -->
+                            <div class="tab_content">
+                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                    <div class="tabs_item">
+                                        <div class="counterSlides">
+                                            <span class="currentSlide">1</span>
+                                            <span class="separatorSlide">/</span>
+                                            <span class="totalSlide">3</span>
+                                        </div>
+                                        <div class="carousel_items">
+                                            @foreach($child->getNews() as $item)
+                                                <a href="{{url('/service', [$child->id, $item->id])}}" class="item">
+                                                    <div class="img">
+                                                        <img src="{{$item->main_image}}" alt="">
+                                                    </div>
+                                                    <div class="info">
+                                                        <p class="person_name">{{$item->getTitle()}}</p>
+                                                        <p class="person_post">{{$item->doctor->getName()}}</p>
+                                                    </div>
+                                                </a>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endif
                 </div><!-- /.widget -->
             @endforeach
 

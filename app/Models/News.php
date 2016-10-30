@@ -12,41 +12,38 @@ class News extends Model
         return json_decode($images);
     }
 
-    /*public function getUploadSettings()
-    {
-        return [
-            'image' => [
-                'orientate' => [],
-                'resize' => [1280, null, function ($constraint) {
-                    $constraint->upsize();
-                    $constraint->aspectRatio();
-                }]
-            ],
-            'main_image' => [
-                'orientate' => [],
-                'fit' => [200, 300, function ($constraint) {
-                    $constraint->upsize();
-                    $constraint->aspectRatio();
-                }]
-            ]
-        ];
-    }*/
     public function setMainImageAttribute($file){
-        //getting timestamp
-        $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
+        if(!is_string($file)) {
+            //getting timestamp
+            $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
 
-        $name = $timestamp. '-' .$file->getClientOriginalName();
-        $file->move(public_path().'/images/uploads/news/main/', $name);
-        $this->attributes['main_image'] = '/images/uploads/news/main/'.$name;
+            $name = $timestamp . '-' . $file->getClientOriginalName();
+            $file->move(public_path() . '/images/uploads/news/main/', $name);
+            $this->attributes['main_image'] = '/images/uploads/news/main/' . $name;
+        }else{
+            //if(strpos($file, 'http')){
+                $index = strpos($file, 'images');
+                $file = '/'.substr($file, $index);
+            //}
+            $this->attributes['main_image'] = $file;
+        }
     }
 
     public function setImageAttribute($file){
-        //getting timestamp
-        $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
+        if(!is_string($file)) {
+            //getting timestamp
+            $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
 
-        $name = $timestamp. '-' .$file->getClientOriginalName();
-        $file->move(public_path().'/images/uploads/news/detail/', $name);
-        $this->attributes['image'] = '/images/uploads/news/detail/'.$name;
+            $name = $timestamp . '-' . $file->getClientOriginalName();
+            $file->move(public_path() . '/images/uploads/news/detail/', $name);
+            $this->attributes['image'] = '/images/uploads/news/detail/' . $name;
+        }else{
+            //if(strpos($file, 'http')){
+                $index = strpos($file, 'images');
+                $file = '/'.substr($file, $index);
+            //}
+            $this->attributes['image'] = $file;
+        }
     }
 
     public function setGalleryAttribute($images){
@@ -58,5 +55,13 @@ class News extends Model
 
     public function carousels(){
         $this->hasMany(Carousel::class);
+    }
+
+    public function getTitle(){
+        return $this->attributes['title_'.session('locale')];
+    }
+
+    public function doctor(){
+        return $this->belongsTo(Doctor::class);
     }
 }

@@ -72,6 +72,7 @@ class Categories extends Section implements Initializable
     public function onEdit($id)
     {
         return AdminForm::panel()->addBody([
+            AdminFormElement::checkbox('is_home', 'Показывать на главной'),
             AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
             AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required(),
         ]);
@@ -83,6 +84,7 @@ class Categories extends Section implements Initializable
     public function onCreate()
     {
         return AdminForm::panel()->addBody([
+            AdminFormElement::checkbox('is_home', 'Показывать на главной'),
             AdminFormElement::text('title_ru', 'Заголовок(Рус)')->required(),
             AdminFormElement::text('title_ua', 'Заголовок(Укр)')->required()
         ]);

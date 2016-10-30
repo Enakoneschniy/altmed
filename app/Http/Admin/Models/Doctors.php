@@ -79,12 +79,14 @@ class Doctors extends Section implements Initializable
             $tabs = [];
 
             $tabs[] = AdminDisplay::tab(AdminForm::elements([
+                AdminFormElement::checkbox('active', 'Опубликовать')->required(),
                 AdminFormElement::text('name_ru', 'ФИО(Рус)')->required(),
                 AdminFormElement::text('name_ua', 'ФИО(Укр)')->required(),
-                AdminFormElement::select('address', 'Адрес клиники')
+                AdminFormElement::text('email', 'E-mail')->required(),
+                AdminFormElement::select('address_id', 'Адрес клиники')
                     ->setModelForOptions(Address::class)
                     ->setDisplay(function($option) {
-                        return "{$option->address}";
+                        return "{$option->address_ru} ({$option->address_ua})";
                     })->required(),
                 AdminFormElement::wysiwyg('description_ru', 'Описание(Рус)')->required(),
                 AdminFormElement::wysiwyg('description_ua', 'Описание(Укр)')->required(),
@@ -96,17 +98,17 @@ class Doctors extends Section implements Initializable
                 AdminColumn::image('photo', 'Image')
             ]))->setLabel('Фото');
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
-                AdminFormElement::select('specialty', 'Специализация')
+                AdminFormElement::select('specialty_id', 'Специализация')
                     ->setModelForOptions(Specialty::class)
                     ->setDisplay(function($option) {
                         return "{$option->title_ru}";
                     })->required(),
-                AdminFormElement::select('job', 'Должность')
+                AdminFormElement::select('job_id', 'Должность')
                     ->setModelForOptions(Job::class)
                     ->setDisplay(function($option) {
                         return "{$option->title_ru}";
                     })->required(),
-                AdminFormElement::select('qualify', 'Квалификация')
+                AdminFormElement::select('qualify_id', 'Квалификация')
                     ->setModelForOptions(Qualify::class)
                     ->setDisplay(function($option) {
                         return "{$option->title_ru}";
@@ -115,7 +117,7 @@ class Doctors extends Section implements Initializable
 
             return $tabs;
         });
-        return AdminForm::panel()
+        return AdminForm::panel()->setHtmlAttribute('enctype', 'multipart/form-data')
             ->addHeader([
                 $tabs
             ]);
@@ -132,12 +134,14 @@ class Doctors extends Section implements Initializable
             $tabs = [];
 
             $tabs[] = AdminDisplay::tab(AdminForm::elements([
+                AdminFormElement::checkbox('active', 'Опубликовать'),
                 AdminFormElement::text('name_ru', 'ФИО(Рус)')->required(),
                 AdminFormElement::text('name_ua', 'ФИО(Укр)')->required(),
-                AdminFormElement::select('address', 'Адрес клиники')
+                AdminFormElement::text('email', 'E-mail')->required(),
+                AdminFormElement::select('address_id', 'Адрес клиники')
                     ->setModelForOptions(Address::class)
                     ->setDisplay(function($option) {
-                        return "{$option->address}";
+                        return "{$option->address_ru} ({$option->address_ua})";
                     })->required(),
                 AdminFormElement::wysiwyg('description_ru', 'Описание(Рус)')->required(),
                 AdminFormElement::wysiwyg('description_ua', 'Описание(Укр)')->required(),
@@ -149,17 +153,17 @@ class Doctors extends Section implements Initializable
                 AdminColumn::image('photo', 'Image')
             ]))->setLabel('Фото');
             $tabs[] = AdminDisplay::tab(new \SleepingOwl\Admin\Form\FormElements([
-                AdminFormElement::select('specialty', 'Специализация')
+                AdminFormElement::select('specialty_id', 'Специализация')
                     ->setModelForOptions(Specialty::class)
                     ->setDisplay(function($option) {
                         return "{$option->title_ru}";
                     })->required(),
-                AdminFormElement::select('job', 'Должность')
+                AdminFormElement::select('job_id', 'Должность')
                     ->setModelForOptions(Job::class)
                     ->setDisplay(function($option) {
                         return "{$option->title_ru}";
                     })->required(),
-                AdminFormElement::select('qualify', 'Квалификация')
+                AdminFormElement::select('qualify_id', 'Квалификация')
                     ->setModelForOptions(Qualify::class)
                     ->setDisplay(function($option) {
                         return "{$option->title_ru}";
@@ -168,7 +172,7 @@ class Doctors extends Section implements Initializable
 
             return $tabs;
         });
-        return AdminForm::panel()
+        return AdminForm::panel()->setHtmlAttribute('enctype', 'multipart/form-data')
             ->addHeader([
                 $tabs
             ]);

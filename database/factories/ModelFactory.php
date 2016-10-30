@@ -21,3 +21,24 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+$factory->define(App\Models\News::class, function (Faker\Generator $faker) {
+    $gallery = [];
+    for ($i = 0; $i < 4; $i++){
+        $gallery[] =  $faker->image(public_path()."/images/uploads", 640, 470, 'cats', true, true, 'Faker');
+    }
+    $array = [8, 9, 10, 11, 12, 15, 16, 17, 20, 21];
+
+    return [
+        'title_ru' => $faker->sentence(3, true),
+        'title_ua' => $faker->sentence(3, true),
+        'published' => $faker->boolean(100),
+        'text_ru' => $faker->paragraphs(6, true),
+        'text_ua' => $faker->paragraphs(6, true),
+        'image' => $faker->image(public_path()."/images/uploads/news/detail", 218, 217, 'cats', true, true, 'Faker'),
+        'main_image' => $faker->image(public_path()."/images/uploads/news/detail", 213, 170, 'cats', true, true, 'Faker'),
+        'gallery' => $gallery,
+        'category_id' => $array[rand(0, count($array) - 1)],
+        'doctor_id' => 1,
+        'is_home' => true
+    ];
+});

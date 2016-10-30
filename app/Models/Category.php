@@ -11,6 +11,13 @@ class Category extends Node
     public function news(){
         return $this->hasMany(News::class);
     }
+
+    public function getNews(){
+        return News::where([
+            ['is_home','=', true],
+            ['category_id','=', $this->id]
+        ])->get();
+    }
     public function getRootCategories(){
         return $this->where('parent_id', null)->get();
     }

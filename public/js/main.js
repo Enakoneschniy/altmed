@@ -33,7 +33,7 @@ $(document).ready(function () {
 			$magicLine
 			.data('origLeft', $this.position().left)
 			.data('origWidth', $this.parent().width());
-			return false;
+			//return false;
 		});
 
 		$('.main_menu li').find('a').hover(function() {
@@ -118,8 +118,8 @@ $(document).ready(function () {
 		paginationNumbers:true
 	});
 	// работа с главным слайдером на главной странице
-	$(function() {//$('#general_slider').bind("DOMSubtreeModified",function(){
-		var totalGeneralCarouselItems = $('#general_slider .owl-page').length;
+	$('#general_slider').bind("DOMSubtreeModified",function(){
+		var totalGeneralCarouselItems = parseInt($('#general_slider .owl-page:last-child .owl-numbers').text());
 		var widthGeneralPagination = $('#general_slider .owl-pagination').width();
 		$('#general_slider .owl-pagination .owl-page').width(widthGeneralPagination/totalGeneralCarouselItems);
 	});
@@ -127,20 +127,35 @@ $(document).ready(function () {
 	$general.addClass('slide1');
 	$('.general').click(function(){
 		var currentSlideGeneral = $('.general_slider .owl-page.active span').text();
-		if (currentSlideGeneral == 1) {
-			$general.removeClass('slide1 slide2 slide3 slide4');
-			$general.addClass('slide'+currentSlideGeneral);
-		} else if (currentSlideGeneral == 2) {
-			$general.removeClass('slide1 slide2 slide3 slide4');
-			$general.addClass('slide'+currentSlideGeneral);
-		} else if (currentSlideGeneral == 3) {
-			$general.removeClass('slide1 slide2 slide3 slide4');
-			$general.addClass('slide'+currentSlideGeneral);
-		} else if (currentSlideGeneral == 4) {
-			$general.removeClass('slide1 slide2 slide3 slide4');
-			$general.addClass('slide'+currentSlideGeneral);
-		}
+		console.log('change');
+		//alert(currentSlideGeneral);
+		var currentSlideGeneral = $('.general_slider .owl-page.active span').text();
+		$('.general img.img_fullpage').removeClass('active');
+		$('.general img.slide' + currentSlideGeneral).addClass('active');
+
+		// if (currentSlideGeneral == 1) {
+		// 	$general.removeClass('slide1 slide2 slide3 slide4');
+		// 	$general.addClass('slide'+currentSlideGeneral);
+		// } else if (currentSlideGeneral == 2) {
+		// 	$general.removeClass('slide1 slide2 slide3 slide4');
+		// 	$general.addClass('slide'+currentSlideGeneral);
+		// } else if (currentSlideGeneral == 3) {
+		// 	$general.removeClass('slide1 slide2 slide3 slide4');
+		// 	$general.addClass('slide'+currentSlideGeneral);
+		// } else if (currentSlideGeneral == 4) {
+		// 	$general.removeClass('slide1 slide2 slide3 slide4');
+		// 	$general.addClass('slide'+currentSlideGeneral);
+		// }
 	});
+
+
+	var totalGeneralCarouselItems = parseInt($('#general_slider .owl-page:last-child .owl-numbers').text());
+	$('.general_slider .owl-pagination .owl-page').css('width',100/totalGeneralCarouselItems + '%');
+
+	// $(function(){
+	// $('.general_slider').bind("DOMSubtreeModified",function(){
+	// });
+
 
 	/* CAROUSEL in Article
 	------------------------------------------------------------------- */

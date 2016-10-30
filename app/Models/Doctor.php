@@ -21,4 +21,12 @@ class Doctor extends Model
     public function qualify(){
         return $this->belongsTo(Qualify::class);
     }
+
+    public function news(){
+        return $this->hasMany(News::class);
+    }
+
+    public function getName(){
+        return $this->attributes["name_".session('locale')];
+    }
 }
