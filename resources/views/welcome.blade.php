@@ -287,7 +287,7 @@
                                                 </div>
                                                 <div class="carousel_items">
                                                     @foreach($_child->getNews() as $item)
-                                                        <a href="{{url('/service', [$child->id, $item->id])}}" class="item">
+                                                        <a href="{{url('/consultation', [$child->id, $item->id])}}" class="item">
                                                             <div class="img">
                                                                 <img src="{{$item->previewImage()}}" alt="">
                                                             </div>
@@ -324,7 +324,11 @@
                                         </div>
                                         <div class="carousel_items">
                                             @foreach($child->getNews() as $item)
-                                                <a href="{{url('/service', [$child->id, $item->id])}}" class="item">
+                                                @if($rootCategory->icon == 'ico_doctors')
+                                                    <a href="{{url('/for-doctors', [$child->id, $item->id])}}" class="item">
+                                                @else
+                                                    <a href="{{url('/news', [$child->id, $item->id])}}" class="item">
+                                                @endif
                                                     <div class="img">
                                                         <img src="{{$item->previewImage()}}" alt="">
                                                     </div>

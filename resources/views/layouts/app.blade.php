@@ -47,17 +47,79 @@
 </head>
 <body>
 <div class="wrapper">
+    <header class="main noAbs">
+        <div class="container container_norm">
+            <div class="row">
+                <div class="top_line">
+                    <div class="col4">
+                        <a href="/" class="logo">
+                            <img src="/img/logo_altamedic.png" alt="" class="logo_big">
+                        </a><!-- /.logo -->
+                    </div>
+                    <div class="col4 scroll_hidden">&nbsp;</div>
+                    <div class="col6 scroll_hidden">
+                        <i class="ico_tel sprites"></i>
+                        @if(count($phones) > 0)
+                            @foreach($phones as $phone)
+                                @if(!$loop->last)
+                                    <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}},</a>
+                                @else
+                                    <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}}</a>
+                                @endif
+                            @endforeach
+                        @endif
+                    </div>
+                    <div class="col1 scroll_hidden">
+                        <div class="block_lang text-right">
+                            <a href="#" class="lang lang_ukr">ukr</a>
+                            <a href="#" class="lang lang_rus active">RU</a>
+                        </div>
+                    </div>
+                </div><!-- /.top_line -->
+                <div class="row">
+                    <div class="col8 scroll_hidden">&nbsp;</div>
+                    <div class="col2 bl_right">
+                        <div class="block_person text-right">
+                            <a href="#" class="icon btn_person_icon">
+                                <i class="ico_person abs_center sprites"></i>
+                            </a>
+                            <a href="#" class="icon btn_search_icon">
+                                <i class="ico_search abs_center sprites"></i>
+                            </a>
+                        </div><!-- /.block_person -->
+                    </div><!-- /.col2 -->
+                </div><!-- /.row -->
+                <div class="row">
+                    <div class="col15">
+                        @if(isset($menu))
+
+                            <ul class="main_menu " role="menu">
+                                @foreach($menu as $item)
+                                    <li {{ strpos(Request::url(), $item['url']) !== false  && $item['url'] !== '/' ? ' class="active"' : null }}>
+                                        <a href="{{ url($item['url']) }}" class="">{{$item['title_'.session('locale')]}}</a>
+                                    </li>
+                                @endforeach
+                            </ul><!-- /.main_menu -->
+                        @endif
+                    </div><!-- /.col15 -->
+                </div><!-- /.row -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </header><!-- /header -->
+
+
     <div id="header">
         <div class="container">
             <div class="row">
                 <div class="top_line">
-                    <a href="/" class="logo">
+                    <a href="#" class="logo">
                         <img src="/img/logo_mini.png" alt="" class="logo_mini">
                     </a>
                     @if(isset($menu))
+
                         <ul class="main_menu " role="menu">
                             @foreach($menu as $item)
-                                <li {{ Request::is($item['url']) ? ' class="active"' : null }}>
+                                <li {{strpos(Request::url(), $item['url']) !== false  && $item['url'] !== '/' ? ' class="active"' : null }}>
                                     <a href="{{ url($item['url']) }}" class="">{{$item['title_'.session('locale')]}}</a>
                                 </li>
                             @endforeach
@@ -75,72 +137,6 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div><!-- /#header -->
-    <header class="">
-        <div class="container container_norm">
-            <div class="row">
-                <div class="top_line">
-                    <div class="col4">
-                        <a href="#" class="logo">
-                            <img src="/img/logo_altamedic.png" alt="" class="logo_big">
-                        </a>
-                    </div>
-                    <div class="col4 scroll_hidden">&nbsp;</div>
-                    <div class="col6 scroll_hidden">
-                        <i class="ico_tel sprites"></i>
-                        @if(count($phones) > 0)
-                            @foreach($phones as $phone)
-                                @if(!$loop->last)
-                                    <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}},</a>
-                                @else
-                                    <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}}</a>
-                                @endif
-                            @endforeach
-                        @endif
-                    </div>
-                    <div class="col1 scroll_hidden">
-                        <div class="block_lang text-right">
-                            @foreach($locales as $locale)
-                                @if($locale == session('locale'))
-                                    <a href="javascript:void(0);" class="lang active">{{$locale}}</a>
-                                @else
-                                    <a href="{{ url('/setlocale', $locale) }}" class="lang">{{$locale}}</a>
-                                @endif
-                            @endforeach
-                        </div>
-                    </div>
-                </div><!-- /.row -->
-                <div class="row">
-                    <div class="col8 scroll_hidden">&nbsp;</div>
-                    <div class="col5 scroll_hidden">
-
-                    </div><!-- /.col5 -->
-                    <div class="col2 bl_right">
-                        <div class="block_person text-right">
-                            <a href="#" class="icon btn_person_icon">
-                                <i class="ico_person abs_center sprites"></i>
-                            </a>
-                            <a href="#" class="icon btn_search_icon">
-                                <i class="ico_search abs_center sprites"></i>
-                            </a>
-                        </div><!-- /.block_person -->
-                    </div><!-- /.col2 -->
-                </div><!-- /.row -->
-                <div class="row">
-                    <div class="col15">
-                        @if(isset($menu))
-                            <ul class="main_menu " role="menu">
-                                @foreach($menu as $item)
-                                    <li class="active">
-                                        <a href="{{ url($item['url']) }}" class="">{{$item['title_'.session('locale')]}}</a>
-                                    </li>
-                                @endforeach
-                            </ul><!-- /.main_menu -->
-                        @endif
-                    </div><!-- /.col15 -->
-                </div><!-- /.row -->
-            </div><!-- /. -->
-        </div><!-- /.container_norm -->
-    </header><!-- /header -->
     <section class="content" id="content">
         <div class="container">
             @yield('content')

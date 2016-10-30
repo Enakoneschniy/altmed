@@ -452,6 +452,10 @@ header.main {
 	top: 0;
 	left: 0;
 }
+header.main.noAbs {
+	background: url(../img/bg_header.jpg) no-repeat center;
+	position: relative;
+}
 /* top_line */
 .top_line {
 	margin: 54px auto 0;
@@ -1604,7 +1608,7 @@ ul.main_menu li:hover a {
 	margin-right: 13px;
 	transition:0s;
 }
-.line_contacts .block_phones:hover .ico_tel {
+.line_contacts .block_phones  .ico_tel.active  {
 	background-position: -490px -49px;
 }
 .line_contacts .block_phones .tel {
@@ -1612,8 +1616,11 @@ ul.main_menu li:hover a {
 	color: #575858;
 	transition: 0s;
 }
-.line_contacts .block_phones:hover .tel{
+.line_contacts .block_phones .tel.active {
 	color: #23b7bf;
+}
+.line_contacts .block_phones .tel:hover{
+	// color: #23b7bf;
 }
 .line_contacts .block_mail {
 	float: left;
@@ -1627,16 +1634,15 @@ ul.main_menu li:hover a {
 	margin-right: 13px;
 	transition:0s;
 }
-.line_contacts .block_mail:hover .ico_mail {
+.line_contacts .block_mail .ico_mail.active {
 	background-position: -490px -19px;
-
 }
 .line_contacts .block_mail .link_mail {
 	font: 14px/48px 'OpenSansRegular';
 	color: #575858;
 	transition: 0s;
 }
-.line_contacts .block_mail:hover .link_mail{
+.line_contacts .block_mail .link_mail.active{
 	color: #23b7bf;
 }
 .line_contacts .social_panel {

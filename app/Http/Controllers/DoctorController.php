@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -14,7 +15,25 @@ class DoctorController extends MainController
 
         return view('desktop.for-doctors.list', $this->data);
     }
-
+    public function detail($category, $post){
+        $service = News::find($post);
+        $cat = Category::find($category);
+        //dd($this->data);
+        $this->data['pages'] = [
+            'category' => [
+                'title' => $cat->getTitle(),
+                'url' => '/for-doctors/'.$category,
+                'section' => [
+                    'title' => $cat->parent->getTitle(),
+                    'url' => '/for-doctors'
+                ]
+            ],
+            'title' => $service->getTitle(),
+            'url' => '/for-doctors/'.$category.'/'.$post
+        ];
+        $this->data['post'] = $service;
+        return view('desktop.service.detail', $this->data);
+    }
     /**
      * @param Category $category
      * @return mixed

@@ -19,7 +19,6 @@ $(document).ready(function () {
 	/* Magic MENU
 	------------------------------------------------------------------- */
 	$(function() {
-		'use strict';
 		var leftPos, newWidth, $magicLine;
 		$('.main_menu').append("<li id='magic-line'></li>");
 		$magicLine = $('#magic-line');
@@ -27,6 +26,17 @@ $(document).ready(function () {
 		.css('left', $('.active a').position().left)
 		.data('origLeft', $magicLine.position().left)
 		.data('origWidth', $magicLine.width());
+		var magicLineLeft = 0;
+		// var magicLineLeft = $('#magic-line').css('left');
+
+			// var magicLineLeft = parseFloat($('#magic-line').css('left'));
+			// $magicLine = $('#magic-line');
+			// $('.main_menu li a').mouseout(function(){
+			// 	$magicLine.css({
+			// 		"left": magicLineLeft
+			// 	});
+			// });
+
 		$('.main_menu li a').click(function() {
 			var $this = $(this);
 			$this.parent().addClass('active').siblings().removeClass('active');
@@ -34,9 +44,15 @@ $(document).ready(function () {
 			.data('origLeft', $this.position().left)
 			.data('origWidth', $this.parent().width());
 			// return false;
+			// 
+			magicLineLeft = parseFloat($('#magic-line').css('left'));
+			console.log('magicLineLeft ',magicLineLeft);
 		});
 
 		$('.main_menu li').find('a').hover(function() {
+			magicLineLeft = parseFloat($('#magic-line').css('left'));
+			console.log('magicLineLeft ',magicLineLeft);
+			// var magicLineLeft = parseFloat($('#magic-line').css('left'));
 			var $thisBar = $(this);
 			leftPos = $thisBar.position().left;
 			newWidth = $thisBar.parent().width();
@@ -45,15 +61,29 @@ $(document).ready(function () {
 				"width": newWidth
 			});
 			}, function() {
+			// var magicLineLeft = parseFloat($('#magic-line').css('left'));
+
 			$magicLine.css({
-				"left": $magicLine.data('origLeft'),
+
+				// "left": $magicLine.data('leftPos')
+				// "left": $magicLine.data('origLeft')
+				"left": magicLineLeft
 				// "width": $magicLine.data('origWidth')
-				"width": $magicLine.data('113px')
+				// "width": $magicLine.data('113px')
 			});
 		});
+
+
+
 		var itemMenuWidth = $('ul.main_menu li').width();
 		$('#magic-line').width(itemMenuWidth);
 	});
+
+
+
+
+
+
 
 	/* BUTTON UP
 	------------------------------------------------------------------- */
@@ -178,17 +208,23 @@ $(document).ready(function () {
 		$(carousel_items_in_article).addClass('slider_in_article' + i);
 	};
 	// работа со слайдерами в article
-	$('.slider_in_article').bind("DOMSubtreeModified",function(){
+	function initSliderInArticle () {
 		for (var i = 0; i <= countCarouselItems; i++) {
 			var currentCarouselItem = parseInt($('.slider_in_article' + i + ' .owl-page.active .owl-numbers').text());
 			var totalCarouselItems = parseInt($('.slider_in_article' + i + ' .owl-page:last-child .owl-numbers').text());
 			var widthPagination = $('.slider_in_article' + i + ' .owl-pagination').width();
-			$('.slider_in_article' + i + ' .owl-pagination .owl-page').width(widthPagination/totalCarouselItems);
+			$('.slider_in_article' + i + ' .owl-pagination .owl-page').width(widthPagination/totalCarouselItems-0.5);
 			$('.slider_in_article' + i).closest('.block_slider').find('.currentSlide').text(currentCarouselItem);
 			$('.slider_in_article' + i).closest('.block_slider').find('.totalSlide').text(totalCarouselItems);
 		};
+	}
+	initSliderInArticle();
+	// $('.slider_in_article').bind("DOMSubtreeModified",function(){
+	// 	initSliderInArticle();
+	// });
+	$('.slider_in_article').on("click",function(){
+		initSliderInArticle();
 	});
-
 
 	/*  CAROUSEL Items
 	------------------------------------------------------------------- */
@@ -325,6 +361,17 @@ $(document).ready(function () {
 	$('.block_search .btn_search.active').click(function(){
 		$('#input_search').val()=='';
 	});
+
+
+	/* CHANGE CLASS .tel
+	------------------------------------------------------------------- */
+	$('.block_phones .tel').mouseover(function() {$(this).toggleClass('active');$('.line_contacts .block_phones .ico_tel').toggleClass('active');});
+	$('.block_phones .tel').mouseout(function() {$(this).toggleClass('active');$('.line_contacts .block_phones .ico_tel').toggleClass('active');});
+	
+	/* CHANGE CLASS .email
+	------------------------------------------------------------------- */
+	$('.block_mail .link_mail').mouseover(function() {$(this).toggleClass('active');$('.line_contacts .block_mail .ico_mail').toggleClass('active');});
+	$('.block_mail .link_mail').mouseout(function() {$(this).toggleClass('active');$('.line_contacts .block_mail .ico_mail').toggleClass('active');});
 
 
 	/* PAGE SELECT DOCTOR

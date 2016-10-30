@@ -70,12 +70,23 @@ Route::group(['middleware' => ['web'], 'domain' => $domain], function () {
         Route::get('/', "ServiceController@index");
         Route::get('/{category}/{post}', "ServiceController@detail");
     });
+    Route::group(['prefix' => 'consultation'], function() {
+        Route::get('/', "ConsultationController@index");
+        Route::get('/{category}/{post}', "ConsultationController@detail");
+    });
+    Route::group(['prefix' => 'for-doctors'], function() {
+        Route::get('/', "DoctorController@index");
+        Route::get('/{category}/{post}', "DoctorController@detail");
+    });
+    Route::group(['prefix' => 'news'], function() {
+        Route::get('/', "NewsController@index");
+        Route::get('/{category}/{post}', "NewsController@detail");
+    });
 
-    Route::get('consultation', "ConsultationController@index");
     Route::get('schedule', "ScheduleController@index");
     Route::get('prices', "PriceController@index");
-    Route::get('news', "NewsController@index");
-    Route::get('for-doctors', "DoctorController@index");
+
+
     Route::get('contacts', "ContactsController@index");
     Route::get('map', "MapController@index");
 

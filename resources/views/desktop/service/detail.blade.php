@@ -4,7 +4,7 @@
     <div class="row ">
         <div class="line_crumbs">
             <div class="col3">
-                <a href="#" class="line_crumbs_back">Назад</a>
+                <a href="" onclick="history.back(); return false;" class="line_crumbs_back">Назад</a>
             </div>
             <div class="col12">
                 {!! Breadcrumbs::render('services_detail', $pages) !!}
