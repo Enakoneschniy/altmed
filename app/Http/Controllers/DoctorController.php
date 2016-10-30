@@ -38,7 +38,7 @@ class DoctorController extends MainController
 
     public function mShowNews(Category $category)
     {
-        $this->data['categories'] = json_encode($category->news());
+        $this->data['categories'] = $category->news;
         return $this->data;
     }
 }

@@ -1,18 +1,29 @@
 {
-  "private": true,
+  "name": "y",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "prod": "gulp --production",
-    "dev": "gulp watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.12.5",
     "gulp": "^3.9.1",
-    "jquery": "^3.1.0",
-    "laravel-elixir": "^6.0.0-9",
-    "laravel-elixir-vue-2": "^0.2.0",
-    "laravel-elixir-webpack-official": "^1.0.2",
-    "lodash": "^4.16.2",
-    "vue": "^2.0.1",
-    "vue-resource": "^1.0.3"
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5",
+    "imagemin-pngquant": "^4.2.2",
+    "rimraf": "^2.5.2",
+    "gulp.spritesmith": "^6.2.1"
+  },
+  "description": "",
+  "dependencies": {
+
   }
 }
