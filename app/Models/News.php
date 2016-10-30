@@ -67,6 +67,26 @@ class News extends Model
         }
     }
 
+    public function detailImage(){
+        $img = md5($this->image);
+        $pointIndex = strrpos($this->image, '.');
+        $type = substr($this->image, $pointIndex);
+        $newImg = public_path().'/images/resize/'.$img.$type;
+        if(!file_exists($newImg)) {
+            Image::make($this->image, array(
+                'width' => 218,
+                'height' => 217,
+            ))->save($newImg);
+            $index = strpos($newImg, 'images');
+            $url = '/'.substr($newImg, $index);
+            return $url;
+        }else{
+            $index = strpos($newImg, 'images');
+            $url = '/'.substr($newImg, $index);
+            return $url;
+        }
+    }
+
     public function setGalleryAttribute($images){
         $this->attributes['gallery'] = json_encode($images);
     }
@@ -85,7 +105,34 @@ class News extends Model
         }
         return $title;
     }
+    public function getFullTitle(){
+        return $this->attributes['title_'.session('locale')];
+    }
 
+    /**
+     * @return mixed
+     */
+    public function getFullText(){
+        $galleryPattern = '[gallery]';
+        $text = $this->attributes['text_'.session('locale')];
+        $posGallery = mb_strpos($text, $galleryPattern);
+        $gallery = [];
+        if($posGallery){
+            //dd($this->gallery);
+            foreach ($this->gallery as $item){
+                $index = strpos($item, 'images');
+                $gallery[] = '/'.substr($item, $index);
+            }
+            //dd($this->gallery);
+
+            $htmlGallery = view('desktop.gallery', ['gallery' => $gallery]);
+            //dd($htmlGallery);
+            $text = str_replace($galleryPattern, $htmlGallery, $text);
+            return $text;
+        }else{
+            return $text;
+        }
+    }
     public function doctor(){
         return $this->belongsTo(Doctor::class);
     }

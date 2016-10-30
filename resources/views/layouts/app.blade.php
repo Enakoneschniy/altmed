@@ -87,9 +87,15 @@
                     <div class="col4 scroll_hidden">&nbsp;</div>
                     <div class="col6 scroll_hidden">
                         <i class="ico_tel sprites"></i>
-                        <a href="tel:+380432520042" class="tel">(0432) 52-00-42,</a>
-                        <a href="tel:+380432520055" class="tel">(0432) 52-00-55,</a>
-                        <a href="tel:+380985550202" class="tel">(098) 555-02-02</a>
+                        @if(count($phones) > 0)
+                            @foreach($phones as $phone)
+                                @if(!$loop->last)
+                                    <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}},</a>
+                                @else
+                                    <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}}</a>
+                                @endif
+                            @endforeach
+                        @endif
                     </div>
                     <div class="col1 scroll_hidden">
                         <div class="block_lang text-right">
@@ -124,23 +130,30 @@
                         @if(isset($menu))
                             <ul class="main_menu " role="menu">
                                 @foreach($menu as $item)
-                                    <li {{ Request::is($item['url']) ? ' class="active"' : null }}>
+                                    <li class="active">
                                         <a href="{{ url($item['url']) }}" class="">{{$item['title_'.session('locale')]}}</a>
                                     </li>
                                 @endforeach
-                            </ul><!-- /. -->
+                            </ul><!-- /.main_menu -->
                         @endif
-                    </div><!-- /. -->
-                </div><!-- /. -->
+                    </div><!-- /.col15 -->
+                </div><!-- /.row -->
             </div><!-- /. -->
         </div><!-- /.container_norm -->
     </header><!-- /header -->
-    @yield('content')
+    <section class="content" id="content">
+        <div class="container">
+            @yield('content')
+        <div class="row description_text">
+            <p>Існує багато варіацій уривків з Lorem Ipsum, але більшість з них зазнала певних змін на кшталт жартівливих вставок або змішування слів, які навіть не виглядають правдоподібно. Якщо ви збираєтесь використовувати Lorem Ipsum, ви маєте упевнитись в тому, що всередині тексту не приховано нічого, що могло б викликати у читача конфуз. Більшість відомих генераторів Lorem Ipsum в Мережі генерують текст шляхом повторення наперед заданих. <a href="#">Читать дальше</a></p>
+        </div>
+    </div>
+    </section>
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <a href="#" class="logo2">
-                    <img src="img/logo_altamedica2.png" alt="">
+                    <img src="/img/logo_altamedica2.png" alt="">
                 </a>
             </div>
             <div class="row">
@@ -226,9 +239,15 @@
                 <div class="line_contacts">
                     <div class="block_phones">
                         <i class="ico_tel sprites"></i>
-                        <a href="tel:+38043252-00-42" class="tel" title="">(0432) 52-00-42,</a>
-                        <a href="tel:+38043252-00-55" class="tel" title="">(0432) 52-00-55,</a>
-                        <a href="tel:+38098555-02-02" class="tel" title="">(098) 555-02-02</a>
+                        @if(count($phones) > 0)
+                            @foreach($phones as $phone)
+                                @if(!$loop->last)
+                                    <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}},</a>
+                                @else
+                                    <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}}</a>
+                                @endif
+                            @endforeach
+                        @endif
                     </div><!-- /.block_phones -->
                     <div class="block_mail">
                         <i class="ico_mail sprites"></i>
@@ -357,7 +376,8 @@
         <i class="ico_up sprites abs_center"></i>
     </a><!-- /.scroll_up -->
 </div>
-<script src="/js/jquery2_1_3.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
 <script src="/js/jquery.arcticmodal-0.3.min.js"></script>
 <script src="/js/wow.min.js"></script>
 <script src="/js/jquery.maskedinput.min.js"></script>
@@ -369,7 +389,6 @@
 <script src="/js/magnet.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
 <script src="/js/mousewheel.js"></script>
-<script src="/js/scroll.js"></script>
 <script src="/js/main.js"></script>
 </body>
 </html>

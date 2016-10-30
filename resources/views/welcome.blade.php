@@ -208,8 +208,8 @@
                     </div>
                     <!-- </div> -->
                     {{--{{config('app.locale')}}--}}
-                    <div class="btn btn_style1 btn_1" data-wipe=">@lang('index.appointment')">@lang('index.appointment')</div>
-                    <div class="btn btn_style1 btn_2" data-wipe=">@lang('index.consultation')">@lang('index.consultation')</div>
+                    <a class="btn btn_style1 btn_1" data-wipe="@lang('index.appointment')">@lang('index.appointment')</a>
+                    <a href="{{url('consultation')}}" class="btn btn_style1 btn_2" data-wipe="@lang('index.consultation')">@lang('index.consultation')</a>
                 </div>
             </div>
             @foreach($leftItems as $rootCategory)

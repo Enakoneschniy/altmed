@@ -27,7 +27,11 @@ $factory->define(App\Models\News::class, function (Faker\Generator $faker) {
         $gallery[] =  $faker->image(public_path()."/images/uploads", 640, 470, 'cats', true, true, 'Faker');
     }
     $array = [8, 9, 10, 11, 12, 15, 16, 17, 20, 21];
+    $arrText = $faker->paragraphs(6);
 
+    foreach($arrText as $key =>  $item){
+
+    }
     return [
         'title_ru' => $faker->sentence(3, true),
         'title_ua' => $faker->sentence(3, true),

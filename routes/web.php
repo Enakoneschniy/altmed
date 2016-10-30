@@ -66,7 +66,11 @@ Route::group(['middleware' => ['web'], 'domain' => $domain], function () {
     Route::get('/', 'IndexController@index');
 
     Route::get('about-clinic', "AboutController@index");
-    Route::get('service', "ServiceController@index");
+    Route::group(['prefix' => 'service'], function(){
+        Route::get('/', "ServiceController@index");
+        Route::get('/{category}/{post}', "ServiceController@detail");
+    });
+
     Route::get('consultation', "ConsultationController@index");
     Route::get('schedule', "ScheduleController@index");
     Route::get('prices', "PriceController@index");
