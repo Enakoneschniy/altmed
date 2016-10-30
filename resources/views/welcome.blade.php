@@ -251,7 +251,7 @@
                                             @foreach($child->getNews() as $item)
                                                 <a href="{{url('/service', [$child->id, $item->id])}}" class="item">
                                                     <div class="img">
-                                                        <img src="{{$item->main_image}}" alt="">
+                                                        <img src="{{$item->previewImage()}}" alt="">
                                                     </div>
                                                     <div class="info">
                                                         <p class="person_name">{{$item->getTitle()}}</p>
@@ -289,7 +289,7 @@
                                                     @foreach($_child->getNews() as $item)
                                                         <a href="{{url('/service', [$child->id, $item->id])}}" class="item">
                                                             <div class="img">
-                                                                <img src="{{$item->main_image}}" alt="">
+                                                                <img src="{{$item->previewImage()}}" alt="">
                                                             </div>
                                                             <div class="info">
                                                                 <p class="person_name">{{$item->getTitle()}}</p>
@@ -310,7 +310,7 @@
                                 @foreach($rootCategory->getChildrenCategories() as $child)
                                     <li><a href="#">{{$child->getTitle()}}</a></li>
                                 @endforeach
-                                @if($rootCategory->icon == 'ico_doctors')
+                                @if($rootCategory->icon == 'ico_doctors' && count($vacancies) > 0)
                                         <li><a href="#">@lang('index.vacancy')</a></li>
                                 @endif
                             </ul> <!-- / tabs -->
@@ -326,7 +326,7 @@
                                             @foreach($child->getNews() as $item)
                                                 <a href="{{url('/service', [$child->id, $item->id])}}" class="item">
                                                     <div class="img">
-                                                        <img src="{{$item->main_image}}" alt="">
+                                                        <img src="{{$item->previewImage()}}" alt="">
                                                     </div>
                                                     <div class="info">
                                                         <p class="person_name">{{$item->getTitle()}}</p>
@@ -337,6 +337,28 @@
                                         </div>
                                     </div>
                                 @endforeach
+                                @if($rootCategory->icon == 'ico_doctors' && count($vacancies) > 0)
+                                        <div class="tabs_item">
+                                            <div class="counterSlides">
+                                                <span class="currentSlide">1</span>
+                                                <span class="separatorSlide">/</span>
+                                                <span class="totalSlide">1</span>
+                                            </div>
+                                            <div class="carousel_items">
+                                                @foreach($vacancies as $vacancy)
+                                                    <a href="{{url('/service', [$child->id, $item->id])}}" class="item">
+                                                        <div class="img">
+                                                            <img src="{{$vacancy->previewImage()}}" alt="">
+                                                        </div>
+                                                        <div class="info">
+                                                            <p class="person_name">{{$vacancy->getTitle()}}</p>
+                                                            <p class="person_post">{{$vacancy->getPreview()}}</p>
+                                                        </div>
+                                                    </a>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                @endif
                             </div>
                         </div>
                     @endif

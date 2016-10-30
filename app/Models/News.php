@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Folklore\Image\Facades\Image;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Input;
 
@@ -46,6 +47,26 @@ class News extends Model
         }
     }
 
+    public function previewImage(){
+        $img = md5($this->main_image);
+        $pointIndex = strrpos($this->main_image, '.');
+        $type = substr($this->main_image, $pointIndex);
+        $newImg = public_path().'/images/resize/'.$img.$type;
+        if(!file_exists($newImg)) {
+            Image::make($this->main_image, array(
+                'width' => 213,
+                'height' => 170,
+            ))->save($newImg);
+            $index = strpos($newImg, 'images');
+            $url = '/'.substr($newImg, $index);
+            return $url;
+        }else{
+            $index = strpos($newImg, 'images');
+            $url = '/'.substr($newImg, $index);
+            return $url;
+        }
+    }
+
     public function setGalleryAttribute($images){
         $this->attributes['gallery'] = json_encode($images);
     }
@@ -58,7 +79,11 @@ class News extends Model
     }
 
     public function getTitle(){
-        return $this->attributes['title_'.session('locale')];
+        $title = $this->attributes['title_'.session('locale')];
+        if(mb_strlen($title, 'utf-8') > 40){
+            $title = mb_substr($title, 0, 37, 'utf-8').'...';
+        }
+        return $title;
     }
 
     public function doctor(){

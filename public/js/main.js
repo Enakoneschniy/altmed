@@ -33,7 +33,7 @@ $(document).ready(function () {
 			$magicLine
 			.data('origLeft', $this.position().left)
 			.data('origWidth', $this.parent().width());
-			//return false;
+			// return false;
 		});
 
 		$('.main_menu li').find('a').hover(function() {
@@ -127,8 +127,8 @@ $(document).ready(function () {
 	$general.addClass('slide1');
 	$('.general').click(function(){
 		var currentSlideGeneral = $('.general_slider .owl-page.active span').text();
-		console.log('change');
-		//alert(currentSlideGeneral);
+		// console.log('change');
+		// alert(currentSlideGeneral);
 		var currentSlideGeneral = $('.general_slider .owl-page.active span').text();
 		$('.general img.img_fullpage').removeClass('active');
 		$('.general img.slide' + currentSlideGeneral).addClass('active');
@@ -214,16 +214,33 @@ $(document).ready(function () {
 	};
 	// Проверка на изменение DOM и пересчет пагинаторов для вывода + динамическая ширина пагинатора
 	// работа с внутеннними слайдерами
-	$('.carousel_items').bind("DOMSubtreeModified",function(){
+	// $('.carousel_items').bind("DOMSubtreeModified",function(){
+
+	function initCarouselItems () {
 		for (var i = 0; i <= countCarouselItems; i++) {
 			var owl = $(".carousel_items" + i);
 			var currentCarouselItem = parseInt($('.carousel_items' + i + ' .owl-page.active .owl-numbers').text());
 			var totalCarouselItems = parseInt($('.carousel_items' + i + ' .owl-page:last-child .owl-numbers').text());
 			var widthPagination = $('.carousel_items' + i + ' .owl-pagination').width();
+
 			$('.carousel_items' + i + ' .owl-pagination .owl-page').width(widthPagination/totalCarouselItems);
 			$('.carousel_items' + i).closest('.tabs_item').find('.currentSlide').text(currentCarouselItem);
 			$('.carousel_items' + i).closest('.tabs_item').find('.totalSlide').text(totalCarouselItems);
+		
+			if (isNaN(currentCarouselItem) || isNaN(totalCarouselItems)) {
+				currentCarouselItem = 1; 
+				totalCarouselItems = 1;
+				$('.carousel_items' + i + ' .owl-pagination .owl-page').width(widthPagination/totalCarouselItems);
+				$('.carousel_items' + i).closest('.tabs_item').find('.currentSlide').text(currentCarouselItem);
+				$('.carousel_items' + i).closest('.tabs_item').find('.totalSlide').text(totalCarouselItems);
+				$('.carousel_items' + i + ' .owl-pagination .owl-page').addClass('active');
+			}
 		};
+	}
+	initCarouselItems();
+
+	$('.carousel_items').on("click",function(){
+		initCarouselItems();
 	});
 
 	/* CUSTOM SELECTBOX
