@@ -25,7 +25,7 @@
                                 @if($item['url'] != '/' && $item['url'] != '/prices')
                                     <li>
                                         <a href="{{url($item['url'])}}" class="item {{$item['icon']}}">
-                                            {{$item['title_'.session('locale')]}}
+                                            {{$item['title_' . session('locale')]}}
                                         </a>
                                     </li>
                                 @endif

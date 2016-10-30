@@ -8,7 +8,7 @@
     <title>Altamedica</title>
 
     <!-- Stylessheet -->
-    <link rel="stylesheet" href="mobile/css/main.css">
+    <link rel="stylesheet" href="/mobile/css/main.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -143,14 +143,15 @@
 
 <!-- /WRAPPER -->
 <!-- jQuery & JS-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="mobile/js/jquery.maskedinput-1.3.js"></script>
-<script src="mobile/js/jquery.formstyler.js"></script>
-<script src="mobile/js/jquery.mCustomScrollbar.js"></script>
-<script src="mobile/js/materialize.js"></script>
-<script src="mobile/js/tabsload.js"></script>
-<script src="mobile/js/tabs.js"></script>
-<script src="mobile/js/main.js"></script>
-<script src="mobile/js/slick.js"></script>
+{{--<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>--}}
+<script src="/mobile/js/jquery.js"></script>
+<script src="/mobile/js/jquery.maskedinput-1.3.js"></script>
+<script src="/mobile/js/jquery.formstyler.js"></script>
+<script src="/mobile/js/jquery.mCustomScrollbar.js"></script>
+<script src="/mobile/js/materialize.js"></script>
+<script src="/mobile/js/tabsload.js"></script>
+<script src="/mobile/js/tabs.js"></script>
+<script src="/mobile/js/main.js"></script>
+<script src="/mobile/js/slick.js"></script>
 </body>
 </html>
