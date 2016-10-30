@@ -7,18 +7,7 @@
                 <a href="#" class="line_crumbs_back">Назад</a>
             </div>
             <div class="col12">
-                <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                    <li class="breadcrumbs_i" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                        <a href="#" class="breadcrumbs_link" itemprop="item">
-                            <span class="breadcrumbs_title" itemprop="name">Новости</span>
-                        </a>
-                    </li>
-                    <li class="breadcrumbs_i" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                        <a href="#" class="breadcrumbs_link" itemprop="item">
-                            <span class="breadcrumbs_title" itemprop="name">Стать</span>
-                        </a>
-                    </li>
-                </ul>
+                {!! Breadcrumbs::render('services_detail', $pages) !!}
             </div>
         </div>
     </div>

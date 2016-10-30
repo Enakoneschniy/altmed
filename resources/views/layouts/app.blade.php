@@ -270,7 +270,7 @@
                 <div class="logo_ukrlogic tex-left ">
                     <a href="" class="" target="_blank">
                         <p>Powered by </p>
-                        <img src="img/logo_ukrlogic.png" alt="">
+                        <img src="/img/logo_ukrlogic.png" alt="">
                     </a>
                 </div><!-- /.logo_ukrlogic -->
                 <div class="copy tex-right ">

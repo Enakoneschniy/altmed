@@ -28,16 +28,20 @@ $factory->define(App\Models\News::class, function (Faker\Generator $faker) {
     }
     $array = [8, 9, 10, 11, 12, 15, 16, 17, 20, 21];
     $arrText = $faker->paragraphs(6);
-
+    $text = '';
     foreach($arrText as $key =>  $item){
-
+        if($key == 2){
+            $text .=  '<p>'.$item.'</p>[gallery]';
+        }else{
+            $text .=  '<p>'.$item.'</p>';
+        }
     }
     return [
         'title_ru' => $faker->sentence(3, true),
         'title_ua' => $faker->sentence(3, true),
         'published' => $faker->boolean(100),
-        'text_ru' => $faker->paragraphs(6, true),
-        'text_ua' => $faker->paragraphs(6, true),
+        'text_ru' => $text,
+        'text_ua' => $text,
         'image' => $faker->image(public_path()."/images/uploads/news/detail", 218, 217, 'cats', true, true, 'Faker'),
         'main_image' => $faker->image(public_path()."/images/uploads/news/detail", 213, 170, 'cats', true, true, 'Faker'),
         'gallery' => $gallery,
