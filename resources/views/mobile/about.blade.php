@@ -8,10 +8,10 @@
     <div class="tabs-control-container">
         <div class="tabs-control-wrap" id="tabs-control">
             <a data-link="/tabs/about" href="#" class="tabs-control">
-                <span class="tabs-control__link">График работы</span>
+                <span class="tabs-control__link">{{ trans('about.shedule') }}</span>
             </a>
             <a data-link="/tabs/respond" href="#" class="tabs-control">
-                <span class="tabs-control__link">Отзывы</span>
+                <span class="tabs-control__link">{{ trans('about.reviews') }}</span>
             </a>
         </div>
         <div class="tabs-arrow-wrap">

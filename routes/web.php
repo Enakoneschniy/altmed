@@ -14,21 +14,29 @@
 
 //Auth::routes();
 $domain = config('app.local_domain');
-Route::group(['middleware' => ['web'], 'domain' => "m.".$domain], function () {
+Route::group(['middleware' => ['web'], 'domain' => "m." . $domain], function () {
     Route::get('/', 'IndexController@mIndex');
-
+// for about-page
     Route::get('about-clinic', "AboutController@mIndex");
     Route::get('/tabs/about', "AboutController@mTabsAbout");
     Route::get('/tabs/respond', "AboutController@mTabsRespond");
+    Route::get('feedback', "AboutController@mFeedback");
+// modals on layout
     Route::get('/modals/phone', "ModalController@phones");
     Route::get('/modals/search', "ModalController@search");
-    Route::get('feedback', "AboutController@mFeedback");
+    Route::get('/modals/share-it', "ModalController@share");
+// for for_doctors-page
+    Route::get('for-doctors', "DoctorController@mIndex");
+    Route::get('tabs/for_doctors/{category}', "DoctorController@mShow");
+    Route::get('/ajax/{category}', "DoctorController@mShowNews");
+//new page
+    Route::get('news/', "NewsController@mIndex");
+    Route::get('single/{news}', "NewsController@mSingle");
+//
     Route::get('service', "ServiceController@mIndex");
     Route::get('consultation', "ConsultationController@mIndex");
     Route::get('schedule', "ScheduleController@mIndex");
     Route::get('prices', "PriceController@mIndex");
-    Route::get('news', "NewsController@mIndex");
-    Route::get('for-doctors', "DoctorController@mIndex");
     Route::get('contacts', "ContactsController@mIndex");
     Route::get('map', "MapController@mIndex");
 

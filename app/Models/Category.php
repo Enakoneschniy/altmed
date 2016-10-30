@@ -28,4 +28,11 @@ class Category extends Node
     public function getTitle(){
         return $this->attributes['title_'.session('locale')];
     }
+
+    /**
+     * @return mixed
+     */
+    public function getDoctorCategories(){
+        return $this->where('icon', 'ico_doctors')->get();//icon не будет менятся. он жестко забит в бд/ok
+    }
 }

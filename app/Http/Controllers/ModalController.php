@@ -26,4 +26,12 @@ class ModalController extends MainController
     {
         return view('mobile.modals.search', $this->data);
     }
+
+    /**
+     * @return mixed
+     */
+    public function share()
+    {
+        return view('mobile.modals.social', $this->data);
+    }
 }
