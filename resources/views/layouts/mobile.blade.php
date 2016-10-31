@@ -63,10 +63,18 @@
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="col-1 right-align">
-                    <a href="#" class="lang-bar__btn">
+                <div class="col-1 right-align language-box">
+                    <a href="#" id="lang-trigger" class="lang-bar__btn">
                         RU
                     </a>
+                    <div id="language-box__popover" class="language-box__popover">
+                        <div class="row">
+                            <a href="javascript:void(0)" data-lang="UA">UA</a>
+                        </div>
+                        <div class="row">
+                            <a href="javascript:void(0)" data-lang="RU">RU</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
