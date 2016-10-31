@@ -1,4 +1,3 @@
-$(document).ready(function () {
 
 	/* Add Class JS
 	------------------------------------------------------------------- */
@@ -44,7 +43,7 @@ $(document).ready(function () {
 			.data('origLeft', $this.position().left)
 			.data('origWidth', $this.parent().width());
 			// return false;
-			// 
+			//
 			magicLineLeft = parseFloat($('#magic-line').css('left'));
 			console.log('magicLineLeft ',magicLineLeft);
 		});
@@ -113,7 +112,7 @@ $(document).ready(function () {
 
 	$(window).scroll(function() {
 		if ($(this).scrollTop()>200){
-			$("#header").addClass('show').removeClass('hide');     
+			$("#header").addClass('show').removeClass('hide');
 			} else {
 			$("#header").removeClass('show').addClass('hide');
 		}
@@ -204,7 +203,7 @@ $(document).ready(function () {
 	var countCarouselItemsArticles = $('.slider_in_article').length;
 	// цикл для расстановки уникального идентификатора каждому слайдеру article
 	for (var i = 0; i <= countCarouselItemsArticles; i++) {
-		var carousel_items_in_article = $('.slider_in_article')[i]; 
+		var carousel_items_in_article = $('.slider_in_article')[i];
 		$(carousel_items_in_article).addClass('slider_in_article' + i);
 	};
 	// работа со слайдерами в article
@@ -245,7 +244,7 @@ $(document).ready(function () {
 	var countCarouselItems = $('.carousel_items').length;
 	// цикл для расстановки уникального идентификатора каждому слайдеру
 	for (var i = 0; i <= countCarouselItems; i++) {
-		var carousel_items = $('.carousel_items')[i]; 
+		var carousel_items = $('.carousel_items')[i];
 		$(carousel_items).addClass('carousel_items' + i);
 	};
 	// Проверка на изменение DOM и пересчет пагинаторов для вывода + динамическая ширина пагинатора
@@ -262,9 +261,9 @@ $(document).ready(function () {
 			$('.carousel_items' + i + ' .owl-pagination .owl-page').width(widthPagination/totalCarouselItems);
 			$('.carousel_items' + i).closest('.tabs_item').find('.currentSlide').text(currentCarouselItem);
 			$('.carousel_items' + i).closest('.tabs_item').find('.totalSlide').text(totalCarouselItems);
-		
+
 			if (isNaN(currentCarouselItem) || isNaN(totalCarouselItems)) {
-				currentCarouselItem = 1; 
+				currentCarouselItem = 1;
 				totalCarouselItems = 1;
 				$('.carousel_items' + i + ' .owl-pagination .owl-page').width(widthPagination/totalCarouselItems);
 				$('.carousel_items' + i).closest('.tabs_item').find('.currentSlide').text(currentCarouselItem);
@@ -346,7 +345,7 @@ $(document).ready(function () {
 	$('.wrap_search .btn_back').click(function(){
 		$('.wrap_search').removeClass('active');
 		$('.wrap_search').fadeOut(500);
-	});	
+	});
 
 	/* CHANGE .input_search
 	------------------------------------------------------------------- */
@@ -367,7 +366,7 @@ $(document).ready(function () {
 	------------------------------------------------------------------- */
 	$('.block_phones .tel').mouseover(function() {$(this).toggleClass('active');$('.line_contacts .block_phones .ico_tel').toggleClass('active');});
 	$('.block_phones .tel').mouseout(function() {$(this).toggleClass('active');$('.line_contacts .block_phones .ico_tel').toggleClass('active');});
-	
+
 	/* CHANGE CLASS .email
 	------------------------------------------------------------------- */
 	$('.block_mail .link_mail').mouseover(function() {$(this).toggleClass('active');$('.line_contacts .block_mail .ico_mail').toggleClass('active');});
