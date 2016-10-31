@@ -88,7 +88,7 @@
                     <div class="magnet">
                         @foreach($rootCategory->getChildrenCategories() as $children)
                             @foreach($children->news as $cabinet)
-                                <a href="#" class="tab_cab{{$children->id}} magnet-item item ">
+                                <a href="{{url('/service',[$children->id, $cabinet->id])}}" class="tab_cab{{$children->id}} magnet-item item ">
                                     <div class="img">
                                         <img src="{{$cabinet->previewImage()}}" alt="">
                                     </div>
