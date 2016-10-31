@@ -1,7 +1,5 @@
 <?php
 
 return [
-
-	'view' => 'desktop.breadcrumbs',
-
+	'view' => 'breadcrumbs::bootstrap3',
 ];

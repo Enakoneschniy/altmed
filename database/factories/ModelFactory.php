@@ -26,7 +26,7 @@ $factory->define(App\Models\News::class, function (Faker\Generator $faker) {
     for ($i = 0; $i < 4; $i++){
         $gallery[] =  $faker->image(public_path()."/images/uploads", 640, 470, 'cats', true, true, 'Faker');
     }
-    $array = [8, 9, 10, 11, 12, 15, 16, 17, 20, 21];
+    $array = [8, 9, 10, 11, 12, 15, 16, 17, 20, 21, 23, 26, 27, 28, 29, 30, 31];
     $arrText = $faker->paragraphs(6);
     $text = '';
     foreach($arrText as $key =>  $item){
@@ -47,6 +47,6 @@ $factory->define(App\Models\News::class, function (Faker\Generator $faker) {
         'gallery' => $gallery,
         'category_id' => $array[rand(0, count($array) - 1)],
         'doctor_id' => 1,
-        'is_home' => true
+        'is_home' => $faker->boolean(50)
     ];
 });

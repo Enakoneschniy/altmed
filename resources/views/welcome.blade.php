@@ -221,7 +221,7 @@
                         <p>{{$rootCategory->getTitle()}}</p>
                         @if($rootCategory->icon == 'ico_consult')
                             <ul class="radio_btns">
-                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                @foreach($rootCategory->getChildrenHome() as $child)
                                     <li class="">
                                         <input class="radio" id="radio_consult{{$loop->index}}" name="radio_consult" type="radio" @if($loop->first) checked @endif>
                                         <label tabindex="4" for="radio_consult{{$loop->index}}" class="radio-label">{{$child->getTitle()}}</label>
@@ -235,12 +235,12 @@
                     @if($rootCategory->icon == 'ico_service')
                         <div class="tab">
                             <ul class="tabs tabs_service">
-                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                @foreach($rootCategory->getChildrenHome() as $child)
                                     <li><a href="{{$child->id}}">{{$child->getTitle()}}</a></li>
                                 @endforeach
                             </ul> <!-- / tabs -->
                             <div class="tab_content">
-                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                @foreach($rootCategory->getChildrenHome() as $child)
                                     <div class="tabs_item">
                                         <div class="counterSlides">
                                             <span class="currentSlide">1</span>
@@ -267,18 +267,18 @@
                     @elseif($rootCategory->icon == 'ico_consult')
                         <div class="tab tabs_consult_child">
                             <ul class="tabs tabs_consult">
-                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                @foreach($rootCategory->getChildrenHome() as $child)
                                     @if($loop->first)
-                                        @foreach($child->getChildrenCategories() as $_child)
+                                        @foreach($child->getChildrenHome() as $_child)
                                             <li><a href="#">{{$_child->getTitle()}}</a></li>
                                         @endforeach
                                     @endif
                                 @endforeach
                             </ul> <!-- / tabs -->
                             <div class="tab_content">
-                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                @foreach($rootCategory->getChildrenHome() as $child)
                                     @if($loop->first)
-                                        @foreach($child->getChildrenCategories() as $_child)
+                                        @foreach($child->getChildrenHome() as $_child)
                                             <div class="tabs_item">
                                                 <div class="counterSlides">
                                                     <span class="currentSlide">1</span>
@@ -307,7 +307,7 @@
                     @else
                         <div class="tab">
                             <ul class="tabs">
-                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                @foreach($rootCategory->getChildrenHome() as $child)
                                     <li><a href="#">{{$child->getTitle()}}</a></li>
                                 @endforeach
                                 @if($rootCategory->icon == 'ico_doctors' && count($vacancies) > 0)
@@ -315,7 +315,7 @@
                                 @endif
                             </ul> <!-- / tabs -->
                             <div class="tab_content">
-                                @foreach($rootCategory->getChildrenCategories() as $child)
+                                @foreach($rootCategory->getChildrenHome() as $child)
                                     <div class="tabs_item">
                                         <div class="counterSlides">
                                             <span class="currentSlide">1</span>

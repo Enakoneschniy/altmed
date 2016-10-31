@@ -71,8 +71,13 @@
                     </div>
                     <div class="col1 scroll_hidden">
                         <div class="block_lang text-right">
-                            <a href="#" class="lang lang_ukr">ukr</a>
-                            <a href="#" class="lang lang_rus active">RU</a>
+                            @foreach($locales as $locale)
+                                @if($locale == session('locale'))
+                                    <a href="javascript:void(0);" class="lang active">{{$locale}}</a>
+                                @else
+                                    <a href="{{ url('/setlocale', $locale) }}" class="lang">{{$locale}}</a>
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                 </div><!-- /.top_line -->

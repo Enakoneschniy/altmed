@@ -11,8 +11,9 @@ use Illuminate\Support\Facades\URL;
 
 class ServiceController extends MainController
 {
-    public function index(){
-
+    public function index(Category $category){
+        $this->data['leftItems'] = $category->getRootCategoriesService();
+        $this->data['consultation'] = $category->getConsultCategory();
         return view('desktop.service.list', $this->data);
     }
     public function detail($category, $post){
