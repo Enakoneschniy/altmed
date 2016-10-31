@@ -17,7 +17,7 @@
                 {{ $news['title_' . session('locale')] }}
             </h2>
             <h6 class="article-author-row">
-                Автор статьи: <a href="#" class="author-link">Иван Иванов</a>
+                Автор статьи: <a href="#" class="author-link">{{ $news->doctor['name_' . session('locale')] }}</a>
             </h6>
         </div>
 

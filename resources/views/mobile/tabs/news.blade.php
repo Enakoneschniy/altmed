@@ -6,7 +6,8 @@
                 <select class="md-select types-articles-select" name="" id="categories-for-doctors"
                         data-placeholder="Статьи" data-token="{{ csrf_token() }}">
                     @foreach($categories as $category)
-                        <option data-link="/tabs/for_doctors/{{ $category['id'] }}" value="{{ $category['id'] }}">{{ $category['title_' . session('locale')] }}</option>
+                        <option data-link="/tabs/for_doctors/{{ $category['id'] }}"
+                                value="{{ $category['id'] }}">{{ $category['title_' . session('locale')] }}</option>
                     @endforeach
                 </select>
             </div>
@@ -15,7 +16,7 @@
     <div class="content-container">
         @foreach($categories as $category)
             @foreach($category->news as $news)
-                <div class="content-box content-box--article">
+                <div class="content-box content-box--article" data-id="{{ $category['id'] }}" style="display: none;">
                     <a href="single/{{ $news['id'] }}" class="wrap-img">
                         <img src="{{ $news['main_image'] }}" alt="">
                     </a>
@@ -27,15 +28,16 @@
                     <span class="article-name--desc">
                         {{ $news['updated_at'] }}
                 </span>
-                            <span class="article-author">Вася Пупкин</span>
+                            <span class="article-author">{{ $news->doctor['name_' . session('locale')] }}</span>
                         </div>
                     </div>
-                    @endforeach
-                    @endforeach
                 </div>
+            @endforeach
+        @endforeach
+
 
     </div>
-    <a href="#" class="waves-effect waves-dark more-btn">
+    <a href="#" id="show-more" class="waves-effect waves-dark more-btn">
         Еще
     </a>
 </div>

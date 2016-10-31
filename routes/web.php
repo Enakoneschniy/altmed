@@ -28,7 +28,8 @@ Route::group(['middleware' => ['web'], 'domain' => "m." . $domain], function () 
 // for for_doctors-page
     Route::get('for-doctors', "DoctorController@mIndex");
     Route::get('tabs/for_doctors/{category}', "DoctorController@mShow");
-    Route::get('/ajax/{category}', "DoctorController@mShowNews");
+    Route::get('tabs/vacancies', "DoctorController@mVacancies");
+    Route::get('vacancy/{vacancy}', "DoctorController@mVacancy");
 //new page
     Route::get('news/', "NewsController@mIndex");
     Route::get('single/{news}', "NewsController@mSingle");
