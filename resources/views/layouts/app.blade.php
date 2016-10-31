@@ -95,7 +95,7 @@
 
                             <ul class="main_menu " role="menu">
                                 @foreach($menu as $item)
-                                    <li {{ strpos(Request::url(), $item['url']) !== false  && $item['url'] !== '/' ? ' class="active"' : null }}>
+                                    <li class="{{ strpos(Request::url(), $item['url']) !== false  && $item['url'] !== '/' ? 'active' : '' }}">
                                         <a href="{{ url($item['url']) }}" class="">{{$item['title_'.session('locale')]}}</a>
                                     </li>
                                 @endforeach
@@ -119,7 +119,7 @@
 
                         <ul class="main_menu " role="menu">
                             @foreach($menu as $item)
-                                <li {{strpos(Request::url(), $item['url']) !== false  && $item['url'] !== '/' ? ' class="active"' : null }}>
+                                <li class="{{strpos(Request::url(), $item['url']) !== false  && $item['url'] !== '/' ? 'active' : '' }}">
                                     <a href="{{ url($item['url']) }}" class="">{{$item['title_'.session('locale')]}}</a>
                                 </li>
                             @endforeach

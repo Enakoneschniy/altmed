@@ -742,7 +742,6 @@ ul.main_menu li a{
 	text-transform: uppercase;
 	padding: 0%;
 }
-ul.main_menu li.active a,
 ul.main_menu li:hover a {
 	color:#fff;
 	font-family: 'SegoeBold'
@@ -750,8 +749,6 @@ ul.main_menu li:hover a {
 #magic-line {position:absolute;bottom:-2px;left:0;width:125px;height:4px;background:#fff;transition: all 0.3s;}
 .main_menu:after {visibility:hidden;display:block;content:"";clear:both;height:0}
 *:first-child+html .main_menu{zoom:1}
-
-#magic-line2 {position:absolute;bottom:-2px;left:0; /*width:125px;*/height:4px;background:#fff;transition: all 0.3s;z-index: 2;}
 
 
 /* ======================================================================================================================================================
