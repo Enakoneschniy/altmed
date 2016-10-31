@@ -36,10 +36,18 @@ class Category extends Node
     }
 
     public function getRootCategoriesService(){
-        return $this->where([
-            ['parent_id', '=' , null],
-            ['is_home', '=' , false]
+        $res = $this->where([
+            ['depth', '=' , 1],
+            ['is_home', '=' , false],
+            ['icon','!=', '']
         ])->get();
+        $arResult = [];
+        foreach ($res as $item){
+            if($item->parent()->first()->icon == 'ico_service'){
+                $arResult[] = $item;
+            }
+        }
+        return $arResult;
     }
 
     public function getChildrenCategories(){

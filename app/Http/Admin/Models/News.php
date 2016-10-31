@@ -62,14 +62,15 @@ class News extends Section implements Initializable
         return AdminDisplay::table()
             ->setHtmlAttribute('class', 'table-primary')
             ->setFilters([
-                AdminDisplayFilter::related('category_id')->setModel(Category::class),
+                AdminDisplayFilter::field('category_id')->setTitle('Category ID [:value]'),
             ])
             ->setColumns(
                 AdminColumn::text('id', '#')->setWidth('30px'),
                 AdminColumn::link('title_ru', 'Заголовок(Рус)'),
                 AdminColumn::link('title_ua', 'Заголовок(Укр)'),
                 AdminColumn::link('category.title_ru', 'Категория'),
-                AdminColumnEditable::checkbox('published')->setLabel('Опубликована')
+                AdminColumnEditable::checkbox('published')->setLabel('Опубликована'),
+                AdminColumnEditable::checkbox('is_home')->setLabel('На главной')
             )->paginate(20);
     }
 
