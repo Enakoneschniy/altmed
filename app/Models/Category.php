@@ -18,11 +18,51 @@ class Category extends Node
             ['category_id','=', $this->id]
         ])->get();
     }
+
+    public function getConsultCategory(){
+        //dd($this->where('icon', 'ico_consult')->first());
+        return $this->where('icon', 'ico_consult')->first();
+    }
+
     public function getRootCategories(){
         return $this->where('parent_id', null)->get();
     }
+
+    public function getRootCategoriesHome(){
+        return $this->where([
+            ['parent_id', '=' , null],
+            ['is_home', '=' , true]
+        ])->get();
+    }
+
+    public function getRootCategoriesService(){
+        $res = $this->where([
+            ['depth', '=' , 1],
+            ['is_home', '=' , false],
+            ['icon','!=', '']
+        ])->get();
+        $arResult = [];
+        foreach ($res as $item){
+            if($item->parent()->first()->icon == 'ico_service'){
+                $arResult[] = $item;
+            }
+        }
+        return $arResult;
+    }
+
     public function getChildrenCategories(){
         return $this->children()->get();
+    }
+
+    public function getChildrenHome(){
+        $array = $this->children()->get();
+        $result = [];
+        foreach($array as $cat){
+            if($cat->is_home){
+                $result[] = $cat;
+            }
+        }
+        return $result;
     }
 
     public function getTitle(){

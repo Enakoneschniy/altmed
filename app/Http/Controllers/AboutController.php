@@ -12,7 +12,7 @@ class AboutController extends MainController
 
     public function index(Review $review)
     {
-        $this->data['reviews'] = $review->getActiveItems();
+        //$this->data['reviews'] = $review->getActiveItems();
 
         return view('desktop.about', $this->data);
     }

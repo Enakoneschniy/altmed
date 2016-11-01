@@ -14,10 +14,7 @@ use App\Http\Requests;
 class IndexController extends MainController
 {
     public function index(Category $category, Carousel $carousel, Vacancy $vacancy){
-        $this->data['jobsService'] = Job::all()->toArray();
-        $this->data['jobsConsult'] = Job::all()->toArray();
-
-        $this->data['leftItems'] = $category->getRootCategories();
+        $this->data['leftItems'] = $category->getRootCategoriesHome();
         $this->data['slides'] = $carousel->getSlides();
         $this->data['vacancies'] = $vacancy->getActives();
         return view('welcome', $this->data);

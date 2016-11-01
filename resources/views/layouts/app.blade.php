@@ -47,17 +47,84 @@
 </head>
 <body>
 <div class="wrapper">
+    <header class="main noAbs">
+        <div class="container container_norm">
+            <div class="row">
+                <div class="top_line">
+                    <div class="col4">
+                        <a href="/" class="logo">
+                            <img src="/img/logo_altamedic.png" alt="" class="logo_big">
+                        </a><!-- /.logo -->
+                    </div>
+                    <div class="col4 scroll_hidden">&nbsp;</div>
+                    <div class="col6 scroll_hidden">
+                        <i class="ico_tel sprites"></i>
+                        @if(count($phones) > 0)
+                            @foreach($phones as $phone)
+                                @if(!$loop->last)
+                                    <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}},</a>
+                                @else
+                                    <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}}</a>
+                                @endif
+                            @endforeach
+                        @endif
+                    </div>
+                    <div class="col1 scroll_hidden">
+                        <div class="block_lang text-right">
+                            @foreach($locales as $locale)
+                                @if($locale == session('locale'))
+                                    <a href="javascript:void(0);" class="lang active">{{$locale}}</a>
+                                @else
+                                    <a href="{{ url('/setlocale', $locale) }}" class="lang">{{$locale}}</a>
+                                @endif
+                            @endforeach
+                        </div>
+                    </div>
+                </div><!-- /.top_line -->
+                <div class="row">
+                    <div class="col8 scroll_hidden">&nbsp;</div>
+                    <div class="col2 bl_right">
+                        <div class="block_person text-right">
+                            <a href="#" class="icon btn_person_icon">
+                                <i class="ico_person abs_center sprites"></i>
+                            </a>
+                            <a href="#" class="icon btn_search_icon">
+                                <i class="ico_search abs_center sprites"></i>
+                            </a>
+                        </div><!-- /.block_person -->
+                    </div><!-- /.col2 -->
+                </div><!-- /.row -->
+                <div class="row">
+                    <div class="col15">
+                        @if(isset($menu))
+
+                            <ul class="main_menu " role="menu">
+                                @foreach($menu as $item)
+                                    <li class="{{ strpos(Request::url(), $item['url']) !== false  && $item['url'] !== '/' ? 'active' : '' }}">
+                                        <a href="{{ url($item['url']) }}" class="">{{$item['title_'.session('locale')]}}</a>
+                                    </li>
+                                @endforeach
+                            </ul><!-- /.main_menu -->
+                        @endif
+                    </div><!-- /.col15 -->
+                </div><!-- /.row -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </header><!-- /header -->
+
+
     <div id="header">
         <div class="container">
             <div class="row">
                 <div class="top_line">
-                    <a href="/" class="logo">
+                    <a href="#" class="logo">
                         <img src="/img/logo_mini.png" alt="" class="logo_mini">
                     </a>
                     @if(isset($menu))
+
                         <ul class="main_menu " role="menu">
                             @foreach($menu as $item)
-                                <li {{ Request::is($item['url']) ? ' class="active"' : null }}>
+                                <li class="{{strpos(Request::url(), $item['url']) !== false  && $item['url'] !== '/' ? 'active' : '' }}">
                                     <a href="{{ url($item['url']) }}" class="">{{$item['title_'.session('locale')]}}</a>
                                 </li>
                             @endforeach
@@ -75,72 +142,19 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div><!-- /#header -->
-    <header class="">
-        <div class="container container_norm">
-            <div class="row">
-                <div class="top_line">
-                    <div class="col4">
-                        <a href="#" class="logo">
-                            <img src="/img/logo_altamedic.png" alt="" class="logo_big">
-                        </a>
-                    </div>
-                    <div class="col4 scroll_hidden">&nbsp;</div>
-                    <div class="col6 scroll_hidden">
-                        <i class="ico_tel sprites"></i>
-                        <a href="tel:+380432520042" class="tel">(0432) 52-00-42,</a>
-                        <a href="tel:+380432520055" class="tel">(0432) 52-00-55,</a>
-                        <a href="tel:+380985550202" class="tel">(098) 555-02-02</a>
-                    </div>
-                    <div class="col1 scroll_hidden">
-                        <div class="block_lang text-right">
-                            @foreach($locales as $locale)
-                                @if($locale == session('locale'))
-                                    <a href="javascript:void(0);" class="lang active">{{$locale}}</a>
-                                @else
-                                    <a href="{{ url('/setlocale', $locale) }}" class="lang">{{$locale}}</a>
-                                @endif
-                            @endforeach
-                        </div>
-                    </div>
-                </div><!-- /.row -->
-                <div class="row">
-                    <div class="col8 scroll_hidden">&nbsp;</div>
-                    <div class="col5 scroll_hidden">
-
-                    </div><!-- /.col5 -->
-                    <div class="col2 bl_right">
-                        <div class="block_person text-right">
-                            <a href="#" class="icon btn_person_icon">
-                                <i class="ico_person abs_center sprites"></i>
-                            </a>
-                            <a href="#" class="icon btn_search_icon">
-                                <i class="ico_search abs_center sprites"></i>
-                            </a>
-                        </div><!-- /.block_person -->
-                    </div><!-- /.col2 -->
-                </div><!-- /.row -->
-                <div class="row">
-                    <div class="col15">
-                        @if(isset($menu))
-                            <ul class="main_menu " role="menu">
-                                @foreach($menu as $item)
-                                    <li {{ Request::is($item['url']) ? ' class="active"' : null }}>
-                                        <a href="{{ url($item['url']) }}" class="">{{$item['title_'.session('locale')]}}</a>
-                                    </li>
-                                @endforeach
-                            </ul><!-- /. -->
-                        @endif
-                    </div><!-- /. -->
-                </div><!-- /. -->
-            </div><!-- /. -->
-        </div><!-- /.container_norm -->
-    </header><!-- /header -->
-    @yield('content')
+    <section class="content" id="content">
+        <div class="container">
+            @yield('content')
+        <div class="row description_text">
+            <p>Існує багато варіацій уривків з Lorem Ipsum, але більшість з них зазнала певних змін на кшталт жартівливих вставок або змішування слів, які навіть не виглядають правдоподібно. Якщо ви збираєтесь використовувати Lorem Ipsum, ви маєте упевнитись в тому, що всередині тексту не приховано нічого, що могло б викликати у читача конфуз. Більшість відомих генераторів Lorem Ipsum в Мережі генерують текст шляхом повторення наперед заданих. <a href="#">Читать дальше</a></p>
+        </div>
+    </div>
+    </section>
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <a href="#" class="logo2">
-                    <img src="img/logo_altamedica2.png" alt="">
+                    <img src="/img/logo_altamedica2.png" alt="">
                 </a>
             </div>
             <div class="row">
@@ -226,9 +240,15 @@
                 <div class="line_contacts">
                     <div class="block_phones">
                         <i class="ico_tel sprites"></i>
-                        <a href="tel:+38043252-00-42" class="tel" title="">(0432) 52-00-42,</a>
-                        <a href="tel:+38043252-00-55" class="tel" title="">(0432) 52-00-55,</a>
-                        <a href="tel:+38098555-02-02" class="tel" title="">(098) 555-02-02</a>
+                        @if(count($phones) > 0)
+                            @foreach($phones as $phone)
+                                @if(!$loop->last)
+                                    <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}},</a>
+                                @else
+                                    <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}}</a>
+                                @endif
+                            @endforeach
+                        @endif
                     </div><!-- /.block_phones -->
                     <div class="block_mail">
                         <i class="ico_mail sprites"></i>
@@ -251,7 +271,7 @@
                 <div class="logo_ukrlogic tex-left ">
                     <a href="" class="" target="_blank">
                         <p>Powered by </p>
-                        <img src="img/logo_ukrlogic.png" alt="">
+                        <img src="/img/logo_ukrlogic.png" alt="">
                     </a>
                 </div><!-- /.logo_ukrlogic -->
                 <div class="copy tex-right ">
@@ -357,7 +377,8 @@
         <i class="ico_up sprites abs_center"></i>
     </a><!-- /.scroll_up -->
 </div>
-<script src="/js/jquery2_1_3.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
 <script src="/js/jquery.arcticmodal-0.3.min.js"></script>
 <script src="/js/wow.min.js"></script>
 <script src="/js/jquery.maskedinput.min.js"></script>
@@ -371,5 +392,6 @@
 <script src="/js/mousewheel.js"></script>
 <script src="/js/scroll.js"></script>
 <script src="/js/main.js"></script>
+<script src="/js/script.js"></script>
 </body>
 </html>

@@ -7,11 +7,27 @@ use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests;
-
+use Illuminate\Support\Facades\Response;
+use Validator;
 
 
 class ReviewController extends MainController
 {
+    function questionCreate(Request $request){
+        $rules = [
+            'name' => 'required',
+            'email' => 'required|email',
+            'content' => 'required',
+        ];
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails()){
+            return Response::json(array(
+                'success' => false,
+                'errors' => $validator->getMessageBag()->toArray()
+
+            ), 400); // 400 being the HTTP code for an invalid request.
+        }
+    }
     /**
      * @param StoreReviewRequest $request
      * @return \Illuminate\Http\RedirectResponse

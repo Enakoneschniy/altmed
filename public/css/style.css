@@ -452,6 +452,10 @@ header.main {
 	top: 0;
 	left: 0;
 }
+header.main.noAbs {
+	background: url(../img/bg_header.jpg) no-repeat center;
+	position: relative;
+}
 /* top_line */
 .top_line {
 	margin: 54px auto 0;
@@ -738,6 +742,7 @@ ul.main_menu li a{
 	text-transform: uppercase;
 	padding: 0%;
 }
+ul.main_menu li.active a,
 ul.main_menu li:hover a {
 	color:#fff;
 	font-family: 'SegoeBold'
@@ -745,6 +750,8 @@ ul.main_menu li:hover a {
 #magic-line {position:absolute;bottom:-2px;left:0;width:125px;height:4px;background:#fff;transition: all 0.3s;}
 .main_menu:after {visibility:hidden;display:block;content:"";clear:both;height:0}
 *:first-child+html .main_menu{zoom:1}
+
+#magic-line2 {position:absolute;bottom:-2px;left:0; /*width:125px;*/height:4px;background:#fff;transition: all 0.3s;z-index: 2;}
 
 
 /* ======================================================================================================================================================
@@ -1256,10 +1263,12 @@ ul.main_menu li:hover a {
 .tabs_item {
 	display: none;
 	position: relative;
+	transition:0.5s;
 }
 .tabs_item:first-child {
 	display: block;
 }
+// .tabs_item.active {display: block;}
 .tab_content {}
 
 .tabs_item .description {}
@@ -1604,7 +1613,7 @@ ul.main_menu li:hover a {
 	margin-right: 13px;
 	transition:0s;
 }
-.line_contacts .block_phones:hover .ico_tel {
+.line_contacts .block_phones  .ico_tel.active  {
 	background-position: -490px -49px;
 }
 .line_contacts .block_phones .tel {
@@ -1612,8 +1621,11 @@ ul.main_menu li:hover a {
 	color: #575858;
 	transition: 0s;
 }
-.line_contacts .block_phones:hover .tel{
+.line_contacts .block_phones .tel.active {
 	color: #23b7bf;
+}
+.line_contacts .block_phones .tel:hover{
+	// color: #23b7bf;
 }
 .line_contacts .block_mail {
 	float: left;
@@ -1627,16 +1639,15 @@ ul.main_menu li:hover a {
 	margin-right: 13px;
 	transition:0s;
 }
-.line_contacts .block_mail:hover .ico_mail {
+.line_contacts .block_mail .ico_mail.active {
 	background-position: -490px -19px;
-
 }
 .line_contacts .block_mail .link_mail {
 	font: 14px/48px 'OpenSansRegular';
 	color: #575858;
 	transition: 0s;
 }
-.line_contacts .block_mail:hover .link_mail{
+.line_contacts .block_mail .link_mail.active{
 	color: #23b7bf;
 }
 .line_contacts .social_panel {

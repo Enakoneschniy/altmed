@@ -53,7 +53,7 @@ class Doctors extends Section implements Initializable
      */
     public function onDisplay()
     {
-        return AdminDisplay::table()->with(['jobs', 'qualifies', 'addresses', 'specialties'])
+        return AdminDisplay::table()->with(['job', 'qualify', 'address', 'specialty'])
             ->setHtmlAttribute('class', 'table-primary')
             ->setColumns(
                 AdminColumn::text('id', '#')->setWidth('30px'),
