@@ -10,9 +10,8 @@ use App\Http\Requests;
 
 class DoctorController extends MainController
 {
-    public function index()
+    public function index(Category $category)
     {
-
         return view('desktop.for-doctors.list', $this->data);
     }
     public function detail($category, $post){
