@@ -91,4 +91,5 @@ Route::group(['middleware' => ['web'], 'domain' => $domain], function () {
     Route::get('map', "MapController@index");
 
     Route::post('/review/create', 'ReviewController@create');
+    Route::post('/question', 'ReviewController@questionCreate');
 });

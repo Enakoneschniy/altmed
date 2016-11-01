@@ -32,7 +32,7 @@
                 </div><!-- /.tabs_item -->
                 <div class="tabs_item">
                     <div class="forma forma_question">
-                        {!! Form::open(['url' => '/review/create']) !!}
+                        {!! Form::open(['url' => '/question']) !!}
                             <ul>
                                 <li class="{{ $errors->has('name') ? ' active message_error' : '' }}">
                                     <div class="column1">

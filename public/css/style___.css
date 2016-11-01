@@ -1263,12 +1263,10 @@ ul.main_menu li:hover a {
 .tabs_item {
 	display: none;
 	position: relative;
-	transition:0.5s;
 }
 .tabs_item:first-child {
 	display: block;
 }
-// .tabs_item.active {display: block;}
 .tab_content {}
 
 .tabs_item .description {}
