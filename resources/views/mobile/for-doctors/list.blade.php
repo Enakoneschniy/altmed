@@ -10,7 +10,7 @@
                 <span class="tabs-control__link">{{ $category['title_' . session('locale')] }}</span>
                 </a>
             @endforeach
-            <a data-link="ajax/tabs/vacancies" href="#" class="tabs-control">
+            <a data-link="/tabs/vacancies" href="#" class="tabs-control">
                 <span class="tabs-control__link">{{ trans('for_doctors.vacancies') }}</span>
             </a>
         </div>
