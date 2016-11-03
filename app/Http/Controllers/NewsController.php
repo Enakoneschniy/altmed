@@ -34,12 +34,28 @@ class NewsController extends MainController
         $this->data['post'] = $service;
         return view('desktop.service.detail', $this->data);
     }
-    public function mIndex()
-    {
 
+    public function mIndex(Category $category)
+    {
+        $this->data['categories'] = $category->getSpecificCategories('ico_news')[0]->getChildrenCategories();
         return view('mobile.news.list', $this->data);
     }
 
+    /**
+     * @param Category $category
+     * @return mixed
+     */
+    public function mShow(Category $category)
+    {
+        $this->data['category'] = $category;
+        $this->data['categories'] = $category->getChildrenCategories();
+        return view('mobile.tabs.news', $this->data);
+    }
+
+    /**
+     * @param News $news
+     * @return mixed
+     */
     public function mSingle(News $news)
     {
         $this->data['news'] = $news;

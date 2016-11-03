@@ -72,7 +72,7 @@ class Category extends Node
     /**
      * @return mixed
      */
-    public function getDoctorCategories(){
-        return $this->where('icon', 'ico_doctors')->get();//icon не будет менятся. он жестко забит в бд/ok
+    public function getSpecificCategories($ico){
+        return $this->where('icon', $ico)->get();//icon не будет менятся. он жестко забит в бд/ok
     }
 }

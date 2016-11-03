@@ -34,6 +34,7 @@ Route::group(['middleware' => ['web'], 'domain' => "m." . $domain], function () 
 //new page
     Route::get('news/', "NewsController@mIndex");
     Route::get('single/{news}', "NewsController@mSingle");
+    Route::get('tabs/news/{category}', "NewsController@mShow");
 //
     Route::get('service', "ServiceController@mIndex");
     Route::get('consultation', "ConsultationController@mIndex");

@@ -9,7 +9,7 @@
     <div class="respond-block__wrap">
 
         @foreach($reviews as $review)
-            <div class="respond-block respond-block-items">
+            <div class="respond-block respond-block-items" style="display: none;">
                 <div class="respond-block__head">
                     <div class="respond-block__head-name">
                         {{ $review['name'] }}

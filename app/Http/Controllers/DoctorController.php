@@ -44,7 +44,7 @@ class DoctorController extends MainController
     public function mIndex(Category $category)
     {
 
-        $this->data['categories'] = $category->getDoctorCategories()[0]->getChildrenCategories();
+        $this->data['categories'] = $category->getSpecificCategories('ico_doctors')[0]->getChildrenCategories();
         return view('mobile.for-doctors.list', $this->data);
     }
 
@@ -54,6 +54,7 @@ class DoctorController extends MainController
      */
     public function mShow(Category $category)
     {
+        $this->data['category'] = $category;
         $this->data['categories'] = $category->getChildrenCategories();
         return view('mobile.tabs.news', $this->data);
     }
