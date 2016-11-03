@@ -26,7 +26,7 @@
                 {{ $vacancy['description_' . session('locale')] }}
             </p>
         </div>
-        <a href="#" class="waves-effect waves-light btn send-cv">
+        <a href="/vacancy-form/{{ $vacancy['id'] }}" class="waves-effect waves-light btn send-cv">
             Заполнить анкету
         </a>
     </div>

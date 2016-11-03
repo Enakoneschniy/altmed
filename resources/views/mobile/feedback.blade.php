@@ -13,7 +13,7 @@
     {{--</div>--}}
     <div class="container feedback-form__wrap">
         <div class="container__inner">
-            {!! Form::open(['class' => 'review-form', 'url' => '/review/create']) !!}
+            {!! Form::open(['class' => 'review-form', 'url' => '/review/create', 'enctype'=>'multipart/form-data']) !!}
             <div class="filters-wrap">
                 <div class="select-row">
                     <select class="md-select feedback-form-select" name="type_id" id="">

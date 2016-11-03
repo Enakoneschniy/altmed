@@ -1,19 +1,19 @@
 <!-- AJAX DIAGNOSTIC CONTAINER -->
 <div class="vacancy-container" id="vacancy-container">
     <a href="#" class="waves-effect waves-light btn send-cv">
-        Заполнить анкету
+        @lang('for_doctors.fill-form')
     </a>
     <form action="#" class="filter-form">
         <div class="filters-wrap">
             <div class="select-row">
-                <select class="md-select types-vacancy-select" name="" id="">
-                    <option value="">Все</option>
-                    <option value="">Офтальмолог</option>
-                    <option value="">Психиатр</option>
-                    <option value="">Травматолог</option>
-                    <option value="">Гинеколог</option>
-                    <option value="">Иммунолог</option>
-                </select>
+                {{--<select class="md-select types-vacancy-select" name="" id="">--}}
+                    {{--<option value="">Все</option>--}}
+                    {{--<option value="">Офтальмолог</option>--}}
+                    {{--<option value="">Психиатр</option>--}}
+                    {{--<option value="">Травматолог</option>--}}
+                    {{--<option value="">Гинеколог</option>--}}
+                    {{--<option value="">Иммунолог</option>--}}
+                {{--</select>--}}
             </div>
         </div>
     </form>
@@ -39,7 +39,7 @@
         @endif
     </div>
     <a href="#" class="waves-effect waves-dark more-btn">
-        Еще
+        @lang('about.more-btn')
     </a>
 </div>
 <!-- AJAX DIAGNOSTIC CONTAINER -->

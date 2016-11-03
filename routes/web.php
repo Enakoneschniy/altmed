@@ -30,6 +30,7 @@ Route::group(['middleware' => ['web'], 'domain' => "m." . $domain], function () 
     Route::get('tabs/for_doctors/{category}', "DoctorController@mShow");
     Route::get('tabs/vacancies', "DoctorController@mVacancies");
     Route::get('vacancy/{vacancy}', "DoctorController@mVacancy");
+    Route::get('vacancy-form/{vacancy}', "DoctorController@mVacancyForm");
 //new page
     Route::get('news/', "NewsController@mIndex");
     Route::get('single/{news}', "NewsController@mSingle");
@@ -41,6 +42,7 @@ Route::group(['middleware' => ['web'], 'domain' => "m." . $domain], function () 
     Route::get('contacts', "ContactsController@mIndex");
     Route::get('map', "MapController@mIndex");
 
+    Route::post('response/create', "ResponseController@create");
     Route::post('/review/create', 'ReviewController@create');
     Route::get('setlocale/{locale}', function ($locale) {
         if (in_array($locale, config('app.locales'))) {   # Проверяем, что у пользователя выбран доступный язык

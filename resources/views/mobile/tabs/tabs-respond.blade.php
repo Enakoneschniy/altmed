@@ -3,43 +3,30 @@
 
     <a href="/feedback" class="leave-respond">
         <div class="btn-transparent waves-effect waves-dark"></div>
-        Оставить отзыв
+        @lang('about.add-review')
     </a>
 
     <div class="respond-block__wrap">
-        <div class="respond-block">
-            <div class="respond-block__head">
-                <div class="respond-block__head-name">
-                    Алексей
+
+        @foreach($reviews as $review)
+            <div class="respond-block respond-block-items">
+                <div class="respond-block__head">
+                    <div class="respond-block__head-name">
+                        {{ $review['name'] }}
+                    </div>
+                    <div class="respond-block__head-date">
+                        {{ date('d.m.Y', strtotime($review['created_at'])) }}
+                    </div>
                 </div>
-                <div class="respond-block__head-date">
-                    22.01.2016
-                </div>
-            </div>
-            <div class="respond-block__body">
-                Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію
-                сторінки.
-                Сенс використання Lorem Ipsum полягає в тому, що
-            </div>
-        </div>
-        <div class="respond-block">
-            <div class="respond-block__head">
-                <div class="respond-block__head-name">
-                    Алексей
-                </div>
-                <div class="respond-block__head-date">
-                    22.01.2016
+                <div class="respond-block__body">
+                    {{ $review['content'] }}
                 </div>
             </div>
-            <div class="respond-block__body">
-                Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію
-                сторінки.
-                Сенс використання Lorem Ipsum полягає в тому, що
-            </div>
-        </div>
+        @endforeach
+
     </div>
-    <a href="#" class="waves-effect waves-dark more-btn">
-        Еще
+    <a href="#" id="show-more-reviews" class="waves-effect waves-dark more-btn">
+        @lang('about.more-btn')
     </a>
 </div>
 <!-- AJAX RESPOND CONTAINER -->

@@ -58,21 +58,35 @@ class DoctorController extends MainController
         return view('mobile.tabs.news', $this->data);
     }
 
+    /**
+     * @param Vacancy $vacancy
+     * @return mixed
+     */
     public function mVacancies(Vacancy $vacancy)
     {
         $this->data['vacancies'] = $vacancy->getActives();
         return view('mobile.tabs.vacancies', $this->data);
     }
 
+    /**
+     * @param Vacancy $vacancy
+     * @return mixed
+     */
     public function mVacancy(Vacancy $vacancy)
     {
         $this->data['vacancy'] = $vacancy;
         return view('mobile.for-doctors.vacancy', $this->data);
     }
 
-    public function mVacancyForm()
+    /**
+     * @param Vacancy $vacancy
+     * @return mixed
+     */
+    public function mVacancyForm(Vacancy $vacancy)
     {
-
+        $this->data['vacancies'] = $vacancy->getActives();
+        $this->data['current_vacancy'] = $vacancy;
+        return view('mobile.for-doctors.vacancy-form', $this->data);
     }
 
 //

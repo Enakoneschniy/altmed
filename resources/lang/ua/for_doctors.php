@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'vacancies' => 'Вакансії'
+    'vacancies' => 'Вакансії',
+    'fill-form' => 'ЗЗаповнити анкету',
 ];

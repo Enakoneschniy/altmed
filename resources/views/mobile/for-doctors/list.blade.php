@@ -20,9 +20,10 @@
         </div>
     </div>
     <div class="container__inner">
-        <div class="tabs__container" id="tabs-container">
+        <div class="tabs__container tabs__container-news" id="tabs-container">
         </div>
     </div>
 </main>
 <!-- END MAIN CONTENT -->
 @endsection
+
