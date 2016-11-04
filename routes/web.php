@@ -63,6 +63,8 @@ Route::group(['middleware' => ['web'], 'domain' => $domain], function () {
 
         return redirect()->back();  # Редиректим его <s>назад</s> на ту же страницу
     });
+    Route::post('/review/create', 'ReviewController@create');
+    Route::post('/question/create', 'ReviewController@question');
     Route::get('/', 'IndexController@index');
 
     Route::get('about-clinic', "AboutController@index");
@@ -72,7 +74,7 @@ Route::group(['middleware' => ['web'], 'domain' => $domain], function () {
     });
     Route::group(['prefix' => 'consultation'], function() {
         Route::get('/', "ConsultationController@index");
-        Route::get('/{category}/{post}', "ConsultationController@detail");
+        Route::get('/{job}/{doc}', "ConsultationController@detail");
     });
     Route::group(['prefix' => 'for-doctors'], function() {
         Route::get('/', "DoctorController@index");

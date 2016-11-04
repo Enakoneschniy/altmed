@@ -377,6 +377,163 @@
         <i class="ico_up sprites abs_center"></i>
     </a><!-- /.scroll_up -->
 </div>
+
+<div class="g-hidden">
+    <div class="modal modal_ask_succes" id="">
+        <div class="wr-hidden">
+            <div class="modal_header" style="margin-bottom: 0;">
+                <p style="margin-right: 26px;">@lang('about.add-review-success')</p>
+                <div class="modal_close arcticmodal-close sprites"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="g-hidden">
+    <div class="modal modal_askk_succes" id="">
+        <div class="wr-hidden">
+            <div class="modal_header" style="margin-bottom: 0;">
+                <p style="margin-right: 26px;">@lang('about.add-question-success')</p>
+                <div class="modal_close arcticmodal-close sprites"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="g-hidden">
+		<div class="modal modal_ask_doctor" id="">
+			<div class="wr-hidden">
+				<div class="modal_header">
+					<p>@lang('about.question')</p>
+					<div class="modal_close arcticmodal-close sprites"></div>
+				</div>
+				<div class="forma forma_question">
+                    {!! Form::open(['url' => '/question/create']) !!}
+                        <ul>
+                            <li class="name_input {{ $errors->has('name') ? ' active message_error' : '' }}">
+                                <div class="column1">
+                                    <i class="ico_input_user sprites"></i>
+                                    {!! Form::text('name', null, ['class' => 'control_input', 'placeholder' => trans('review.name')]) !!}
+                                </div>
+                                <div class="column2">
+                                    <div class="inform ok error">
+                                        <i class="ico_ok sprites"></i>
+                                        <i class="ico_error sprites"></i>
+                                        <p class='error_text'></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="input_mail email_input {{ $errors->has('email') ? ' active message_error' : '' }}">
+                                <div class="column1">
+                                    <i class="ico_input_mail sprites"></i>
+                                    {!! Form::text('email', null, ['class' => 'control_input', 'placeholder' => trans('review.email')]) !!}
+                                </div>
+                                <div class="column2">
+                                    <div class="inform ok error">
+                                        <i class="ico_ok sprites"></i>
+                                        <i class="ico_error sprites"></i>
+                                        <p class='error_text'></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="input_message content_input {{ $errors->has('content') ? ' active message_error' : '' }}">
+                                <div class="column1">
+                                    <i class="ico_input_message sprites"></i>
+                                    {!! Form::textarea('content', null, ['class' => 'control_input', 'placeholder' => trans('review.content')]) !!}
+                                </div>
+                                <div class="column2">
+                                    <div class="inform ok error">
+                                        <i class="ico_ok sprites"></i>
+                                        <i class="ico_error sprites"></i>
+                                        <p class='error_text'></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="input_submit">
+                                {!! Form::submit(trans('review.submit'),['class' =>'control_input']) !!}
+                            </li>
+                        </ul>
+                    {!! Form::close() !!}
+                </div><!-- /.forma_question -->
+			</div>
+		</div>
+	</div>
+<div class="g-hidden">
+		<div class="modal modal_ask" id="">
+			<div class="wr-hidden">
+				<div class="modal_header">
+					<p>@lang('about.add-review')</p>
+					<div class="modal_close arcticmodal-close sprites"></div>
+				</div>
+				<div class="forma forma_question">
+					{!! Form::open(['url' => '/review/create']) !!}
+                           {!! Form::hidden('type_id', 3) !!}
+                            <ul>
+                                <li class="name_input {{ $errors->has('name') ? ' active message_error' : '' }}">
+                                    <div class="column1">
+                                        <i class="ico_input_user sprites"></i>
+                                        {!! Form::text('name', null, ['class' => 'control_input', 'placeholder' => trans('review.name')]) !!}
+                                    </div>
+                                    <div class="column2">
+                                        <div class="inform ok error">
+                                            <i class="ico_ok sprites"></i>
+                                            <i class="ico_error sprites"></i>
+                                            <p class='error_text'></p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="phone_input {{ $errors->has('phone') ? ' active message_error' : '' }}">
+                                    <div class="column1">
+                                        <i class="ico_input_phone sprites"></i>
+                                        {!! Form::text('phone', null, ['class' => 'control_input', 'placeholder' => trans('review.phone')]) !!}
+                                    </div>
+                                    <div class="column2">
+                                        <div class="inform ok error">
+                                            <i class="ico_ok sprites"></i>
+                                            <i class="ico_error sprites"></i>
+                                            <p class='error_text'></p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="input_mail email_input {{ $errors->has('email') ? ' active message_error' : '' }}">
+                                    <div class="column1">
+                                        <i class="ico_input_mail sprites"></i>
+                                        {!! Form::text('email', null, ['class' => 'control_input', 'placeholder' => trans('review.email')]) !!}
+                                        
+                                    </div>
+                                    <div class="column2">
+                                        <div class="inform ok error">
+                                            <i class="ico_ok sprites"></i>
+                                            <i class="ico_error sprites"></i>
+                                            <p class='error_text'></p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="input_message content_input {{ $errors->has('content') ? ' active message_error' : '' }}">
+                                    <div class="column1">
+                                        <i class="ico_input_message sprites"></i>
+                                        {!! Form::textarea('content', null, ['class' => 'control_input', 'placeholder' => trans('review.content')]) !!}
+                                    </div>
+                                    <div class="column2">
+                                        <div class="inform ok error">
+                                            <i class="ico_ok sprites"></i>
+                                            <i class="ico_error sprites"></i>
+                                            <p class='error_text'></p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="input_submit">
+                                    {!! Form::submit(trans('review.submit'),['class' =>'control_input']) !!}
+                                </li>
+                            </ul>
+                        {!! Form::close() !!}
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
 <script src="/js/jquery.arcticmodal-0.3.min.js"></script>

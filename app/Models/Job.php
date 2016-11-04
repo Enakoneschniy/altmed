@@ -9,4 +9,7 @@ class Job extends Model
     public function doctors(){
         return $this->hasMany(Doctor::class);
     }
+    public function getTitle(){
+        return $this->attributes['title_'.session('locale')];
+    }
 }

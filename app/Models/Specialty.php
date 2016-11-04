@@ -9,4 +9,7 @@ class Specialty extends Model
     public function doctors(){
         $this->hasMany(Doctor::class);
     }
+    public function getTitle(){
+        return $this->attributes['title_'.session('locale')];
+    }
 }

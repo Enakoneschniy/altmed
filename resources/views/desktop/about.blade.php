@@ -20,21 +20,18 @@
                         <div class="time_img">
                             <i class="ico_time sprites"></i>
                         </div>
-                        <div class="work_days">Понедельник - Воскресенье</div>
-                        <div class="work_hours">07:00 - 20:00</div>
+                        <div class="work_days">{{$schedule->getDayFrom()}} - {{$schedule->getDayTo()}}</div>
+                        <div class="work_hours">{{$schedule->time_from}} - {{$schedule->time_to}}</div>
                     </div><!-- /.block_time -->
                     <div class="description">
-                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з уривку класичної латинської літератури 45 року до н.е., тобто має більш як 2000-річну історію. Річард Макклінток, професор латини
-                            з коледжу Хемпдін-Сидні, що у Вірджінії, вивчав одне з найменш зрозумілих латинських слів - consectetur - з уривку Lorem Ipsum, і у пошуку цього слова в класичній літературі знайшов безсумнівне джерело. Lorem Ipsum походить
-                            з розділів 1.10.32 та 1.10.33 цицеронівського "de Finibus Bonorum et Malorum" ("Про межі добра і зла"), написаного
-                            у 45 році до н.е. Цей трактат з теорії етики був дуже популярним в епоху Відродження. Перший рядок Lorem Ipsum, "Lorem ipsum dolor sit amet..." походить з одного з рядків розділу 1.10.32.</p>
+                        <p>{!! $schedule->getText() !!}</p>
                     </div><!-- /.description -->
                 </div><!-- /.tabs_item -->
                 <div class="tabs_item">
                     <div class="forma forma_question">
-                        {!! Form::open(['url' => '/question']) !!}
+                        {!! Form::open(['url' => '/question/create']) !!}
                             <ul>
-                                <li class="{{ $errors->has('name') ? ' active message_error' : '' }}">
+                                <li class="name_input {{ $errors->has('name') ? ' active message_error' : '' }}">
                                     <div class="column1">
                                         <i class="ico_input_user sprites"></i>
                                         {!! Form::text('name', null, ['class' => 'control_input', 'placeholder' => trans('review.name')]) !!}
@@ -42,14 +39,12 @@
                                     <div class="column2">
                                         <div class="inform ok error">
                                             <i class="ico_ok sprites"></i>
-                                            @if ($errors->has('name'))
-                                                <i class="ico_error sprites"></i>
-                                                <p>{{ $errors->first('name') }}</p>
-                                            @endif
+                                            <i class="ico_error sprites"></i>
+                                            <p class='error_text'></p>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="input_mail {{ $errors->has('email') ? ' active message_error' : '' }}">
+                                <li class="input_mail email_input {{ $errors->has('email') ? ' active message_error' : '' }}">
                                     <div class="column1">
                                         <i class="ico_input_mail sprites"></i>
                                         {!! Form::text('email', null, ['class' => 'control_input', 'placeholder' => trans('review.email')]) !!}
@@ -57,14 +52,12 @@
                                     <div class="column2">
                                         <div class="inform ok error">
                                             <i class="ico_ok sprites"></i>
-                                            @if ($errors->has('email'))
-                                                <i class="ico_error sprites"></i>
-                                                <p>{{ $errors->first('email') }}</p>
-                                            @endif
+                                            <i class="ico_error sprites"></i>
+                                            <p class='error_text'></p>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="input_message {{ $errors->has('content') ? ' active message_error' : '' }}">
+                                <li class="input_message content_input {{ $errors->has('content') ? ' active message_error' : '' }}">
                                     <div class="column1">
                                         <i class="ico_input_message sprites"></i>
                                         {!! Form::textarea('content', null, ['class' => 'control_input', 'placeholder' => trans('review.content')]) !!}
@@ -72,10 +65,8 @@
                                     <div class="column2">
                                         <div class="inform ok error">
                                             <i class="ico_ok sprites"></i>
-                                            @if ($errors->has('content'))
-                                                <i class="ico_error sprites"></i>
-                                                <p>{{ $errors->first('content') }}</p>
-                                            @endif
+                                            <i class="ico_error sprites"></i>
+                                            <p class='error_text'></p>
                                         </div>
                                     </div>
                                 </li>
@@ -101,28 +92,22 @@
                 <i class="ico_add sprites"></i>
                 <p>@lang('about.add-review')</p>
             </a>
-            <div class="block_review">
-                <div class="reviews_img">
-                    <i class="ico_user sprites abs_center"></i>
-                </div>
-                <div class="review_text">
-                    <div class="person">Алексей</div>
-                    <div class="date">02.11.2016</div>
-                    <div class="text">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на </div>
-                </div>
-            </div><!-- /.block_review -->
-            <div class="block_review">
-                <div class="reviews_img">
-                    <i class="ico_user sprites abs_center"></i>
-                </div>
-                <div class="review_text">
-                    <div class="person">Алексей</div>
-                    <div class="date">02.11.2016</div>
-                    <div class="text">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на </div>
-                </div>
-            </div><!-- /.block_review -->
+            <div class="reviews-list">
+                @foreach($reviews as $review)
+                    <div class="block_review">
+                        <div class="reviews_img">
+                            <i class="ico_user sprites abs_center"></i>
+                        </div>
+                        <div class="review_text">
+                            <div class="person">{{$review->name}}</div>
+                            <div class="date">{{$review->created_at}}</div>
+                            <div class="text">{{$review->content}}</div>
+                        </div>
+                    </div><!-- /.block_review -->
+                @endforeach
+            </div>
             <div class="wrap_center">
-                <a href="#" class="btn btn_style1 btn_2 btn_more" data-wipe="Еще">
+                <a href="#" data-total="{{$reviews->lastPage()}}" data-current="{{$reviews->currentPage()}}" class="btn btn_style1 btn_2 btn_more more-reviews" data-wipe="@lang('about.more-btn')">
                     <i class="ico_arr_down sprites"></i>@lang('about.more-btn')</a>
             </div><!-- /.wrap_center -->
         </div><!-- /.block -->

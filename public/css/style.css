@@ -1935,7 +1935,7 @@ ul.main_menu li:hover a {
 }
 .forma form ul li .ico_input_phone {
 	width: 18px;
-	height: 17px;
+	height: 18px;
 	background-position: -465px -49px;
 	position: absolute;
 	top: 15px;
@@ -1964,7 +1964,8 @@ ul.main_menu li:hover a {
 .forma form ul li.message_error input[type="text"],
 .forma form ul li.message_error input[type="tel"],
 .forma form ul li.message_error input[type="email"],
-.forma form ul li.message_error input[type="password"] {border-color: #cf425d;}
+.forma form ul li.message_error input[type="password"],
+.forma form ul li.message_error textarea {border-color: #cf425d;}
 /* 
 Show/Hide message 
 */

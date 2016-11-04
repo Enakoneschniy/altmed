@@ -13,7 +13,7 @@ use Validator;
 
 class ReviewController extends MainController
 {
-    function questionCreate(Request $request){
+    function question(Request $request){
         $rules = [
             'name' => 'required',
             'email' => 'required|email',
@@ -21,12 +21,9 @@ class ReviewController extends MainController
         ];
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()){
-            return Response::json(array(
-                'success' => false,
-                'errors' => $validator->getMessageBag()->toArray()
-
-            ), 400); // 400 being the HTTP code for an invalid request.
+            return Response::json($validator->getMessageBag()->toArray(), 400); // 400 being the HTTP code for an invalid request.
         }
+        Question:create($request->all());
     }
     /**
      * @param StoreReviewRequest $request

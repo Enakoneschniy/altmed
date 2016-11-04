@@ -13,6 +13,7 @@ use AdminColumn;
 use AdminDisplay;
 use AdminForm;
 use AdminFormElement;
+use AdminColumnEditable;
 use SleepingOwl\Admin\Contracts\Initializable;
 
 class Doctors extends Section implements Initializable
@@ -58,11 +59,11 @@ class Doctors extends Section implements Initializable
             ->setColumns(
                 AdminColumn::text('id', '#')->setWidth('30px'),
                 AdminColumn::image('photo', 'Фото')->setWidth('100px'),
-                AdminColumn::link('name_ru', 'ФИО(Рус)'),
-                AdminColumn::link('name_ua', 'ФИО(Укр)'),
+                AdminColumn::link('name_ru', 'ФИО'),
                 AdminColumn::email('email', 'E-mail'),
-                AdminColumn::text('description_ru', 'Описание(Рус)'),
-                AdminColumn::text('description_ua', 'Описание(Укр)')
+                AdminColumn::text('job.title_ru', 'Должность'),
+                AdminColumn::text('specialty.title_ru', 'Специализация'),
+                AdminColumn::text('qualify.title_ru', 'Квалификация')
             )->paginate(20);
     }
 

@@ -3,17 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Models\Review;
+use App\Models\About;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 use App\Http\Requests;
 
 class AboutController extends MainController
 {
 
-    public function index(Review $review)
+    public function index(Request $request, Response $resonse, Review $review)
     {
-        //$this->data['reviews'] = $review->getActiveItems();
-
+        
+        $this->data['reviews'] = $review->getActiveReviews();
+        if ($request->ajax()) {
+            return view('desktop.ajax_review', $this->data);
+        }
+        $this->data['schedule'] = About::find(1);
+        //dd($this->data['reviews']);
         return view('desktop.about', $this->data);
     }
 

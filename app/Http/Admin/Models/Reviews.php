@@ -9,6 +9,7 @@ use AdminColumn;
 use AdminDisplay;
 use AdminForm;
 use AdminFormElement;
+use AdminColumnEditable;
 use SleepingOwl\Admin\Contracts\Initializable;
 
 class Reviews extends Section implements Initializable
@@ -58,8 +59,13 @@ class Reviews extends Section implements Initializable
             ->setHtmlAttribute('class', 'table-primary')
             ->setColumns(
                 AdminColumn::text('id', '#')->setWidth('30px'),
-                AdminColumn::link('address_ru', 'Адрес(Рус)')->setWidth('100px'),
-                AdminColumn::link('address_ua', 'Адрес(Укр)')->setWidth('100px')
+                AdminColumn::link('name', 'Имя'),
+                AdminColumn::link('phone', 'Телефон'),
+                AdminColumn::link('email', 'E-mail'),
+                AdminColumn::link('content', 'Текст сообщения'),
+                AdminColumnEditable::checkbox('active')->setLabel('Опубликована'),
+                AdminColumn::datetime('created_at')
+            
             )->paginate(20);
     }
 
