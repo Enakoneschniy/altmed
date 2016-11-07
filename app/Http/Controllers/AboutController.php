@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Review;
+use App\Models\WorkSchedule;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests;
 
@@ -45,12 +47,19 @@ class AboutController extends MainController
     }
 
     /**
-     * @param Review $review
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return mixed
      */
-    public function mTabsAbout(Review $review)
+    public function mAsk(){
+        return view('mobile.ask-form', $this->data);
+    }
+
+    /**
+     * @param WorkSchedule $workSchedule
+     * @return mixed
+     */
+    public function mTabsAbout(WorkSchedule $workSchedule)
     {
-        $this->data['reviews'] = $review->getActiveItems();
+        $this->data['schedule'] = $workSchedule->get();
         return view('mobile.tabs.tabs-about', $this->data);
     }
 

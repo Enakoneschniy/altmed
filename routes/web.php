@@ -21,6 +21,7 @@ Route::group(['middleware' => ['web'], 'domain' => "m." . $domain], function () 
     Route::get('/tabs/about', "AboutController@mTabsAbout");
     Route::get('/tabs/respond', "AboutController@mTabsRespond");
     Route::get('feedback', "AboutController@mFeedback");
+    Route::get('/ask', "AboutController@mAsk");
 // modals on layout
     Route::get('/modals/phone', "ModalController@phones");
     Route::get('/modals/search', "ModalController@search");
@@ -35,8 +36,12 @@ Route::group(['middleware' => ['web'], 'domain' => "m." . $domain], function () 
     Route::get('news/', "NewsController@mIndex");
     Route::get('single/{news}', "NewsController@mSingle");
     Route::get('tabs/news/{category}', "NewsController@mShow");
-//
+//service page
     Route::get('service', "ServiceController@mIndex");
+//    Route::get('tabs/services/{category}', "ServiceController@mIndex");
+    
+    
+    
     Route::get('consultation', "ConsultationController@mIndex");
     Route::get('schedule', "ScheduleController@mIndex");
     Route::get('prices', "PriceController@mIndex");
@@ -45,6 +50,7 @@ Route::group(['middleware' => ['web'], 'domain' => "m." . $domain], function () 
 
     Route::post('response/create', "ResponseController@create");
     Route::post('/review/create', 'ReviewController@create');
+    Route::post('/question/create', 'QuestionController@create');
     Route::get('setlocale/{locale}', function ($locale) {
         if (in_array($locale, config('app.locales'))) {   # Проверяем, что у пользователя выбран доступный язык
             config(['app.locale' => $locale]);
