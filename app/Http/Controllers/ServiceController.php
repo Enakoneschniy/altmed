@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Doctor;
 use App\Models\News;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,14 @@ class ServiceController extends MainController
 {
     public function index(Category $category){
         $this->data['leftItems'] = $category->getRootCategoriesService();
-        $this->data['consultation'] = $category->getConsultCategory();
+        $doctors = Doctor::where('active', true)->get();
+        $arConsultation = [];
+        foreach($doctors as $doctor){
+            $arConsultation['specialties'][$doctor->specialty->id]['title'] = $doctor->specialty->getTitle();
+            $arConsultation['specialties'][$doctor->specialty->id]['jobs'][$doctor->job->id]['title'] = $doctor->job->getTitle();
+            $arConsultation['specialties'][$doctor->specialty->id]['jobs'][$doctor->job->id]['doctors'][$doctor->id] = $doctor;
+        }
+        $this->data['consultation'] = $arConsultation;
         return view('desktop.service.list', $this->data);
     }
     public function detail($category, $post){
