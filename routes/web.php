@@ -84,6 +84,7 @@ Route::group(['middleware' => ['web'], 'domain' => $domain], function () {
     Route::group(['prefix' => 'news'], function() {
         Route::get('/', "NewsController@index");
         Route::get('/{category}/{post}', "NewsController@detail");
+        Route::get('/{category}', "NewsController@listN");
     });
 
     Route::get('schedule', "ScheduleController@index");

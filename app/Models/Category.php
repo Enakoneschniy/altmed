@@ -27,6 +27,15 @@ class Category extends Node
     public function getRootCategories(){
         return $this->where('parent_id', null)->get();
     }
+    public function getNewsCategories(){
+        $newsCat = $this->where('icon', 'ico_news')->first();
+        $newsChildCat = $this->where('parent_id', $newsCat->id)->get();
+        return [
+            'main_cat' => $newsCat,
+            'child_cat' => $newsChildCat
+        ];
+    }
+
 
     public function getRootCategoriesHome(){
         return $this->where([

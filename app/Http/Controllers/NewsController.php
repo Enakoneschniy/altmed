@@ -10,9 +10,21 @@ use App\Http\Requests;
 
 class NewsController extends MainController
 {
-    public function index()
+    public function index(Category $category)
     {
+        $this->data['left'] = $category->getNewsCategories();
+        $this->data['news'] = News::all();
+        return view('desktop.news.list', $this->data);
 
+    }
+    public function listN($category, Category $cat){
+        $this->data['left'] = $cat->getNewsCategories();
+        foreach ($this->data['left']['child_cat'] as &$item) {
+            if($item->id == $category){
+                $item->select = true;
+            }
+        }
+        $this->data['news'] = News::all('category_id', $category);
         return view('desktop.news.list', $this->data);
     }
     public function detail($category, $post){
