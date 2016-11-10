@@ -70,6 +70,29 @@ $(function(){
             closeOnEsc:true
         });
     });
+
+    $('body').on('click', '.news_more', function(e){
+        e.preventDefault();
+        var currentPage = $(this).data('current');
+        var totalPage = $(this).data('total');
+        var that = this;
+        if(currentPage < totalPage){
+            $.ajax({
+                url:`?page=${++currentPage}`,
+                dataType: 'html',
+                success: function (data) {
+                    $('.magnet').append(data);
+                    //console.log(data);
+                    $(that).data('current', currentPage);
+                    $('.tab_filters').magnet('append', data);
+                    if(currentPage == totalPage){
+                        $(that).remove();
+                    }
+                }
+            });
+        }
+    });
+
     $('body').on('click', '.more-reviews', function(e){
         e.preventDefault();
         var currentPage = $(this).data('current');

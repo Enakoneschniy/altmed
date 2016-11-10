@@ -10,21 +10,30 @@ use App\Http\Requests;
 
 class NewsController extends MainController
 {
-    public function index(Category $category)
+    public function index(Category $category, Request $request)
     {
+
         $this->data['left'] = $category->getNewsCategories();
-        $this->data['news'] = News::all();
+        $this->data['news'] = News::where([[
+            'category_id', '!=', 23
+        ]])->paginate(8);
+        if ($request->ajax()) {
+            return view('desktop.ajax_news', $this->data);
+        }
         return view('desktop.news.list', $this->data);
 
     }
-    public function listN($category, Category $cat){
+    public function listN($category, Category $cat, Request $request){
         $this->data['left'] = $cat->getNewsCategories();
         foreach ($this->data['left']['child_cat'] as &$item) {
             if($item->id == $category){
                 $item->select = true;
             }
         }
-        $this->data['news'] = News::all('category_id', $category);
+        $this->data['news'] = News::where('category_id', $category)->paginate(8);
+        if ($request->ajax()) {
+            return view('desktop.ajax_news', $this->data);
+        }
         return view('desktop.news.list', $this->data);
     }
     public function detail($category, $post){

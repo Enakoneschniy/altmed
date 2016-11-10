@@ -107,7 +107,7 @@
                 @endforeach
             </div>
             <div class="wrap_center">
-                <a href="#" data-total="{{$reviews->lastPage()}}" data-current="{{$reviews->currentPage()}}" class="btn btn_style1 btn_2 btn_more more-reviews" data-wipe="@lang('about.more-btn')">
+                <a href="" data-total="{{$reviews->lastPage()}}" data-current="{{$reviews->currentPage()}}" class="btn btn_style1 btn_2 btn_more more-reviews" data-wipe="@lang('about.more-btn')">
                     <i class="ico_arr_down sprites"></i>@lang('about.more-btn')</a>
             </div><!-- /.wrap_center -->
         </div><!-- /.block -->
