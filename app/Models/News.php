@@ -77,7 +77,7 @@ class News extends Model
         if(!in_array($type, ["gif", "jpeg", "png", "wbmp", "xbm"])){
             $type = "jpeg";
         }
-        $newImg = public_path().'/images/resize/'.$img.$type;
+        $newImg = public_path().'/images/resize/'.$img.'.'.$type;
         if(!file_exists($newImg)) {
             Image::make($this->image, array(
                 'width' => $width,
