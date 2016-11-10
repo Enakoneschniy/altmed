@@ -43,12 +43,12 @@ Route::group(['middleware' => ['web'], 'domain' => "m." . $domain], function () 
 
     Route::post('/review/create', 'ReviewController@create');
     Route::get('setlocale/{locale}', function ($locale) {
-        if (in_array($locale, config('app.locales'))) {   # Проверяем, что у пользователя выбран доступный язык
+        if (in_array($locale, config('app.locales'))) {
             config(['app.locale' => $locale]);
-            session(['locale' => $locale]); # И устанавливаем его в сессии под именем locale
+            session(['locale' => $locale]);
         }
 
-        return redirect()->back();  # Редиректим его <s>назад</s> на ту же страницу
+        return redirect()->back();
     });
 });
 
@@ -56,13 +56,13 @@ Route::group(['middleware' => ['web'], 'domain' => "m." . $domain], function () 
 
 Route::group(['middleware' => ['web'], 'domain' => $domain], function () {
     Route::get('setlocale/{locale}', function ($locale) {
-        if (in_array($locale, config('app.locales'))) {   # Проверяем, что у пользователя выбран доступный язык
+        if (in_array($locale, config('app.locales'))) {
             //config(['app.locale' => $locale]);
             app()->setLocale($locale);
-            session(['locale' => $locale]); # И устанавливаем его в сессии под именем locale
+            session(['locale' => $locale]);
         }
 
-        return redirect()->back();  # Редиректим его <s>назад</s> на ту же страницу
+        return redirect()->back();
     });
     Route::post('/review/create', 'ReviewController@create');
     Route::post('/question/create', 'ReviewController@question');

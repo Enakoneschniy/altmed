@@ -79,8 +79,8 @@ return [
 
     'locale' => 'ru',
     'locales' => ['ru', 'ua'],
-    'local_domain' => 'urklogika.com',
-    'domain' => 'urklogika.com',
+    'local_domain' => 'ukrlogika.com',
+    'domain' => 'ukrlogika.com',
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
