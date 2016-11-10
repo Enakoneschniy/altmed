@@ -79,8 +79,8 @@ return [
 
     'locale' => 'ru',
     'locales' => ['ru', 'ua'],
-    'local_domain' => 'altamedica.local',
-    'domain' => 'altamedica.local',
+    'local_domain' => 'urklogika.com',
+    'domain' => 'urklogika.com',
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
