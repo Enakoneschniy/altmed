@@ -11,11 +11,35 @@ use App\Http\Requests;
 
 class DoctorController extends MainController
 {
-    public function index(Category $category)
+    /*public function index(Category $category)
     {
         return view('desktop.for-doctors.list', $this->data);
-    }
+    }*/
+    public function index(Category $category, Request $request)
+    {
+        $this->data['left'] = $category->getForDoctorCategories();
+        $this->data['news'] = News::where([[
+            'category_id', '!=', 23
+        ]])->paginate(8);
+        if ($request->ajax()) {
+            return view('desktop.ajax_news', $this->data);
+        }
+        return view('desktop.for-doctors.list', $this->data);
 
+    }
+    public function listN($category, Category $cat, Request $request){
+        $this->data['left'] = $cat->getForDoctorCategories();
+        foreach ($this->data['left']['child_cat'] as &$item) {
+            if($item->id == $category){
+                $item->select = true;
+            }
+        }
+        $this->data['news'] = News::where('category_id', $category)->paginate(8);
+        if ($request->ajax()) {
+            return view('desktop.ajax_news', $this->data);
+        }
+        return view('desktop.for-doctors.list', $this->data);
+    }
     public function detail($category, $post)
     {
         $service = News::find($post);

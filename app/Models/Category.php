@@ -35,6 +35,14 @@ class Category extends Node
             'child_cat' => $newsChildCat
         ];
     }
+    public function getForDoctorCategories(){
+        $newsCat = $this->where('icon', 'ico_doctors')->first();
+        $newsChildCat = $this->where('parent_id', $newsCat->id)->get();
+        return [
+            'main_cat' => $newsCat,
+            'child_cat' => $newsChildCat
+        ];
+    }
 
 
     public function getRootCategoriesHome(){

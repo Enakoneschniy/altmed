@@ -80,6 +80,7 @@ Route::group(['middleware' => ['web'], 'domain' => $domain], function () {
     Route::group(['prefix' => 'for-doctors'], function() {
         Route::get('/', "DoctorController@index");
         Route::get('/{category}/{post}', "DoctorController@detail");
+        Route::get('/{category}', "DoctorController@listN");
     });
     Route::group(['prefix' => 'news'], function() {
         Route::get('/', "NewsController@index");
