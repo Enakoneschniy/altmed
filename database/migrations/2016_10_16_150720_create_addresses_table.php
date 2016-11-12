@@ -15,10 +15,12 @@ class CreateAddressesTable extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('city_ru');
+            $table->text('city_ua');
             $table->text('address_ru');
             $table->text('address_ua');
-            $table->string('lat');
-            $table->string('lng');
+            $table->string('lat')->nullable();
+            $table->string('lng')->nullable();
             $table->timestamps();
         });
     }

@@ -29,7 +29,7 @@ class Category extends Node
     }
     public function getNewsCategories(){
         $newsCat = $this->where('icon', 'ico_news')->first();
-        $newsChildCat = $this->where('parent_id', $newsCat->id)->get();
+        $newsChildCat = $this->where('parent_id',6)->get();
         return [
             'main_cat' => $newsCat,
             'child_cat' => $newsChildCat

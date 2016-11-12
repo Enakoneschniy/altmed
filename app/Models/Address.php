@@ -12,4 +12,7 @@ class Address extends Model
     public function getAddress(){
         return $this->attributes['address_'.session('locale')];
     }
+    public function getCity(){
+        return $this->attributes['city_'.session('locale')];
+    }
 }

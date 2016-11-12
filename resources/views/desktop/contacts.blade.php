@@ -6,7 +6,7 @@
             <div class="img">
                 <i class="ico_contacts abs_center sprites"></i>
             </div>
-            <p>Адреса,<br>Контакты</p>
+            <p>@lang('about.contact_title')</p>
         </div>
         <div class="block">
             <div class="contact_item">
@@ -16,10 +16,10 @@
                     </div>
                 </div>
                 <div class="column2">
-                    <p class="days">Понедельник - Пятница</p>
-                    <p class="hours">07:00 - 20:00</p>
-                    <p class="days">Суббота - Воскресенье</p>
-                    <p class="hours">08:00 - 180:00</p>
+                    @foreach($schedules as $schedule)
+                        <p class="days">{{$schedule->getDayFrom()}} - {{$schedule->getDayTo()}}</p>
+                        <p class="hours">{{$schedule->time_from}} - {{$schedule->time_to}}</p>
+                    @endforeach
                 </div>
             </div>
             <div class="contact_item">
@@ -30,9 +30,9 @@
                 </div>
                 <div class="column2">
                     <p>
-                        <a href="" class="tel">(0432) 52-00-42</a>
-                        <a href="" class="tel">(0432) 52-00-55</a>
-                        <a href="" class="tel">(098) 555-02-02</a>
+                        @foreach($phones as $phone)
+                            <a href="tel:{{$phone->phone}}" class="tel">{{$phone->phone}}</a>
+                        @endforeach
                     </p>
                 </div>
             </div>
@@ -43,61 +43,32 @@
                     </div>
                 </div>
                 <div class="column2">
-                    <a href="mailto:altamedik@gmail.com" class="mail">altamedik@gmail.com</a>
+                    @foreach($emails as $email)
+                        <a href="mailto:{{$email->email}}" class="mail">{{$email->email}}</a>
+                    @endforeach
                 </div>
             </div>
         </div>
         <div class="block">
             <ul class="block_adresses">
-                <li class="block_adress active">
-                    <div class="img">
-                        <i class="ico_local sprites"></i>
-                    </div>
-                    <div class="city">
-                        г. Винница
-                    </div>
-                    <div class="district">
-                        Ул. Улица 45/4
-                    </div>
-                </li>
-                <li class="block_adress">
-                    <div class="img">
-                        <i class="ico_local sprites"></i>
-                    </div>
-                    <div class="city">
-                        г. Винница
-                    </div>
-                    <div class="district">
-                        Ул. Улица 45/4
-                    </div>
-                </li>
-                <li class="block_adress">
-                    <div class="img">
-                        <i class="ico_local sprites"></i>
-                    </div>
-                    <div class="city">
-                        г. Винница
-                    </div>
-                    <div class="district">
-                        Ул. Улица 45/4
-                    </div>
-                </li>
-                <li class="block_adress">
-                    <div class="img">
-                        <i class="ico_local sprites"></i>
-                    </div>
-                    <div class="city">
-                        г. Винница
-                    </div>
-                    <div class="district">
-                        Ул. Улица 45/4
-                    </div>
-                </li>
+                @foreach($addresses as $address)
+                    <li class="block_adress @if($loop->first) active @endif">
+                        <div class="img">
+                            <i class="ico_local sprites"></i>
+                        </div>
+                        <div class="city">
+                            {{$address->getCity()}}
+                        </div>
+                        <div class="district">
+                            {{$address->getAddress()}}
+                        </div>
+                    </li>
+                @endforeach
             </ul>
             <div class="wrap_center">
-                <div class="btn btn_style1 btn_1 btn_geolocal" data-wipe="Ваше местоположение">
-                    <i class="ico_geolocal sprites"></i>Ваше местоположение</div>
-                <div class="btn btn_style1 btn_1" data-wipe="Проложить маршрут">Проложить маршрут</div>
+                <div class="btn btn_style1 btn_1 btn_geolocal" data-wipe="@lang('about.we_location')">
+                    <i class="ico_geolocal sprites"></i>@lang('about.we_location')</div>
+                <div class="btn btn_style1 btn_1" data-wipe="@lang('about.direction')">@lang('about.direction')</div>
 
             </div>
             <div class="block_maps">
@@ -135,53 +106,53 @@
             <div class="content_wrap">
                 <div class="content">
                     <div class="forma forma_question">
-                        <form action="" class="" id="" method="">
-                            <ul>
-                                <li class="input_user  ">
-                                    <div class="column1">
-                                        <i class="ico_input_user sprites"></i>
-                                        <input type="text" placeholder="Имя Фамилия|" id="" class="control_input " name="">
+                        {!! Form::open(['url' => '/question/create']) !!}
+                        <ul>
+                            <li class="name_input {{ $errors->has('name') ? ' active message_error' : '' }}">
+                                <div class="column1">
+                                    <i class="ico_input_user sprites"></i>
+                                    {!! Form::text('name', null, ['class' => 'control_input', 'placeholder' => trans('review.name')]) !!}
+                                </div>
+                                <div class="column2">
+                                    <div class="inform ok error">
+                                        <i class="ico_ok sprites"></i>
+                                        <i class="ico_error sprites"></i>
+                                        <p class='error_text'></p>
                                     </div>
-                                    <div class="column2">
-                                        <div class="inform ok error">
-                                            <i class="ico_ok sprites"></i>
-                                            <i class="ico_error sprites"></i>
-                                            <p>Введите имя и фамилию</p>
-                                        </div>
+                                </div>
+                            </li>
+                            <li class="input_mail email_input {{ $errors->has('email') ? ' active message_error' : '' }}">
+                                <div class="column1">
+                                    <i class="ico_input_mail sprites"></i>
+                                    {!! Form::text('email', null, ['class' => 'control_input', 'placeholder' => trans('review.email')]) !!}
+                                </div>
+                                <div class="column2">
+                                    <div class="inform ok error">
+                                        <i class="ico_ok sprites"></i>
+                                        <i class="ico_error sprites"></i>
+                                        <p class='error_text'></p>
                                     </div>
-                                </li>
-                                <li class="input_mail">
-                                    <div class="column1">
-                                        <i class="ico_input_mail sprites"></i>
-                                        <input type="text" placeholder="Адрес электронной почты" id="" class="control_input " name="">
+                                </div>
+                            </li>
+                            <li class="input_message content_input {{ $errors->has('content') ? ' active message_error' : '' }}">
+                                <div class="column1">
+                                    <i class="ico_input_message sprites"></i>
+                                    {!! Form::textarea('content', null, ['class' => 'control_input', 'placeholder' => trans('review.content')]) !!}
+                                </div>
+                                <div class="column2">
+                                    <div class="inform ok error">
+                                        <i class="ico_ok sprites"></i>
+                                        <i class="ico_error sprites"></i>
+                                        <p class='error_text'></p>
                                     </div>
-                                    <div class="column2">
-                                        <div class="inform ok error">
-                                            <i class="ico_ok sprites"></i>
-                                            <i class="ico_error sprites"></i>
-                                            <p>Введите электронный адрес</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="input_message">
-                                    <div class="column1">
-                                        <i class="ico_input_message sprites"></i>
-                                        <textarea type="text" placeholder="Текст сообщения" id="" class="control_input " name=""></textarea>
-                                    </div>
-                                    <div class="column2">
-                                        <div class="inform ok error">
-                                            <i class="ico_ok sprites"></i>
-                                            <i class="ico_error sprites"></i>
-                                            <p>Введите сообщение</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="input_submit">
-                                    <input type="submit" value="Отправить" class="control_input">
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
+                                </div>
+                            </li>
+                            <li class="input_submit">
+                                {!! Form::submit(trans('review.submit'),['class' =>'control_input']) !!}
+                            </li>
+                        </ul>
+                        {!! Form::close() !!}
+                    </div><!-- /.forma_question -->
                 </div>
             </div>
         </div>

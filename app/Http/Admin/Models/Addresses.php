@@ -56,6 +56,8 @@ class Addresses extends Section implements Initializable
             ->setHtmlAttribute('class', 'table-primary')
             ->setColumns(
                 AdminColumn::text('id', '#')->setWidth('30px'),
+                AdminColumn::link('city_ru', 'Город(Рус)')->setWidth('100px'),
+                AdminColumn::link('city_ua', 'Город(Укр)')->setWidth('100px'),
                 AdminColumn::link('address_ru', 'Адрес(Рус)')->setWidth('100px'),
                 AdminColumn::link('address_ua', 'Адрес(Укр)')->setWidth('100px')
             )->paginate(20);
@@ -69,6 +71,8 @@ class Addresses extends Section implements Initializable
     public function onEdit($id)
     {
         return AdminForm::panel()->addBody([
+            AdminFormElement::text('city_ru', 'Город(Рус)')->required(),
+            AdminFormElement::text('city_ua', 'Город(Укр)')->required(),
             AdminFormElement::text('address_ru', 'Адрес(Рус)')->required(),
             AdminFormElement::text('address_ua', 'Адрес(Укр)')->required(),
         ]);
@@ -80,6 +84,8 @@ class Addresses extends Section implements Initializable
     public function onCreate()
     {
         return AdminForm::panel()->addBody([
+            AdminFormElement::text('city_ru', 'Город(Рус)')->required(),
+            AdminFormElement::text('city_ua', 'Город(Укр)')->required(),
             AdminFormElement::text('address_ru', 'Адрес(Рус)')->required(),
             AdminFormElement::text('address_ua', 'Адрес(Укр)')->required(),
         ]);
