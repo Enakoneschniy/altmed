@@ -473,67 +473,22 @@
                     <div class="tabs block_adresses_maps">
                         <ul class="block_adresses">
                             <p>Адреса клиник:</p>
-                            <li class="block_adress active">
-                                <div class="img">
-                                    <i class="ico_local sprites"></i>
-                                </div>
-                                <div class="city">
-                                    г. Бар
-                                </div>
-                                <div class="district">
-                                    ул. Р.Люксембург, 43
-                                </div>
-                            </li>
-                            <li class="block_adress">
-                                <div class="img">
-                                    <i class="ico_local sprites"></i>
-                                </div>
-                                <div class="city">
-                                    г. Бар
-                                </div>
-                                <div class="district">
-                                    ул. Р.Люксембург, 43
-                                </div>
-                            </li>
-                            <li class="block_adress">
-                                <div class="img">
-                                    <i class="ico_local sprites"></i>
-                                </div>
-                                <div class="city">
-                                    г. Бар
-                                </div>
-                                <div class="district">
-                                    ул. Р.Люксембург, 43
-                                </div>
-                            </li>
-                            <li class="block_adress">
-                                <div class="img">
-                                    <i class="ico_local sprites"></i>
-                                </div>
-                                <div class="city">
-                                    г. Бар
-                                </div>
-                                <div class="district">
-                                    ул. Р.Люксембург, 43
-                                </div>
-                            </li>
+                            @foreach($addresses as $key => $address)
+                                <li class="block_adress @if($loop->first) active @endif" data-index="{{$key}}">
+                                    <div class="img">
+                                        <i class="ico_local sprites"></i>
+                                    </div>
+                                    <div class="city">
+                                        {{$address->getCity()}}
+                                    </div>
+                                    <div class="district">
+                                        {{$address->getAddress()}}
+                                    </div>
+                                </li>
+                            @endforeach
                         </ul><!-- /.block_adresses -->
                         <div class="block_maps">
-                            <div class="map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d328036.1193350647!2d36.46542611762971!3d50.03417717966305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d49.9887272!2d36.2511927!4m0!5e0!3m2!1sru!2sru!4v1469438490041"  style="border:0" allowfullscreen></iframe>
-                                <a href="#" class="link_map">Перейти к карте1</a>
-                            </div><!-- /.map -->
-                            <div class="map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d5460603.078747388!2d30.550904481249994!3d48.06565706105013!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LI!3m2!1d50.4501!2d30.5234!5e0!3m2!1sru!2sru!4v1469438623163" allowfullscreen></iframe>
-                                <a href="#" class="link_map">Перейти к карте2</a>
-                            </div><!-- /.map -->
-                            <div class="map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d328036.1193350647!2d36.46542611762971!3d50.03417717966305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d49.9887272!2d36.2511927!4m0!5e0!3m2!1sru!2sru!4v1469438490041"  style="border:0" allowfullscreen></iframe>
-                                <a href="#" class="link_map">Перейти к карте3</a>
-                            </div><!-- /.map -->
-                            <div class="map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d5460603.078747388!2d30.550904481249994!3d48.06565706105013!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LI!3m2!1d50.4501!2d30.5234!5e0!3m2!1sru!2sru!4v1469438623163" allowfullscreen></iframe>
-                                <a href="#" class="link_map">Перейти к карте4</a>
+                            <div id="map-footer" class="map">
                             </div><!-- /.map -->
                         </div><!-- /.block_maps -->
                     </div><!-- /.block_adresses_maps -->
@@ -702,6 +657,12 @@
 <script src="js/mousewheel.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXw_Ycc1wB7VSV9SeM9K_KF8HIOQ6v8c4&callback=initMap"></script>
 <script src="js/script.js"></script>
+<script>
+    var addresses = <?php echo json_encode($addresses->toArray())?>;
+
+    //initFooterMap(addresses);
+</script>
 </body>
 </html>

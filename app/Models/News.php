@@ -6,9 +6,11 @@ use Carbon\Carbon;
 use Folklore\Image\Facades\Image;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Input;
+use Laravel\Scout\Searchable;
 
 class News extends Model
 {
+    use Searchable;
     public function getGalleryAttribute($images){
         return json_decode($images);
     }

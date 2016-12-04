@@ -121,4 +121,85 @@ $(function(){
         $(`.tabs.tabs_consult li.${showClass}`).show();
         $(`.tabs.tabs_consult li.${showClass} a:first`).trigger('click');
     });
+
+    function get_location(map) {
+        //if (Modernizr.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position){
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+                // Посмотрим карту или сделаем что-нибудь интер
+                new google.maps.Marker({
+                    position: {lat: latitude, lng: longitude},
+                    map: map,
+                    title: 'You'
+                });
+                map.setCenter({lat: latitude, lng: longitude});
+            });
+        //} else {
+            // Нет встроенной поддержки
+        //}
+    }
+
+    function initGlobalMap(addresses){
+        var myLatLng = {lat: parseFloat(addresses[0]['lat']), lng: parseFloat(addresses[0]['lng'])};
+        var map =  new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            scrollwheel: false,
+            zoom: 15
+        });
+        var markers = [];
+        for(var addr of addresses) {
+            markers.push(
+                new google.maps.Marker({
+                    position: {lat: parseFloat(addr.lat), lng: parseFloat(addr.lng)},
+                    title: 'Altamedica' + addr.address_ru
+                })
+            );
+        }
+        markers[0].setMap(map);
+        $('.content .block_adress').click(function(){
+            $(this).siblings('.block_adress').removeClass('active');
+            $(this).addClass('active');
+            var ind = $(this).data('index');
+            for(var marker of markers){
+                marker.setMap(null);
+            }
+            markers[parseInt(ind)].setMap(map);
+            map.setCenter(markers[parseInt(ind)].position);
+        });
+    }
+    function initFooterMap(addresses) {
+        var myLatLng = {lat: parseFloat(addresses[0]['lat']), lng: parseFloat(addresses[0]['lng'])};
+        var map =  new google.maps.Map(document.getElementById('map-footer'), {
+            center: myLatLng,
+            scrollwheel: false,
+            zoom: 15
+        });
+        var markers = [];
+        for(var addr of addresses) {
+            markers.push(
+                new google.maps.Marker({
+                    position: {lat: parseFloat(addr.lat), lng: parseFloat(addr.lng)},
+                    title: 'Altamedica' + addr.address_ru
+                })
+            );
+        }
+        markers[0].setMap(map);
+        $('.footer .block_adress').click(function(){
+            $(this).siblings('.block_adress').removeClass('active');
+            $(this).addClass('active');
+            var ind = $(this).data('index');
+            for(var marker of markers){
+                marker.setMap(null);
+            }
+            markers[parseInt(ind)].setMap(map);
+            map.setCenter(markers[parseInt(ind)].position);
+        });
+    }
+    if(window.location.pathname !== '/map'){
+        initFooterMap(addresses);
+    }else{
+        initGlobalMap(addresses);
+        initFooterMap(addresses);
+    }
 });

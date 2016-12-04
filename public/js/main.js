@@ -490,7 +490,7 @@ $(document).ready(function () {
 
 	/* Footer block MAP
 	------------------------------------------------------------------- */
-	$('.footer .block_map .block_adresses li').click(function(){
+	/*$('.footer .block_map .block_adresses li').click(function(){
 		$('.footer .block_map .block_adresses li').removeClass('active');
 		$('.footer .block_map .map').removeClass('active');
 		$('.footer .block_map .map:first-child').css('display','none');
@@ -498,10 +498,11 @@ $(document).ready(function () {
 		var current_item = $(this).data('item');
 		console.log('current_item => ', current_item);
 		$('.footer .block_map .map[data-item='+ current_item +']').addClass('active');
-	});
+	});*/
 	// starting view map
 	// $('.footer .block_map .map[data-item="0"]').addClass('active');
 
+/*
 	$('.footer .block_map .block_adresses li').each(function(id_adress, list_adress){
 		$(list_adress).attr("data-item", id_adress);
 		id_adress++;                        
@@ -511,6 +512,7 @@ $(document).ready(function () {
 		$(list_maps).attr("data-item", id_map);
 		id_map++;                        
 	});
+*/
 
 
 

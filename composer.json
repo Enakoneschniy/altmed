@@ -11,7 +11,8 @@
         "laravelrus/sleepingowl": "dev-development",
         "baum/baum": "~1.1",
         "folklore/image": "0.3.*",
-        "davejamesmiller/laravel-breadcrumbs": "^3.0"
+        "davejamesmiller/laravel-breadcrumbs": "^3.0",
+        "laravel/scout": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

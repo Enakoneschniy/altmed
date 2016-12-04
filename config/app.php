@@ -79,8 +79,8 @@ return [
 
     'locale' => 'ru',
     'locales' => ['ru', 'ua'],
-    'local_domain' => 'ukrlogika.com',
-    'domain' => 'ukrlogika.com',
+    'local_domain' => 'altamedica.local',
+    'domain' => 'altamedica.local',
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -174,6 +174,8 @@ return [
         Folklore\Image\ImageServiceProvider::class,
 
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
+
+        Laravel\Scout\ScoutServiceProvider::class,
         /*
          * Application Service Providers...
          */

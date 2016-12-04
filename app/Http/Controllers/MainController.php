@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Address;
 use App\Models\Email;
 use App\Models\Menu;
 
@@ -23,6 +24,7 @@ class MainController extends Controller
      */
     public function __construct(Menu $menu, Phone $phone, Email $email){
         //dd(config('app.locale'));
+        $this->data['addresses'] = Address::all();
         if(!session('locale')) session(['locale' => 'ru']);
         config(['app.locale' => session('locale')]);
         app()->setLocale(session('locale'));
